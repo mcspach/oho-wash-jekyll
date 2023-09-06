@@ -1,0 +1,64 @@
+{% if include.program-detail %}
+  <section class="section--global-spacing section--four-year-plan section--four-year-plan--program-detail">
+    <div class="padded-row"><h2>Marcus Scott's Four Year Plan</h2></div>
+    <div class="four-year-plan">
+      <div class="four-year-plan__content">
+      <div class="four-year-plan__content__inner">
+        <div class="four-year-plan__content__lower">
+          <div aria-hidden="true" class="line-decoration"></div>
+            <div class="four-year-plan__slider sequence-anim-parent">
+              <div class="small-12 medium-3 columns sequence-anim-item fade-in-up">
+                {% include components/four-year-plan-item.html year="1" subtitle="Elit Cras" course="Pellentesque Purus Commodo" description="Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper." %}
+              </div>
+              <div class="small-12 medium-3 columns sequence-anim-item fade-in-up">
+                {% include components/four-year-plan-item.html year="2" subtitle="Cras Amet Malesuada Egestas" course="Ultricies Consectetur Mattis Adipiscing" description="Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et." %}
+              </div>
+              <div class="small-12 medium-3 columns sequence-anim-item fade-in-up">
+                {% include components/four-year-plan-item.html year="3" subtitle="Sollicitudin Justo Porta Elit" course="Ipsum Risus" description="Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur. Morbi leo risus, porta ac consectetur ac, vestibulum at eros." %}
+              </div>
+              <div class="small-12 medium-3 columns sequence-anim-item fade-in-up">
+                {% include components/four-year-plan-item.html year="4" subtitle="Commodo Ridiculus Venenatis" course="Tortor Mollis Adipiscing Ridiculus" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean lacinia bibendum nulla sed consectetur. Cras justo odio, dapibus ac facilisis in, egestas eget quam." %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% else %}
+  <section class="section--global-spacing section--four-year-plan">
+    <div class="four-year-plan">
+      <div class="four-year-plan__media">
+        {% include components/components__micro/responsive-img.html src-default="//placehold.it/420x670" src-small="//placehold.it/200x320" src-medium="//placehold.it/420x670" size-small="641" size-medium="1024" %}
+      </div>
+      <div class="four-year-plan__content">
+      <div class="four-year-plan__content__inner">
+          <div class="four-year-plan__content__student-info row">
+            <div class="four-year-plan__content__student-info__content">
+              <h2>Nick Cook's Plan</h2>
+              <span>Class of 2019  •  Norfolk, Virginia</span>
+            </div>
+            <div class="four-year-plan__content__student-info__btn"><a href="#" class="btn btn--white">Read Nick Cook's Full Story</a></div>
+          </div>
+          <div class="four-year-plan__content__lower">
+            <div aria-hidden="true" class="line-decoration"></div>
+            <div class="four-year-plan__slider sequence-anim-parent">
+              <div class="small-12 medium-3 columns sequence-anim-item fade-in-up">
+                {% include components/four-year-plan-item.html year="1" subtitle="Elit Cras" course="Pellentesque Purus Commodo" description="Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper." %}
+              </div>
+              <div class="small-12 medium-3 columns sequence-anim-item fade-in-up">
+                {% include components/four-year-plan-item.html year="2" subtitle="Cras Amet Malesuada Egestas" course="Ultricies Consectetur Mattis Adipiscing" description="Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et." %}
+              </div>
+              <div class="small-12 medium-3 columns sequence-anim-item fade-in-up">
+                {% include components/four-year-plan-item.html year="3" subtitle="Sollicitudin Justo Porta Elit" course="Ipsum Risus" description="Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur. Morbi leo risus, porta ac consectetur ac, vestibulum at eros." %}
+              </div>
+              <div class="small-12 medium-3 columns sequence-anim-item fade-in-up">
+                {% include components/four-year-plan-item.html year="4" subtitle="Commodo Ridiculus Venenatis" course="Tortor Mollis Adipiscing Ridiculus" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean lacinia bibendum nulla sed consectetur. Cras justo odio, dapibus ac facilisis in, egestas eget quam." %}
+              </div>
+            </div>
+          </div>
+      </div>
+      </div>
+    </div>
+  </section>
+{% endif %}

@@ -1,0 +1,62 @@
+.admin-tabs {
+  border-bottom: solid 1px #cccccc;
+  margin-bottom: 2em;
+  margin-top: 1em;
+  background: #ffffff;
+  padding: 1em;
+  width: 100%;
+  border: .25em solid #bbbbbb; }
+  .admin-tabs ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    padding: 0; }
+  .admin-tabs li {
+    display: inline-block;
+    list-style: none;
+    margin: .25em; }
+  .admin-tabs a {
+    background: #444444;
+    margin: 0;
+    color: #000000;
+    display: block;
+    padding: .5em;
+    transition: all .2s ease-out, transform .2s ease-out;
+    text-decoration: none;
+    border-radius: .25em;
+    transform: translate(0, 0); }
+    .admin-tabs a.is-active {
+      background: #999999;
+      transform: translate(0, 0);
+      color: #ffffff; }
+    .admin-tabs a:hover {
+      background: #666666;
+      transform: translate(0, 0);
+      color: #ffffff; }
+
+div.workbench-info-block {
+  margin: 1em 0; }
+
+.alert-box {
+  margin: .5em 0; }
+
+.user-login-form {
+  margin: 0 0 3em; }
+  .user-login-form .form-required {
+    color: #444444 !important;
+    font-weight: 400; }
+  .user-login-form .description {
+    margin: .25em 0 0;
+    font-style: italic; }
+  .user-login-form input {
+    width: 100%;
+    padding: 1em;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: .125em;
+    color: #000;
+    text-transform: none; }
+  .user-login-form input[type="submit"] {
+    width: auto; }
+
+/*# sourceMappingURL=../../../../maps/base/drupal/d8/system-region.css.map */

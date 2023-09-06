@@ -1,0 +1,30 @@
+<article class="listing-item event event--listing-item row">
+  {% if include.src %}
+    <div class="event__media small-12 medium-4">
+      <img src="http://placehold.it/360x240" alt="Event Listing Image" width="360" height="240">
+    </div>
+  {% endif %}
+  <div class="event__content listing-item__content small-12 medium-8">
+    <div class="event__date-row row padded-row">
+      <span class="event__day-of-week eyebrow">{{include.dayOfWeek}}</span>
+      <span class="event__date">{{include.date}}</span>
+      <span class="event__month">{{include.month}}</span>
+    </div>
+    <div class="event__meta listing-item__meta">
+      <h2 class="listing-title"><a href="#">{{include.title}}</a></h2>
+      <div class="event__time-location-row">
+        <div class="time fa-list-item far fa-clock"><span>3:00pm-4:30pm</span></div>
+        <div class="location fa-list-item far fa-map-marker-alt"><span>Location</span></div>
+      </div>
+      <p>{{include.description}}</p>
+      <div class="tags">
+        <ul>
+          <li>Nullam</li>
+          <li>Parturient Inceptos Nibh</li>
+          <li>Ornare</li>
+          <li>Tortor Malesuada</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</article>

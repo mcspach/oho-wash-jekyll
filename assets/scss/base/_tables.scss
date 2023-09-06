@@ -1,0 +1,57 @@
+//Table
+
+table,
+table.table.footable {
+  font-family: $sans-serif;
+  font-size: rem-calc(16);
+  margin-bottom: rem-calc(40);
+  text-align: left;
+  border-spacing: 0;
+  .fooicon {
+    font-family: $fontAwesomeFamily !important;
+    font-weight: 600;
+    color: $yellow;
+  }
+  .footable-toggle {
+    margin-right: rem-calc(8);
+  }
+}
+
+thead {
+  color: #000;
+  tr {
+    border-left: 1px solid $teal;
+  }
+  th {
+    border-top: 1px solid $teal !important;
+  }
+}
+td, th,
+.footable.table > tbody > tr > th {
+  padding: rem-calc(15 15 10 15) !important;
+}
+tbody {
+  tr:nth-child(even) {
+    background: $light-gray;
+  }
+}
+thead:empty + tbody {
+  border-top: rem-calc(1) solid $teal;
+}
+tr td {
+  border-bottom: rem-calc(1) solid $gray-border;
+}
+tbody th,
+.footable.table > tbody > tr > th {
+  border-bottom-width: rem-calc(2);
+}
+body .footable.table > tbody > tr > th,
+th {
+  border-right: 1px solid $teal;
+  background: $pale-teal;
+  border-bottom: rem-calc(1) solid $teal !important;
+  font-weight: $benton-medium;
+  &:first-child {
+    border-left: rem-calc(1) solid $teal;
+  }
+}

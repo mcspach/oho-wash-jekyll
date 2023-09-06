@@ -1,0 +1,195 @@
+/*
+-----------
+LIST ITEMS
+-----------
+*/
+// -------- Large Listing Item
+.event,
+.listing-item {
+  @include margins-bottom(30,40,40);
+  @include paddings-bottom(15,25,25);
+  border-bottom: rem-calc(1) solid $gray-border;
+  display: flex;
+  flex-wrap: wrap;
+  &.news--listing-item {
+    @include paddings-bottom(15,40,40);    
+  }
+  &__media {
+    margin-bottom: rem-calc(20);
+    @media #{$medium-up} {
+      margin-bottom: 0;
+      order: 2;
+      padding-left: rem-calc(20);
+    }    
+  }
+  &__content {
+    @media #{$medium-up} {
+      order: 1;
+      padding-right: rem-calc(20);
+    }    
+  }
+  &__date-row {
+    margin-bottom: rem-calc(40);
+    min-height: rem-calc(36);
+  }
+  &__date {
+    line-height: rem-calc(20);
+    padding: rem-calc(0 10);
+  }
+  &__month {
+    line-height: 1;
+    font-size: rem-calc(15);
+    color: $accent-gray;
+    font-weight: $benton-medium;
+  }
+  &__time-location-row {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: rem-calc(25);
+    div:first-child {
+      padding-right: rem-calc(10);
+      margin-right: rem-calc(10);
+      border-right: rem-calc(1) solid $gray-border;
+    }
+  }
+  .time,
+  .location {
+    display: inline-block;
+    padding-top: rem-calc(5);
+    padding-bottom: rem-calc(5);
+    width: auto;
+    display: flex;
+    align-items: center;
+    padding-left: rem-calc(20);
+    &:before {
+      top: auto;
+      font-weight: 500;
+    }
+  }
+  .time,
+  .location {
+    font-size: rem-calc(15);
+    color: $accent-gray;
+    font-weight: $benton-medium;
+  }
+  .tags li {
+    margin-bottom: rem-calc(15);
+  }
+}
+.news__date {
+  font-size: rem-calc(15);
+  color: $accent-gray;
+  font-weight: $benton-medium;
+  display: block;
+  margin-bottom: rem-calc(20);
+}
+.calendar-column-upper-nav {
+  padding: rem-calc(10 15 5);
+  border: rem-calc(1) solid $gray-border;
+  margin-bottom: rem-calc(35);
+  h2 {
+    margin-bottom: rem-calc(4);
+  }
+  ul {
+    @include unset-bullets;
+  }
+  li {
+    width: 49%;
+    margin-bottom: rem-calc(5);
+    display: inline-block;
+  }
+  a {
+    @extend %small-body;
+    font-weight: $benton-medium;
+  }
+}
+.mini-cal {
+  .navigation {
+    @include unset-bullets;
+    margin-bottom: rem-calc(0);
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    background: $dark-teal;
+    a {
+      display: block;
+      padding: rem-calc(10);
+      font-size: 0;
+      height: rem-calc(30);
+      width: rem-calc(20);
+      background-image: url('../icons/angle-right--white.svg');
+      background-repeat: no-repeat;
+      background-size: rem-calc(8);
+      background-position: center;
+    }
+    #fe_pm {
+      transform: rotate(180deg);
+    }
+    select {
+      background: none;
+      border: none;
+      border-radius: none;
+      color: #fff;
+      appearance: none;
+      -moz-appearance: none;
+      background-image: url(../img/event-select.png);
+      background-size: rem-calc(9);
+      background-position: right rem-calc(3) center;
+      background-repeat: no-repeat;
+    }
+  }
+  table {
+    margin-top: 0;
+    width: 100%;
+    td, th,
+    & > tbody > tr > th {
+      padding: rem-calc(5 10) !important;
+      text-align: center;
+    }
+    tr td {
+      border-width: rem-calc(2);
+    }
+  }
+}
+.event-detail,
+.news-detail {
+  h1 {
+    @include margins-bottom(20,40,40);
+  }
+  .section--wysiwyg img {
+    display: block;
+    @include margins-bottom(20,40,40);
+  }
+  .tags {
+    @include margins-bottom(25,35,35);
+    li {
+      margin-bottom: rem-calc(5);
+    }
+  }
+}
+.letter-divider {
+  margin-bottom: rem-calc(16);
+  margin-top: rem-calc(16);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  &__row {
+    display: flex;
+    align-items: center;
+    @include flex-column(100%);
+    margin-bottom: rem-calc(30);
+    &:after {
+      content: "";
+      @include flex-column(calc(100% - 60px));
+      display: block;
+      height: rem-calc(2);
+      background: $light-teal;
+    }    
+    h2 {
+      @include flex-column(rem-calc(60))
+      @include font-sizes(30,36,36);
+      color: $deep-red;
+      margin: 0;
+    }
+  }
+}

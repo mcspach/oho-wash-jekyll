@@ -1,0 +1,215 @@
+/*
+-------------------
+PAGINATION
+-------------------
+*/
+
+
+// -------- ICONS
+$icon--first: "\f100";
+$icon--prev: "\f104";
+$icon--last: "\f101";
+$icon--next: "\f105";
+
+// ------------- SELECTORS
+// ****** THESE SELECTORS ACCOMMODATE BOTH D7 AND D8
+$pagination-selector: ".pagination-container nav";
+$first-selector: "[data-page='first']";
+$prev-selector: "[data-page='prev']";
+$last-selector: "[data-page='last']";
+$next-selector: "[data-page='next']";
+$all-directional-selectors: $first-selector, $prev-selector, $last-selector, $next-selector;
+$current-page: ".active";
+
+// --------------------- STYLES
+$top-border-distance: rem-calc(30);
+$border-style: none;
+
+$directional-item-padding: rem-calc(5);
+
+$number-item-padding: rem-calc(10);
+$number-item-padding--mobile: rem-calc(10);
+$number-item-font-size: rem-calc(15);
+$number-item-font-size--mobile: rem-calc(15);
+/*
+--------
+GLOBALS
+--------
+*/
+#{$pagination-selector} {
+  @include grid-row();
+  width: 100%;
+  padding: rem-calc(0 20);
+  border-top: $border-style;
+  display: flex;
+  justify-content: center;
+  margin-bottom: rem-calc(50);
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    margin: 0;
+    padding: $top-border-distance 0 0;
+    width: 100%;
+  }
+  li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    padding: $number-item-padding;
+    font-size: $number-item-font-size;
+    cursor: pointer;
+    &:hover {
+      text-decoration: none;
+      div {
+        background: $light-gray;
+      }
+    }
+  }
+}
+
+#{$all-directional-selectors} {
+  display: flex;
+  align-items: center;
+  span {
+     color: $dark-gray;
+     font-weight: $benton-medium;
+     font-size: rem-calc(15);
+     @media #{$small-only} {
+       font-size: 0;
+     }
+  }
+  i,
+  div {
+    padding: $directional-item-padding;
+    display: block;
+    font-size: 0;
+    font-weight: 100;
+    font-style: normal;
+    transition: background .6s ease;
+    @include flex-column(rem-calc(44));
+    height: rem-calc(44);
+    border-radius: 50%;
+    border: rem-calc(1) solid $gray-border;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $light-teal;
+    &:before,
+    &:after {
+      font-size: rem-calc(38);
+      font-family: $fontAwesomeFamily;
+    }
+  }
+}
+#{$pagination-selector} {
+  #{$current-page} {
+    color: $primary-text-color;
+    color: #000;
+    font-weight: $benton-bold;
+    height: rem-calc(40);
+    width: rem-calc(40);
+    border: rem-calc(1) solid $gray-border;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+      display: block;
+      color: #000;
+      cursor: default;
+    }
+    a:hover {
+      text-decoration: none;
+    }
+  }
+}
+#{$first-selector} { 
+  div:before {
+    content: $icon--first;
+  }
+}
+#{$prev-selector} {
+  div:before {
+    content: $icon--prev;
+  }
+}
+#{$last-selector} {
+  div:before {
+    content: $icon--last;
+  }
+}
+#{$next-selector} { 
+  div:before {
+    content: $icon--next;
+  }
+}
+
+#{$first-selector},
+#{$prev-selector} {
+  span {
+    margin-left: rem-calc(10);
+  }
+}
+#{$next-selector},
+#{$last-selector} {
+  span {
+    margin-right: rem-calc(10);
+  }
+}
+#{$pagination-selector} {
+  #{$prev-selector} {
+    @media #{$medium-up} {
+      margin-left: rem-calc(5);
+      margin-right: rem-calc(5);
+    }
+  }
+}
+#{$pagination-selector} {
+  #{$next-selector} {
+    @media #{$medium-up} {
+      margin-left: rem-calc(5);
+    }
+  }
+}
+
+// how it behaves in narrow widths - hiding all numbers but is-active and removing text from beside the arrows
+@media #{$small-only} {
+  #{$pagination-selector} {
+    li a {
+      padding: $number-item-padding;
+      font-size: $number-item-font-size;
+    }
+    #{$first-selector},
+    #{$prev-selector} {
+      a:after {
+        display: none;
+      }
+    }  
+    #{$next-selector},
+    #{$last-selector} {
+      div:after {
+        display: none;
+      }
+    }  
+    a {
+      display: none;
+    }
+    #{$current-page},
+    #{$all-directional-selectors} {
+      display: flex;
+      a {
+        display: flex;
+      }
+    }
+    #{$current-page} {
+      display: flex;
+    }
+  }
+}
+#per_page {
+  display: none;
+}

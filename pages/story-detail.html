@@ -1,0 +1,186 @@
+---
+layout: default
+title: Story Detail Page
+breadcrumbs:
+- News & Stories
+- All Stories
+content_type: story
+---
+<article class="story-detail">
+  {% if page.breadcrumbs %}
+  <div class="padded-row">
+    {% include components/breadcrumbs.html classes="breadcrumbs" %}
+  </div>
+  {% endif %}
+  <div class="story-detail__upper section--global-spacing--large">
+    <div class="row">
+      <div class="small-12 columns story-detail__img-column">
+        <div class="story-detail__img story-detail__img--desktop">
+          <img src="//placehold.it/360x575" alt="#" width="360" height="575">
+        </div>
+        <div class="story-detail__student-info--desktop">
+          <div class="story__info-item">
+            <div class="story__info-item__media">
+              <img src="/assets/icons/major-minor.svg" width="60" height="60" alt="book icon">
+            </div>
+            <div class="story__info-item__content">
+              <h2 class="eyebrow">Majors and Minors</h2>
+              <ul>
+                <li>Biology and Studio Art Major</li>
+              </ul>
+            </div>
+          </div>
+          <div class="story__info-item">
+            <div class="story__info-item__media">
+              <img src="/assets/icons/learn-by-doing.svg" width="60" height="60"
+                alt="icon depicting head, gears, and a pencil">
+            </div>
+            <div class="story__info-item__content">
+              <h2 class="eyebrow">Learn by Doing</h2>
+              <ul>
+                <li>Acadia National Park</li>
+                <li>Jet Propulsion Library</li>
+              </ul>
+            </div>
+          </div>
+          <div class="story__info-item">
+            <div class="story__info-item__media">
+              <img src="/assets/icons/activities.svg" width="60" height="60" alt="icon depicting sports and music">
+            </div>
+            <div class="story__info-item__content">
+              <h2 class="eyebrow">Extracurricular Activities</h2>
+              <ul>
+                <li>Carter Society for Junior Fellows </li>
+                <li>Captain of Varsity Soccer</li>
+              </ul>
+            </div>
+          </div>
+          <div class="story__info-item">
+            <div class="story__info-item__media">
+              <img src="/assets/icons/learn-by-doing.svg" width="60" height="60"
+                alt="icon depicting head, gears, and a pencil">
+            </div>
+            <div class="story__info-item__content">
+              <h2 class="eyebrow">Support From Donor Program</h2>
+              <ul>
+                <li><a href="#">Consectetur Magna Ipsum</a></li>
+                <li><a href="#">Fermentum Sem Dapibus</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END IMG COLUMN -->
+      <div class="small-12 columns story-detail__content-column story anim-item">
+        <div class="story__content__upper">
+          <div class="story-detail__img story-detail__img--mobile">
+            <img src="//placehold.it/360x575" alt="#" width="360" height="575">
+          </div>
+          <div class="story__content__upper__inner">
+            <span class="eyebrow eyebrow--teal">Student</span>
+            <h1>{{page.title}}</h1>
+            <div class="line-decoration" ariah-hidden="true"></div>
+            <h2 class="h3">Marcus Scott</h2>
+            <span>Class of 2019 • Norfolk, Virginia</span>
+          </div>
+        </div>
+        <div class="story-detail__student-info--mobile">
+          <div class="story__info-item">
+            <div class="story__info-item__media">
+              <img src="/assets/icons/major-minor.svg" width="60" height="60" alt="book icon">
+            </div>
+            <div class="story__info-item__content">
+              <h2 class="eyebrow">Majors and Minors</h2>
+              <ul>
+                <li>Environmental Studies Major
+                  Creative Writing and Anthropology Minors</li>
+              </ul>
+            </div>
+          </div>
+          <div class="story__info-item">
+            <div class="story__info-item__media">
+              <img src="/assets/icons/learn-by-doing.svg" width="60" height="60"
+                alt="icon depicting head, gears, and a pencil">
+            </div>
+            <div class="story__info-item__content">
+              <h2 class="eyebrow">Learn by Doing</h2>
+              <ul>
+                <li>Acadia National Park</li>
+                <li>Jet Propulsion Library</li>
+              </ul>
+            </div>
+          </div>
+          <div class="story__info-item">
+            <div class="story__info-item__media">
+              <img src="/assets/icons/activities.svg" width="60" height="60" alt="icon depicting sports and music">
+            </div>
+            <div class="story__info-item__content">
+              <h2 class="eyebrow">Extracurricular Activities</h2>
+              <ul>
+                <li>Carter Society for Junior Fellows </li>
+                <li>Captain of Varsity Soccer</li>
+              </ul>
+            </div>
+          </div>
+          <div class="story__info-item">
+            <div class="story__info-item__media">
+              <img src="/assets/icons/learn-by-doing.svg" width="60" height="60"
+                alt="icon depicting head, gears, and a pencil">
+            </div>
+            <div class="story__info-item__content">
+              <h2 class="eyebrow">Support From Donor Program</h2>
+              <ul>
+                <li><a href="#">Consectetur Magna Ipsum</a></li>
+                <li><a href="#">Fermentum Sem Dapibus</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="story__content__lower section--global-spacing--small clearfix section--wysiwyg">
+          <p class="intro-text">But don’t be too hasty to keep up with the big wigs in the astronomy clubs that have
+            advanced telescopes. There is another alternative that can give you most of the advantages of a telescope
+            and some extra flexibility and reduced cost to boot. That alternative is a good pair of astronomy
+            binoculars.</p>
+          <p>This is a story and a full WYSIWYG. It seems from the moment you begin to take your love of astronomy
+            seriously, the thing that is on your mind is what kind of telescope will you get. And there is no question,
+            investing in a good telescope can really enhance your enjoyment of your new passion in astronomy. </p>
+          <p>But don’t be too hasty to keep up with the big wigs in the astronomy clubs that have advanced telescopes.
+            There is another alternative that can give you most of the advantages of a telescope and some extra
+            flexibility and reduced cost to boot. That alternative is a good pair of astronomy binoculars. Mostly we
+            think of binoculars as the thing you use to see the football game when you have to sit in the cheap seats.
+          </p>
+          <p>But if you do some homework and had a good grasp on what your stargazing objectives are, the advantages of
+            astronomy binoculars over an entry level telescope can be pretty convincing.</p>
+          <figure class="obj-left">
+            <img alt="#" src="http://placehold.it/360x240">
+            <figcaption>Caption Nullam quis risus eget urna mollis ornare vel eu leo. Duis mollis, est non commodo
+              luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</figcaption>
+          </figure>
+          <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I
+            enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for
+            the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite.Integer posuere
+            erat a ante venenatis dapibus posuere velit aliquet. Donec id elit non mi porta gravida at eget metus. Lorem
+            ipsum dolor sit amet, consectetur adipiscing elit. Morbi leo risus, porta ac consectetur ac, vestibulum at
+            eros. </p>
+        </div>
+        <div class="story-topics tags">
+          <ul>
+            <li>Topic 2</li>
+            <li>Topic 3</li>
+            <li>Topic 6</li>
+          </ul>
+        </div>
+        <section class="section--cta--small">
+          <h2>Heading for CTA Component</h2>
+          <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel
+            illum qui dolorem eum fugiat quo voluptas nulla pariatur</p>
+          <a class="btn btn--light-teal" href="#">How to Get Involved</a>
+        </section>
+      </div>
+      <!-- END CONTENT COLUMN -->
+    </div>
+  </div>
+  {% include components/modules/four-year-plan.html program-detail="true" %}
+  {% include components/modules/img-grid.html %}
+  {% include components/modules/related-stories.html %}
+</article>

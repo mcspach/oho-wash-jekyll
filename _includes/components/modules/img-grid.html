@@ -1,0 +1,80 @@
+<section data-delay="100" class="section--img-grid section--global-spacing sequence-anim-parent">
+  <div class="padded-row">
+    <div class="lined-section-title">
+      <div class="line-decoration" ariah-hidden="true"></div>
+      <h2>Image Video Gallery</h2>
+      <p class="grid-max-960">Aenean lacinia bibendum nulla sed consectetur. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum.</p>
+    </div>
+  </div>
+  <div class="row row--img-grid">
+    <div class="small-12 more-or-less-container">
+      <div class="more-or-less" id="more-or-less">
+        <div class="img-grid">
+          {% for i in (1..3) %}
+          <div class="img-grid__selector sequence-anim-item fade-up-in"><!-- IMG GRID ITEM -->
+            {% include components/img-grid/img-grid-item.html icon="true" grid-item="true" src="http://placehold.it/560x375" %}
+          </div>
+          <div class="img-grid__selector sequence-anim-item fade-up-in"><!-- IMG GRID ITEM -->
+            {% include components/img-grid/img-grid-item.html icon="true" grid-item="true" src="http://placehold.it/560x375" %}
+          </div>
+          <div class="img-grid__selector sequence-anim-item fade-up-in"><!-- IMG GRID ITEM -->
+            {% include components/img-grid/img-grid-item.html icon="true" grid-item="true" video_src="true" src="http://placehold.it/560x375" %}
+          </div>
+          <div class="img-grid__selector sequence-anim-item fade-up-in"><!-- IMG GRID ITEM -->
+            {% include components/img-grid/img-grid-item.html icon="true" grid-item="true" src="http://placehold.it/560x375" %}
+          </div>
+          <div class="img-grid__selector sequence-anim-item fade-up-in"><!-- IMG GRID ITEM -->
+            {% include components/img-grid/img-grid-item.html icon="true" grid-item="true" src="http://placehold.it/560x375" %}
+          </div>
+          <div class="img-grid__selector sequence-anim-item fade-up-in"><!-- IMG GRID ITEM -->
+            {% include components/img-grid/img-grid-item.html icon="true" grid-item="true" src="http://placehold.it/560x375" %}
+          </div>
+          <div class="img-grid__selector sequence-anim-item fade-up-in"><!-- IMG GRID ITEM -->
+            {% include components/img-grid/img-grid-item.html icon="true" grid-item="true" src="http://placehold.it/560x375" %}
+          </div>
+          {% endfor %}
+        </div> <!-- / img grid -->
+        <div class="more-or-less__button-strip more-or-less__fewer">
+          <div class="lined-divide-container--center">
+            <button tabindex="-1" class="btn btn--teal" href="#"><i aria-hidden="true" class="far fa-arrow-alt-circle-up"></i><span>See Fewer</span></button>
+          </div>
+        </div>    
+      </div> <!-- /  more or less -->
+    </div>
+  </div>
+  <div class="modal">
+    <div class="row slider-row--img-grid">
+  
+      <button class="modal-close">
+      <span class="show-for-sr">Close the modal window</span>
+        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><defs><style>.cls-1{fill:#fff;}</style></defs><polygon class="cls-1" points="40 2.85 37.15 0 20 17.15 2.85 0 0 2.85 17.15 20 0 37.15 2.85 40 20 22.85 37.15 40 40 37.15 22.85 20 40 2.85"></polygon></svg>
+      </button>
+  
+      <div class="img-grid-slider">
+        {% for i in (1..3) %}
+        <div class="img-grid-slider__slide"><!-- IMG GRID ITEM -->
+          {% include components/img-grid/img-grid-item.html icon="true" src="http://placehold.it/860x500" %}
+        </div>
+        <div class="img-grid-slider__slide"><!-- IMG GRID ITEM -->
+          {% include components/img-grid/img-grid-item.html icon="true" caption="Aenean eu leo quam.  bibendum nulla sed consectetur. Maecenas faucibus mollis interdum." src="http://placehold.it/860x760.jpg" %}
+        </div>
+        <div class="img-grid-slider__slide"><!-- IMG GRID ITEM -->
+          {% include components/img-grid/img-grid-item.html icon="true" src="http://placehold.it/860x400" video_src="true" %}
+        </div>
+        <div class="img-grid-slider__slide"><!-- IMG GRID ITEM -->
+          {% include components/img-grid/img-grid-item.html icon="true" caption="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur. Maecenas faucibus mollis interdum." src="http://placehold.it/460x560" %}
+        </div>
+        <div class="img-grid-slider__slide"><!-- IMG GRID ITEM -->
+          {% include components/img-grid/img-grid-item.html icon="true" caption="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit Aenean lacinia bibendum nulla sed consectetur. Maecenas faucibus mollis interdum." src="http://placehold.it/550x860" %}
+        </div>
+        <div class="img-grid-slider__slide"><!-- IMG GRID ITEM -->
+          {% include components/img-grid/img-grid-item.html icon="true" width="600" height="540" caption="Aen bibendum nulla sed consectetur. Maecenas faucibus mollis interdum." src="http://placehold.it/360x500" %}
+        </div>
+        <div class="img-grid-slider__slide"><!-- IMG GRID ITEM -->
+          {% include components/img-grid/img-grid-item.html icon="true" width="600" height="540" caption="Aen bibendum nulla sed consectetur. Maecenas faucibus mollis interdum." src="http://placehold.it/360x500" %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

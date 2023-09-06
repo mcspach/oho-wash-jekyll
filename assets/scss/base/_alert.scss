@@ -1,0 +1,26 @@
+/*
+-----
+ALERT
+-----
+*/
+
+.alert--site-wide {
+  @extend %section--banded--small;
+  background: $deeper-red;
+  color: #fff;
+
+  a {
+    @extend %btn;
+    @extend %btn--white;
+  }
+
+  .fa {
+    font-size: rem-calc(47);
+    color: $yellow;
+    margin-bottom: rem-calc(20);
+  }
+}
+
+.alert--site-wide+.skip-link {
+  display: none;
+}

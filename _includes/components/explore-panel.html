@@ -1,0 +1,40 @@
+<div class="explore-panel">
+  <div class="explore-panel__title-area">
+    <div class="lined-section-title">
+      <div class="line-decoration" ariah-hidden="true"></div>
+      <h2>{{include.title}}</h2>
+    </div>
+    <button class="explore-close"><span class="eyebrow">Close</span><img alt="close" src="/assets/icons/explore-close.svg" width="26" height="26"></button>
+  </div>
+  <article class="explore-item row">
+    <div class="row">
+      <div class="small-12 medium-6 columns explore-item__media">
+        {% if include.video %}
+          <div class="video-modal-container">
+            <a data-fancybox href="https://www.youtube.com/watch?v=GF60Iuh643I">
+              <img src="//placehold.it/460x310" alt="dog" width="560" height="340">
+              <div aria-hidden="true"></div>
+            </a>
+          </div>
+        {% else %}
+          <img src="//placehold.it/460x310" alt="dog" width="560" height="340">
+        {% endif %}
+      </div>
+      <div class="small-12 medium-6 columns explore-item__content ">
+        <div class="explore-item__content__upper">
+          <p><strong>Location: </strong>Etiam porta sem malesuada magna mollis euismod. </p>
+          <p><strong>Opportunities: </strong>Risus, Egestas, Aenean, Vulputate.</p>
+        </div>
+        <blockquote>
+          <p>“Quote if available about what the student was able to get involved in at this center, what was their experience. This should be two to three lines and not more than that.”</p>
+          <span class="credit eyebrow">Timothée Chalamet</span>
+        </blockquote>
+        <div class="explore-item__content__lower">
+          <div class="line-decoration" ariah-hidden="true"></div>
+          <a href="#" class="arrow-link" tabindex="0"><span class="arrow-link__link">Explore this center</span><div class="arrow-link__icon" aria-hidden="true"></div></a>
+          <a href="#" class="arrow-link" tabindex="0"><span class="arrow-link__link">Explore learn by doing</span><div class="arrow-link__icon" aria-hidden="true"></div></a>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>

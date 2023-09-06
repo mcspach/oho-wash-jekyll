@@ -1,0 +1,52 @@
+- title: Academics
+  path: /
+  sub_menu:
+  - title: Nav Sub A
+    path: /
+  - title: Nav Sub A
+    path: /
+  - title: Nav Sub A
+    path: /
+
+- title: Admissions & Aid
+  path: /
+  class: ""
+  sub_menu:
+  - title: Apply
+    path: /
+  - title: Tuition and Fees
+    path: /
+  - title: Financial Aid
+    path: /
+    class: "is-active active-trail"
+  - title: Visit
+    path: /
+  - title: Request Information
+    path: /
+  - title: Admissions and Financial Aid Team
+    path: /
+  - title: Student Mentors and Bloggers
+    path: /
+  - title: Admitted Students
+    path: /
+    
+- title: Campus Community
+  path: /
+  sub_menu:
+  - title: Nav Sub C
+    path: /
+
+- title: Learn by Doing
+  path: /
+  sub_menu:
+  - title: Nav Subnavigation G
+    path: /
+    
+  - title: Nav Subjective G
+    path: /
+  - title: Nav Submarine G
+    path: /
+
+- title: Athletics
+  path: /
+  sub_menu:

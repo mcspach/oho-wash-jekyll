@@ -1,0 +1,82 @@
+<article class="hero {{include.class_modifier}} {% if include.video_src %}hero--video{% endif %} {% if include.iframe_src %}hero--iframe{% endif %} {% if include.src %}hero--img{% else %}hero--no-img{% endif %}">
+  {% if include.video_src or include.iframe_src or include.src %}
+    <div class="hero__media">
+      {% if include.video_src %}
+        <div class="video-feature">
+          <video id="hero" loop muted poster="{{inlude.src}}">
+            <source src="{{include.video_src}}">
+          </video>
+        </div>
+      {% endif %}
+      {% if include.iframe_src %}
+        <div class="video-feature">
+          <iframe width="560" height="315" src="{{include.iframe_src}}" frameborder="0" allow="autoplay; encrypted-media; loop" allowfullscreen></iframe>
+        </div>
+      {% endif %}
+      {% if include.parallax_iframe_src %}
+        <div class="video-feature">
+          <div id="bgndVideo" class="player" data-property="{videoURL:'{{include.parallax_iframe_src}}',containment:'body',autoPlay:true, showControls:false, mute:true, startAt:0, opacity:1, loop:true, anchor:'center,center', useOnMobile:false, mobileFallbackImage:'/assets/img/hero-img-common.jpg, optimizeDisplay:true'}">My video</div>
+        </div>
+      {% endif %}
+      {% if include.src %}
+        <img srcset="http://placehold.it/2400x1500 2400w, {{include.src}} 1600w," src="http://placehold.it/768x480" alt="#">
+      {% endif %}
+    </div>
+  {% endif %}
+  {% if include.overlay %}
+    <div class="hero__overlay" aria-hidden="true"></div>
+  {% endif %}
+  <div class="hero__content">
+    <h2>Brand Statement Lorem Ipsum Dolor</h2>
+    <a href="#" class="btn btn--large">Optional Button</a>
+  </div>
+  
+  <div class="discover-opportunities small-12">
+    <div class="discover-opportunities__inner">
+      <h3><span class="discover-opportunities__heading-inner">Learn in and out of the classroom</span></h3>
+      <h4 class="show-for-sr">complete the sentence using the select options to see what opportunities Washington college has for you!</h4>
+      <div id="discover-opportunities-container">
+        <p>I want to study...</p>
+        <div id="area-of-study" class="discover-opportunities__select">
+          <ul class="discover-opportunities__options">
+            <li><a data-discover-opportunities-item-id="option-1" href="#">Option 1</a></li>
+            <li><a data-discover-opportunities-item-id="option-2" href="#">Option 2</a></li>
+          </ul>
+        </div>
+        <p>and</p>
+        <br>
+        <p>get first-hand experience through...</p>
+        <div id="learn-by-doing" class="discover-opportunities__select">
+          <ul class="discover-opportunities__options">
+            <li><a data-discover-opportunities-item-id="option-1" href="#">Option 1</a></li>
+            <li><a data-discover-opportunities-item-id="option-2" href="#">Option 2</a></li>
+          </ul>
+        </div>
+        <button class="btn btn--large btn--random btn--teal"><div class="far fa-sync"></div>Undecided? <span class="show-for-sr">Click to see a random area of study and first hand experience</span></button>
+        {% include components/discover-opportunities-item.html panel_id="option-1-option-2" extraLink="true" title="Option 1 and 2 Bibendum Sollicitudin Vulputate Tellus" description="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Morbi leo risus, porta ac consectetur ac, vestibulum at eros." %}
+        {% include components/discover-opportunities-item.html panel_id="option-2-option-2" video="true" title="Option 2 and 2 Tristique Dapibus Euismod Parturient Purus" description="Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit." extraLink="true" %}
+  {% include components/discover-opportunities-item.html panel_id="option-2-option-1" video="true" title=" Option 2 and 1 Quam Egestas Elit"  %}
+      </div>
+    </div>
+  </div>
+  
+  <div class="section--global-spacing small-12 section--hero-ctas">
+    <div class="hero-cta-container"><a href="#" class="arrow-link"><span class="arrow-link__link">Explore All Programs</span><div class="arrow-link__icon" aria-hidden="true"></div></a></div>
+    <div class="hero-cta-container"><a href="#" class="arrow-link"><span class="arrow-link__link">What is Learn by Doing?</span><div class="arrow-link__icon" aria-hidden="true"></div></a></div>
+  </div>
+  
+  <div class="section--differentiators section--global-spacing">
+    <div class="row">
+      <div class="small-12 large-4 columns">
+        {% include components/differentiator.html stat="93%" title="Dapibus Etiam Sollicitudin" description="Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et." %}
+      </div>
+      <div class="small-12 large-4 columns">
+        {% include components/differentiator.html icon="true" title="Condimentum Sollicitudin Pellentesque Cursus" description="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." %}
+      </div>
+      <div class="small-12 large-4 columns">
+        {% include components/differentiator.html src="true" title="Parturient Fermentum Bibendum Quam" link_title="true" %}
+      </div>
+    </div>
+  </div>
+  
+</article>

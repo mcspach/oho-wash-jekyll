@@ -1,0 +1,17 @@
+// --------------------------------------------------
+// Foundation
+// --------------------------------------------------
+// This file imports all of the pieces 
+// of the Foundation framework
+
+// 
+// Settings
+// --------------------------------------------------
+
+// Component style settings
+@import "foundation_settings";
+@import "foundation";
+
+// @include foundation-everything; we just want flex grid classes
+@include foundation-flex-classes;
+@include foundation-flex-grid;

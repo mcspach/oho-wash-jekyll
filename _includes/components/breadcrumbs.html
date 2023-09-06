@@ -1,0 +1,14 @@
+{% if page.breadcrumbs and include.type != 'hardcoded' %}
+  <ol class="{{ include.classes }}">
+    {% for item in page.breadcrumbs %}
+      <li><a href="#">{{ item }}</a></li>
+    {% endfor %}
+    <li class="active">{{ page.title }}</li>
+  </ol>
+{% else %}
+  <ol class="{{ include.classes }}">
+    <li><a href="/">Home</a></li>
+    <li><a href="/">Parent</a></li>
+    <li class="active">{{ page.title }}</li>
+  </ol>
+{% endif %}

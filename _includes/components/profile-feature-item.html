@@ -1,0 +1,12 @@
+<article class="profile-item">
+  <div class="profile-item__media">
+    <a href="#"><img src="http://placehold.it/180x270" alt="#" width="180" height="270"></a>
+  </div>
+  <div class="profile-item__content">
+    <h3><a href="#">{{include.name}}</a></h3>
+    <span class="profile-item__position">{{include.position}}</span>
+    {% if include.quote %}
+      <p class="profile-item__quote">{{include.quote}}</p>
+    {% endif %}
+  </div>
+</article>

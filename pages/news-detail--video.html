@@ -1,0 +1,68 @@
+---
+layout: default
+title: news Detail
+breadcrumbs:
+  - All news
+content_type: news
+---
+<article class="news-detail">
+  {% if page.breadcrumbs %}
+    <div class="padded-row">
+      {% include components/breadcrumbs.html classes="breadcrumbs" %}
+    </div>
+  {% endif %}
+  <div class="section--global-spacing--large">
+    <div class="padded-row row grid-max-760">
+      <div class="news-detail__title-lockup">
+        <h1>Nullam id dolor id nibh ultricies vehicula ut id elit.</h1>
+        <div class="news news-detail__meta">
+        </div>
+      </div>
+      <div class="section--wysiwyg section--global-spacing--small">
+        <p class="intro-text">It is probably the dream of any amateur astronomer to be able to be the boss of one of the great multi million dollar telescopes even if it was just for one hour or for a few shots. Sure, we can have a lot of fun with our binoculars. And as we improve our personal equipment set, we get better and better at pinpointing what we want to see in the sky.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/j-y8beRv1OI" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p>This is a story and a full WYSIWYG. It seems from the moment you begin to take your love of astronomy seriously, the thing that is on your mind is what kind of telescope will you get. And there is no question, investing in a good telescope can really enhance your enjoyment of your new passion in astronomy. </p>
+        <p>But don’t be too hasty to keep up with the big wigs in the astronomy clubs that have advanced telescopes. There is another alternative that can give you most of the advantages of a telescope and some extra flexibility and reduced cost to boot. That alternative is a good pair of astronomy binoculars. Mostly we think of binoculars as the thing you use to see the football game when you have to sit in the cheap seats. </p>
+        <p>But if you do some homework and had a good grasp on what your stargazing objectives are, the advantages of astronomy binoculars over an entry level telescope can be pretty convincing.</p>
+      </div>
+      <section class="section--cta--small section--global-spacing--small">
+        <h2>Heading for CTA Component</h2>
+        <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur</p>
+        <a class="btn btn--light-teal" href="#">How to Get Involved</a>
+      </section>
+      <div class="tags">
+        <ul>
+          <li>Nullam</li>
+          <li>Parturient Inceptos Nibh</li>
+          <li>Ornare</li>
+          <li>Tortor Malesuada</li>
+        </ul>
+      </div>
+      <div class="related-news-links">
+        <h2>Related Links</h2>
+        <a>Related Link Name Here</a>
+        <a>Related Consectetur Sit Vulputate Vehicula</a>
+      </div>
+    </div>
+  </div>
+  {% include components/modules/img-grid.html %}
+  <section class="section--global-spacing--large section--related-news">
+    <div class="padded-row">
+      <div class="lined-section-title">
+        <div class="line-decoration" ariah-hidden="true"></div>
+        <h2>Featured In</h2>
+      </div>
+    </div>
+    <div class="row sequence-anim-parent">
+      <div class="small-12 medium-4 columns small-news sequence-anim-item fade-up-in">
+        {% include components/news-item.html title="Fermentum Ultricies Commodo" date="March 39 2019" description="Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit." %}
+      </div>
+      <div class="small-12 medium-4 columns small-news sequence-anim-item fade-up-in">
+        {% include components/news-item.html title="Ullamcorper Parturient Porta Egestas Mollis Elit Cursus" date="March 29 2019" description="Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue. Morbi leo risus, porta ac consectetur ac, vestibulum at eros." %}
+      </div>
+      <div class="small-12 medium-4 columns small-news sequence-anim-item fade-up-in">
+        {% include components/news-item.html title="Ullamcorper Parturient Porta Egestas Mollis Elit Cursus" date="March 29 2019" description="Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue. Morbi leo risus, porta ac consectetur ac, vestibulum at eros." %}
+      </div>
+    </div>
+  </section>
+</article>

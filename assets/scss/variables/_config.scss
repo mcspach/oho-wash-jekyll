@@ -1,0 +1,42 @@
+// --------------------------------------------------
+// Config
+// --------------------------------------------------
+
+// --------------------------- COLORS
+$primary-text-color: #000;
+$link-color: #0A60B0;
+
+
+// Primary Colors
+$deep-red: #7D092D;
+$primary-color: $deep-red;
+$deeper-red: #660000;
+
+// Secondary Colors
+$teal: #1a737E;
+$dark-blue: #0E2B47;
+$dark-teal: #173F4D;
+$gray: #C1C2C4; 
+$gray-border: #C1C2C4;
+
+// Accent Colors
+$light-teal: #20BABD;
+$yellow: #EBAA00;
+$light-gray: #f5f7fa;
+$pale-teal: #CDDFE1;
+$dark-gray: #4A4A4A;
+$accent-gray: #526166;
+
+$primary-color--dark: darken($primary-color, 30%);
+$primary-color--light: lighten($primary-color, 30%);
+
+$primary-gray--text: #9f9f9f;
+
+
+$box-shadow: 0 0 7px 3px rgba(0,0,0,0.30);
+
+// --------------------------- FORMS
+$form-scope: 'form[class*="webform"], [id="user-login"], [id="search-form"], .view-filters';
+$webform-scope: 'form[class*="webform"]';
+
+$fontAwesomeFamily: 'Font Awesome 5 Pro', 'FontAwesome';

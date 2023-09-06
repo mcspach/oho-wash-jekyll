@@ -1,0 +1,223 @@
+/*
+---------------
+FOUR YEAR PLAN
+---------------
+*/
+.four-year-plan {
+  max-width: rem-calc(2000);
+  margin: auto;
+  overflow: hidden;
+  @media #{$small-only} {
+    padding-top: 2.5rem;
+  }
+  @media #{$medium-up} {
+    display: flex;
+  }
+  &__media {
+    position: relative;
+    background: $teal;
+    width: 100%;
+    padding-bottom: rem-calc(30);
+    @media #{$medium-up} {
+      @include flex-column(17%);
+      padding-bottom: 0;
+    }
+    @media #{$large-up} {
+      @include flex-column(29%);
+    }
+    img {
+      @media #{$small-only} {
+        max-width: rem-calc(200);
+        margin-left: rem-calc(20);
+      }
+      @media #{$xlarge-up} {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: cover;
+      }
+    }
+  }
+  &__content {
+    @media #{$medium-up} {
+      @include flex-column(83%);
+    }
+    @media #{$large-up} {
+      @include flex-column(71%);
+    }
+  }
+  .line-decoration {
+    @media #{$medium-up} {
+      @include line-decoration(100vw, rem-calc(50), rem-calc(2), $light-teal, $light-teal, top, rem-calc(0));
+      position: absolute;
+      margin-left: -21vw;
+    }
+    @media #{$large-up} {
+      @include line-decoration(100vw, rem-calc(50), rem-calc(2), $light-teal, #fff, top, rem-calc(0));
+      position: absolute;
+      margin-left: rem-calc(-90);      
+    }
+  }
+}
+.four-year-plan__content {
+  background: $teal;
+  @media #{$medium-up} {
+    padding: rem-calc(40);
+    display: flex;
+    align-items: center;
+  }
+  &__student-info {
+    color: #fff;
+    display: block;
+    align-items: center;
+    max-width: 100%;
+    @include margins-bottom(30,50,50);
+    @media #{$small-only} {
+      padding: rem-calc(0 20);
+    }
+    @media #{$large-up} {
+      flex-wrap: nowrap;
+      display: flex;
+    }
+  }
+  &__student-info__content {
+    margin-bottom: rem-calc(20);
+    @media #{$medium-up} {
+      padding-right: rem-calc(60);
+    }
+    @media #{$large-up} {
+      margin-bottom: 0;
+    }
+    h2 {
+      font-size: rem-calc(30);
+      line-height: rem-calc(39);
+    }
+  }
+}
+// ----- Four Year Plan Item
+.section--four-year-plan {
+  position: relative;
+  overflow: hidden;
+  .columns {
+    padding: rem-calc(0 15);
+    //display: flex;
+  }
+  .slick-slider .slick-list {
+    overflow: visible;
+  }
+  @media (min-width: rem-calc(641)) {
+    .slick-slide {
+      width: 45vw;
+    }  
+  }
+  @media (max-width: rem-calc(640)) {
+    .slick-slide {
+      width: 85vw;
+    }
+  }
+  @media #{$small-only} {
+    .slick-slide {
+      transition: transform .4s ease, opacity .8s ease;
+      opacity: 0;
+      padding-right: rem-calc(20);
+      padding-left: 0;
+      height: auto;
+    }
+    &.sequence-anim-item--active.slick-active {
+      opacity: 1;
+      & + .slick-slide {
+        opacity: 1;
+      }
+    }
+  }
+}
+.four-year-plan-item {
+  padding: rem-calc(15);
+  background: #fff;
+  border: rem-calc(3) solid $pale-teal;
+  font-size: rem-calc(15);
+  position: relative;
+  z-index: 2;
+  &:before {
+    @media #{$medium-up} {
+      content: "";
+      display: block;
+      width: rem-calc(13);
+      height: rem-calc(68);
+      background: url("../icons/four-year-plan.svg");
+      background-size: 100% auto;
+      margin: 0 auto;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      transform: translateY(calc(-100% - 3px));
+    }
+  }
+  h3, p, span {
+    display: block;
+    &:not(:last-child) {
+      margin-bottom: rem-calc(8);
+    }
+  }
+  .course {
+    font-size: rem-calc(16);
+    font-weight: $benton-medium;
+  }
+}
+.four-year-plan__slider {
+  padding-left: rem-calc(20);
+  padding-bottom: rem-calc(100);
+  @media #{$medium-up} {
+    width: calc(100% + 20vw);
+    transform: translateX(-20vw);
+    padding-top: rem-calc(62.5);
+    padding-left: 0;
+    padding-bottom: 0;
+    display: flex;
+  }
+  @media #{$large-up} {
+    width: calc(100% + 100px);
+    transform: translateX(-90px);
+  }
+}
+.four-year-plan__content__student-info__btn {
+  @media #{$small-only} {
+    position: absolute;
+    bottom: rem-calc(30);
+    z-index: 3;
+  }
+}
+// ----- Program Detail Page
+.section--four-year-plan--program-detail {
+  background: $teal;
+  @extend %section--banded--small;
+  h2 {
+    text-align: center;
+    color: #fff;
+  }
+  .four-year-plan__content__inner {
+    width: 100%;
+  }
+  .four-year-plan__content {
+    @include flex-column(100%);
+  }
+  .four-year-plan__slider {
+    transform: none;
+    width: 100%;
+    @media #{$medium-up} {
+      max-width: 95vw;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media #{$large-up} {
+      max-width: 75vw;
+    }
+  }
+  .four-year-plan .line-decoration {
+    width: 150vw;
+    margin-left: rem-calc(-100);
+    max-width: none;
+  }
+}

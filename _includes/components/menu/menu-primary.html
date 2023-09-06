@@ -1,0 +1,54 @@
+<div class="main-menu-container">
+  <button class="far fa-search accordion-drop-down__toggle accordion-drop-down__toggle--search"><span
+      class="show-for-sr">Click to Toggle Text</span></button>
+  <form class="header-search">
+    <div class="header-search__inner">
+      <label class="show-for-sr" for="search">Search Input</label>
+      <input id="search" name="search" type="search" placeholder="Search Washington College"
+        class="form-control input-md">
+      <label class="show-for-sr" for="submit">Single Button</label>
+      <button id="submit" name="submit" class="search-submit far fa-search"><span class="show-for-sr">Submit
+          Search</span></button>
+    </div>
+  </form>
+  <nav id="main-menu" class="navigation" role="navigation">
+    <ul class="menu">
+      {% for menu_item in site.data.menu_primary %}
+      <li>
+        <a class="{{menu_item.class}}" href="{{ menu_item.path }}">{{ menu_item.title }}</a>
+        {% if menu_item.sub_menu %}
+        <ul class="menu">
+          {% for sub_menu_item in menu_item.sub_menu %}
+          <li>
+            <a class="{{sub_menu_item.class}}" href="{{ sub_menu_item.path }}">
+              {{ sub_menu_item.title }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+  <div class="secondary-menu-container">
+    <div class="utility-menu">
+      <ul>
+        <li><a href="#">People & Departments</a></li>
+        <li><a href="#">News & Stories</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </div>
+    <div class="give-btn-container"><a href="#" class="btn--give btn btn--small btn--yellow">Give</a></div>
+    <div class="info-for">
+      <ul>
+        <li><a href="#">Current Students</a></li>
+        <li><a href="#">Parents & Family</a></li>
+        <li><a href="#">Faculty & Staff</a></li>
+        <li><a href="#">Alumni</a></li>
+        <li><a href="#">Chestertown Community</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+/*
+-----------------
+TEXT CARDS
+-----------------
+*/
+
+.section--text-cards {
+  .columns {
+    display: flex;
+    &:not(:last-child) {
+      @media #{$small-only} {
+        margin-bottom: rem-calc(30);
+      }
+    }
+  }
+}
+.text-card {
+  padding: rem-calc(30);
+  font-size: rem-calc(16);
+  width: 100%;
+  h3 {
+    font-size: rem-calc(21);
+    margin-bottom: rem-calc(15);
+    line-height: rem-calc(31);
+    font-weight: normal;
+  }
+  p:not(:last-child) {
+    margin-bottom: rem-calc(15);
+  }
+  .btn {
+    font-size: rem-calc(15);
+    text-transform: none;
+    letter-spacing: 0;
+    padding: rem-calc(10 30);
+    line-height: 1.3333;
+  }
+}

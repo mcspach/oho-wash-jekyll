@@ -1,0 +1,51 @@
+dependencies:
+  # '//code.jquery.com/jquery-1.10.2.min.js': {} # Drupal 7
+  '//code.jquery.com/jquery-3.2.1.min.js': {} # Drupal 8.5
+  '//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js' : { type: external }
+  # '//code.jquery.com/jquery-1.12.4.min.js': {} # WordPress 4.9
+css:
+  '//fonts.googleapis.com/css?family=Playfair+Display:400,700': { type: external }
+  '//use.typekit.net/mur2fvs.css': { type: external }
+  assets/css/app.css: {}
+js:
+  # Vendor
+  assets/js/vendor/viewport.min.js : {}
+  assets/js/vendor/jquery.mb.YTPlayer.js: {}  
+  assets/js/vendor/enquire.js: {}
+  assets/js/vendor/media.match.min.js: {}
+  assets/js/vendor/modernizr.js: {}
+  assets/js/vendor/slick.min.js: {}
+  assets/js/vendor/footable.min.js : {}
+  assets/js/vendor/jquery.fancybox.min.js : {}
+  '//unpkg.com/imagesloaded@4/imagesloaded.pkgd.js': { type: external }
+  assets/js/vendor/isotope.min.js: {}
+  assets/js/vendor/cookie-consent.min.js: {}
+
+  # Plugins
+  assets/js/plugins/jquery.variable-scroll-to.js : {}
+  
+  # Filtering
+  assets/js/vendor/filter.min.js : {}
+  assets/js/data/movies.js: {}
+  assets/js/data/stories.js: {}
+  assets/js/data/directory.js: {}
+  assets/js/data/programs.js: {}
+  assets/js/custom-filters.js: {}
+
+  
+  # Custom
+  assets/js/animate.js: {}
+  assets/js/responsive-tables.js: {}
+  assets/js/responsive-videos.js: {}
+  assets/js/responsive-tables-init.js: {}
+  assets/js/more-or-less.js: {}
+  assets/js/sidebar-nav.js: {}  
+  assets/js/hero.js: {}
+  assets/js/oho-sticky-header.js: {}
+  assets/js/accordion.js: {}
+  assets/js/discover-opportunities.js: {}
+  assets/js/story-feature.js: {}
+  assets/js/updates-slider.js: {}
+  assets/js/profile-slider.js: {}
+  assets/js/four-year-plan.js: {}
+  assets/js/img-grid.js: {}

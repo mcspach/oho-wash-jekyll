@@ -1,0 +1,28 @@
+<article class="checkerboard section--global-spacing">
+  <div class="checkerboard__media">
+    {% if include.video %}
+      <div class="video-modal-container">
+        <a data-fancybox href="https://www.youtube.com/watch?v=GF60Iuh643I">
+          {% include components/components__micro/responsive-img.html src-default="http://placehold.it/400x314" src-small="http://placehold.it/400x314" src-medium="http://placehold.it/700x550" size-small="400" size-medium="700" %}
+          <div aria-hidden="true"></div>
+        </a>
+      </div>
+    {% else %}
+      {% include components/components__micro/responsive-img.html src-default="http://placehold.it/400x314" src-small="http://placehold.it/400x314" src-medium="http://placehold.it/700x550" size-small="400" size-medium="700" %}
+    {% endif %}
+  </div>
+  <div class="checkerboard__content">
+    <h2>{{include.title}}</h2>
+    <p>{{include.description}}</p>
+    {% if include.linkList %}
+      <div class="link-list">
+        <a href="#" class="arrow-link" ><span class="arrow-link__link">Mollis Mattis Nibh</span><div class="arrow-link__icon" aria-hidden="true"></div></a>
+        <a href="#" class="arrow-link" ><span class="arrow-link__link">Ultricies Nibh</span><div class="arrow-link__icon" aria-hidden="true"></div></a>
+        <a href="#" class="arrow-link" ><span class="arrow-link__link">Ullamcorper</span><div class="arrow-link__icon" aria-hidden="true"></div></a>
+      </div>
+    {% endif %}
+    {% if include.btn %}
+      <a href="#" class="btn btn--white">button</a>
+    {% endif %}
+  </div>
+</article>

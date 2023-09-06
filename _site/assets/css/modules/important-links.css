@@ -1,0 +1,101 @@
+.links--important li,
+.links--important li a {
+  font-size: rem(16);
+  line-height: 1;
+  margin-bottom: 1rem; }
+
+.links--important h3 button {
+  display: block;
+  font-size: rem(16);
+  position: relative;
+  background: none;
+  border: none;
+  font-weight: 700;
+  outline: none;
+  color: #000;
+  padding: 0;
+  text-align: left; }
+
+.links--important p {
+  text-align: center;
+  margin: 0; }
+  .links--important p .btn {
+    margin: 0 auto; }
+
+@media screen and (max-width: 39.99em) {
+  .links--important__container {
+    margin: 0 1rem;
+    width: calc(100% - 2rem); }
+  .links--important__section {
+    margin-bottom: 1.5rem; }
+    .links--important__section h3 {
+      margin-bottom: 0; }
+      .links--important__section h3 button {
+        display: block;
+        background: DarkRed;
+        color: #fff;
+        padding: 1rem 2rem;
+        margin-bottom: 0;
+        position: relative;
+        width: 100%;
+        text-align: left; }
+        .links--important__section h3 button:hover {
+          color: PapayaWhip; }
+        .links--important__section h3 button:before {
+          content: "";
+          display: block;
+          background-color: DarkRed;
+          height: 1px;
+          width: calc(100% - 3rem);
+          position: absolute;
+          bottom: 0;
+          left: 1.5rem; }
+        .links--important__section h3 button:after {
+          content: "\f107";
+          font-family: "FontAwesome";
+          font-weight: normal;
+          font-size: 1.5rem;
+          position: absolute;
+          right: 1.5rem;
+          top: 1rem;
+          transition: all 1s ease; }
+    .links--important__section div {
+      display: none;
+      background: #fff;
+      padding: 1rem 2rem 0.5rem; }
+  .links--important__section.engaged h3 button {
+    background: #fff;
+    color: DarkRed; }
+    .links--important__section.engaged h3 button:before {
+      content: "";
+      display: block;
+      background-color: #000;
+      height: 1px;
+      width: calc(100% - 3rem);
+      position: absolute;
+      bottom: 0.25rem;
+      left: 1.5rem; }
+    .links--important__section.engaged h3 button:after {
+      transform: rotateX(180deg); } }
+
+@media screen and (min-width: 40em) {
+  .links--important__container {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap; }
+  .links--important__section {
+    border-left: 1px solid #000;
+    padding-left: 1rem;
+    margin-right: 2rem;
+    margin-bottom: 3rem;
+    width: 21%;
+    min-width: 11rem; }
+    .links--important__section h3 button {
+      pointer-events: none; }
+    .links--important__section div {
+      display: block !important; }
+  .links--important li:last-child,
+  .links--important li:last-child a {
+    margin-bottom: 0; } }
+
+/*# sourceMappingURL=../../maps/modules/important-links.css.map */

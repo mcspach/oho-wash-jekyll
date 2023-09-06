@@ -1,0 +1,32 @@
+.destaurate-anim {
+  background: url("/assets/img/student.jpg");
+  -webkit-filter: grayscale(100%) blur(5px);
+          filter: grayscale(100%) blur(5px);
+  -webkit-transition: all .8s ease-out;
+          transition: all .8s ease-out;
+  height: 100vh;
+  width: auto;
+  position: relative;
+  display: table;
+  width: 100%; }
+
+.destaurate-anim--active {
+  -webkit-filter: none;
+          filter: none; }
+
+.destaurate-anim__text {
+  display: table-cell;
+  vertical-align: middle;
+  max-width: 40px; }
+
+.destaurate-anim__text__box {
+  max-width: 500px;
+  float: right; }
+  .destaurate-anim__text__box h2 {
+    font-size: 55px;
+    margin-bottom: 5px; }
+  .destaurate-anim__text__box span {
+    font-size: 20px; }
+
+
+/*# sourceMappingURL=../../maps/components/desaturate-anim.css.map */

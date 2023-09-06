@@ -1,0 +1,138 @@
+// --------------------------------------------------
+// APP
+// --------------------------------------------------
+// This is our main SCSS file that imports everything
+// that gets compiled into app.css
+
+// Import order:
+// 1.  Encoding
+// 2.  Variables
+// 3.  Foundation
+// 4.  Helpers
+// 5.  Base
+// 6.  Components
+// 7.  Layout
+// 8.  Vendor
+
+//
+// Encoding
+// --------------------------------------------------
+@charset "UTF-8";
+
+//
+// Variables
+// --------------------------------------------------
+// Import our global variables first so we can use
+// them in Foundations's variables file
+
+//
+// Foundation
+// --------------------------------------------------
+// Source: http://foundation.zurb.com/docs/
+// Notes:
+// 1. Foundation's component styles are set
+//    in vendor/foundation/_settings.
+// 2. Modify the _settings file before overriding
+//    the component styles on your own.
+
+// Import all of Foundation
+@import "vendor/foundation_include";
+
+// Global Config Variables
+@import "variables/config";
+
+
+//
+// Helpers
+// --------------------------------------------------
+
+// Mixins
+@import "helpers/mixins";
+
+
+//
+// Vendor
+// --------------------------------------------------
+@import "vendor/slick";
+$fa-font-path: "../fonts/vendor/font-awesome";
+@import "vendor/fontawesome-pro-5.4.1-web/scss/fontawesome";
+@import "vendor/fontawesome-pro-5.4.1-web/scss/variables";
+@import "vendor/fontawesome-pro-5.4.1-web/scss/core";
+@import "vendor/fontawesome-pro-5.4.1-web/scss/solid";
+@import "vendor/fontawesome-pro-5.4.1-web/scss/light";
+@import "vendor/fontawesome-pro-5.4.1-web/scss/regular";
+@import "vendor/fontawesome-pro-5.4.1-web/scss/brands";
+@import "vendor/jquery.mb.YTPlayer";
+@import "vendor/footable.standalone";
+@import "vendor/fancybox.min";
+@import "vendor/cookie-consent";
+
+
+//
+// Base
+// --------------------------------------------------
+
+@import "base/type";
+@import "base/grid-extras";
+@import "base/breadcrumbs";
+@import "base/global-elements";
+@import "base/tables";
+@import "base/forms";
+@import "base/section-blocks";
+@import "base/alert";
+
+//
+// Layouts
+// --------------------------------------------------
+@import "layout/header";
+@import "layout/footer";
+
+
+//
+// CMS Styles
+// --------------------------------------------------
+
+// Native Styles
+// These should all be removed when the transition is made to target CMS.
+// These are used to simulate specific CMS components in the Flat HTML environment.
+
+// @import "cms-styles/native/d7/d7";
+@import "cms-styles/native/d8/d8";
+
+// Custom Styles
+@import "cms-styles/custom/d8/drupal-admin";
+
+//
+// Components
+// --------------------------------------------------
+@import "components/animate";
+@import "components/hero";
+@import "components/accordion-dropdown.scss";
+@import "components/more-or-less.scss";
+@import "components/differentiators.scss";
+@import "components/ctas.scss";
+@import "components/discover-opportunities.scss";
+@import "components/story.scss";
+@import "components/events.scss";
+@import "components/news.scss";
+@import "components/explore.scss";
+@import "components/filter.scss";
+@import "components/pagination.scss";
+@import "components/profiles.scss";
+@import "components/programs.scss";
+@import "components/section-navigation.scss";
+@import "components/checkerboard.scss";
+@import "components/secondary-promos.scss";
+@import "components/cards.scss";
+@import "components/concentrations.scss";
+@import "components/four-year-plan.scss";
+@import "components/img-grid.scss";
+@import "components/listing-items.scss";
+@import "components/cookie-compliance.scss";
+@import "components/newsfeed.scss";
+
+
+//
+// Print
+// --------------------------------------------------
+@import "base/print";

@@ -1,0 +1,45 @@
+/*
+---------------------
+DRUPAL SEARCH PAGE
+---------------------
+*/
+.page--search .main-content {
+  @include padded-row();
+  h2 {
+    margin-bottom: rem-calc(20);
+  }
+  .search-form {
+    max-width: rem-calc(960);
+    width: 100%;
+    .form-item {
+      display: inline-block;
+    }
+    button,
+    #edit-submit {
+      @extend %btn;
+      display: inline-block;
+      width: auto;
+    }
+    input[type="text"] {
+      font-size: rem-calc(16);
+      width: 100%;
+    }
+    label {
+      display: block;
+    }
+  }
+  .search-help-link {
+    @extend %link-arrow;
+    margin-bottom: rem-calc(20);
+    display: inline-block;
+  }
+  ol {
+    list-style-type: none;
+    padding-left: 0;
+    li:not(:last-child) {
+      margin-bottom: rem-calc(40);
+      padding-bottom: rem-calc(40);
+      border-bottom: rem-calc(1) solid #ccc;
+    }
+  }
+}

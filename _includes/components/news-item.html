@@ -1,0 +1,14 @@
+<article class="news-item">
+  <div class="news-item__media">
+    {% if include.src-small %}
+      <a href="#"><img src="http://placehold.it/360x240" alt="#" width="360" height="240"></a>
+    {% else %}
+      <a href="#"><img src="http://placehold.it/560x375" alt="#" width="560" height="375"></a>
+    {% endif %}
+  </div>
+  <div class="news-item__content">
+    <h3><a {% if include.externalLink %}href="#"{% else %}href="http://washcoll.edu"{% endif %}>{{include.title}}</a></h3>
+    <span class="eyebrow">{{include.date}}</span>
+    <p>{{include.description}}</p>
+  </div>
+</article>

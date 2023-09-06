@@ -1,0 +1,29 @@
+<article class="hero {{include.class_modifier}} {% if include.video_src %}hero--video{% endif %} {% if include.iframe_src %}hero--iframe{% endif %} {% if include.src %}hero--img{% else %}hero--no-img{% endif %}">
+  {% if include.video_src or include.iframe_src or include.src %}
+    <div class="hero__media">
+      {% if include.video_src %}
+        <div class="video-feature">
+          <video id="hero" loop muted poster="{{inlude.src}}">
+            <source src="{{include.video_src}}">
+          </video>
+        </div>
+      {% endif %}
+      {% if include.iframe_src %}
+        <div class="video-feature">
+          <iframe width="560" height="315" src="{{include.iframe_src}}" frameborder="0" allow="autoplay; encrypted-media; loop" allowfullscreen></iframe>
+        </div>
+      {% endif %}
+      {% if include.parallax_iframe_src %}
+        <div class="video-feature">
+          <div id="bgndVideo" class="player" data-property="{videoURL:'{{include.parallax_iframe_src}}',containment:'body',autoPlay:true, showControls:false, mute:true, startAt:0, opacity:1, loop:true, anchor:'center,center', useOnMobile:false, mobileFallbackImage:'/assets/img/hero-img-common.jpg, optimizeDisplay:true'}">My video</div>
+        </div>
+      {% endif %}
+      {% if include.src %}
+        <img srcset="http://placehold.it/2400x1500 2400w, {{include.src}} 1600w," src="http://placehold.it/768x480" alt="smallest hero image">
+      {% endif %}
+    </div>
+  {% endif %}
+  {% if include.overlay %}
+    <div class="hero__overlay" aria-hidden="true"></div>
+  {% endif %}
+</article>

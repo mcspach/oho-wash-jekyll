@@ -1,0 +1,49 @@
+<section class="section--news section--banded section--global-spacing">
+  <span aria-hidden="true" class="vertical-title vertical-title--top-left">News</span>
+  {% include components/components__micro/section-title.html title="News @ Washington College" %}
+  <div class="padded-row featured-news-item--large section--global-spacing">
+    {% include components/news-item.html title="Ullamcorper Parturient Porta Egestas Mollis Elit Cursus" date="March 29 2019" description="Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue. Morbi leo risus, porta ac consectetur ac, vestibulum at eros." %}
+  </div>
+  {% if include.small-news %}
+    <div class="row featured-news-item--small--horizontal section--global-spacing">
+      <div class="small-12 large-6 columns">
+      {% include components/news-item.html src-small="true" title="Egestas Etiam Commodos" date="October 31 2019" description="Mattis Ligula Malesuada Vehicula." %}
+      </div>      
+      <div class="small-12 large-6 columns">
+      {% include components/news-item.html src-small="true" title="Ullamcorper Parturient Porta Egestas Mollis Elit Cursus" date="March 29 2019" description="Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue. Morbi leo risus, porta ac consectetur ac, vestibulum at eros." %}
+      </div>      
+    </div>
+  {% endif %}
+  <div class="padded-row {% if include.updates %}section--global-spacing{% endif %}">
+    <div class="lined-divider">
+      <a href="#" class="arrow-link" tabindex="0"><span class="arrow-link__link">View All News</span><div class="arrow-link__icon" aria-hidden="true"></div></a>
+    </div>
+  </div>
+  {% if include.updates %}
+    <span aria-hidden="true" class="vertical-title vertical-title--bottom-right">Updates</span>
+    {% include components/components__micro/section-title.html title="Updates" %}
+    <div class="row updates-slider sequence-anim-parent" data-delay="150">
+      <div class="small-12 medium-4 columns sequence-anim-item fade-up-in">
+        {% include components/update-item.html date="May 22 2019" description="Donec ullamcorper nulla non metus auctor fringilla. Curabitur blandit tempus porttitor. Maecenas sed diam eget risus varius blandit sit amet non magna." %}
+      </div>
+      <div class="small-12 medium-4 columns sequence-anim-item fade-up-in">
+        {% include components/update-item.html date="April 1 2019" description="Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus." %}
+      </div>
+      <div class="small-12 medium-4 columns sequence-anim-item fade-up-in">
+        {% include components/update-item.html date="March 31 2019" description="Ipsum Fermentum Ornare Commodo" %}
+      </div>
+      {% if include.updates-slider %}
+        <div class="small-12 medium-4 columns sequence-anim-item fade-up-in">
+          {% include components/update-item.html date="February 22 2019" description="Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis." %}
+        </div>
+        <div class="small-12 medium-4 columns sequence-anim-item fade-up-in">
+          {% include components/update-item.html date="January 1 2019" description="Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam id dolor id nibh ultricies vehicula ut id elit." %}
+        </div>
+        <div class="small-12 medium-4 columns sequence-anim-item fade-up-in">
+          {% include components/update-item.html date="October 31 2018" description="Mattis Ligula Malesuada Vehicula." %}
+        </div>
+      {% endif %}
+    </div>
+    <div class="updates-slider-arrows"></div>
+  {% endif %}
+</section>

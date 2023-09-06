@@ -1,0 +1,77 @@
+<article class="story {{include.modifier}}">
+  <div class="story__media">
+    {% include components/components__micro/responsive-img.html src-default="/assets/img/story.jpg"
+    src-small="https://source.unsplash.com/random/620X420/?person"
+    src-medium="https://source.unsplash.com/random/260X650/?person"
+    size-medium="1024" %}
+  </div>
+  <div class="story__content-wrapper">
+    <div class="story__content">
+      <a href="#" class="arrow-link"><span class="arrow-link__link">View All Stories</span>
+        <div class="arrow-link__chevron" aria-hidden="true"></div>
+      </a>
+      <div class="story__content__inner">
+        <div class="story__content__upper">
+          <h2 class="h3">{{include.name}}</h2>
+          <span>Class of 2019 • Norfolk, Virginia</span>
+        </div>
+        <div class="story__content__lower">
+          <div class="story__info-item">
+            <div class="story__info-item__media">
+              <img src="/assets/icons/major-minor.svg" width="60" height="60" alt="book icon">
+            </div>
+            <div class="story__info-item__content">
+              <h3 class="eyebrow">Majors and Minors</h3>
+              <ul>
+                <li>Environmental Studies Major
+                  Creative Writing and Anthropology Minors</li>
+              </ul>
+            </div>
+          </div>
+          <div class="story__info-item">
+            <div class="story__info-item__media">
+              <img src="/assets/icons/learn-by-doing.svg" width="60" height="60"
+                alt="icon depicting head, gears, and a pencil">
+            </div>
+            <div class="story__info-item__content">
+              <h3 class="eyebrow">Learn by Doing</h3>
+              <ul>
+                <li>Chesapeake Semester, Cater Society of Junior Fellows Permaculture and Sustainability Internship</li>
+              </ul>
+            </div>
+          </div>
+          {% if include.activities %}
+          <div class="story__info-item">
+            <div class="story__info-item__media">
+              <img src="/assets/icons/activities.svg" width="60" height="60" alt="icon depicting sports and music">
+            </div>
+            <div class="story__info-item__content">
+              <h3 class="eyebrow">Extracurricular Activities</h3>
+              <ul>
+                <li>Carter Society for Junior Fellows </li>
+                <li>Captain of Varsity Soccer</li>
+              </ul>
+            </div>
+          </div>
+          {% endif %}
+          {% if include.learn %}
+          <div class="story__info-item">
+            <div class="story__info-item__media">
+              <img src="/assets/icons/learn-by-doing.svg" width="60" height="60"
+                alt="icon depicting head, gears, and a pencil">
+            </div>
+            <div class="story__info-item__content">
+              <h2 class="eyebrow">Support From Donor Program</h2>
+              <ul>
+                <li><a href="#">Consectetur Magna Ipsum</a></li>
+                <li><a href="#">Fermentum Sem Dapibus</a></li>
+              </ul>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+        <a class="btn btn--red" href="#">Read Marcus' Story</a>
+      </div>
+    </div>
+  </div>
+</article>

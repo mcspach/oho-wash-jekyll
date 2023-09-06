@@ -1,0 +1,47 @@
+/*
+-------------
+CTAS SECTION
+-------------
+*/
+.section--ctas {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  padding-left: rem-calc(20);
+  padding-right: rem-calc(20);
+  h2 {
+    color: #fff;
+    @include margins-bottom(35,35,50);
+  }
+  .btn {
+    max-width: rem-calc(360);
+    @media (min-width: rem-calc(641)) {
+      max-width: 31%;
+    }
+    &:not(:last-child) {
+      @media (min-width: rem-calc(641)) {
+        margin-right: rem-calc(20);
+      }
+    }
+  }
+}
+.section--cta--small {
+  padding: rem-calc(30 0);
+  border-top: rem-calc(2) solid $light-teal;
+  border-bottom: rem-calc(2) solid $light-teal;
+  h2 {
+    font-family: $sans-serif;
+    font-weight: $benton-bold;
+    font-size: rem-calc(20);
+    margin-bottom: rem-calc(5);
+    line-height: rem-calc(34);
+  }
+  p {
+    font-weight: $benton-medium;
+    font-size: rem-calc(16);
+    margin-bottom: rem-calc(27);
+  }
+  .btn {
+    letter-spacing: 0;
+  }
+}

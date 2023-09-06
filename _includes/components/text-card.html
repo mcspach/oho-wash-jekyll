@@ -1,0 +1,9 @@
+<article class="text-card">
+  <h3>{{include.title}}</h3>
+  {% if include.description %}
+    <p>{{include.description}}</p>
+  {% endif %}
+  {% if include.btn %}
+    <a href="#" class="btn">Button that has longer text in it so it’s longer</a>
+  {% endif %}
+</article>

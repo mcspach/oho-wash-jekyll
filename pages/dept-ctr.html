@@ -1,0 +1,57 @@
+---
+layout: default
+title: Starr Center for the Study of the American Experience
+breadcrumbs:
+  - Landing L1 Page
+content_type: center
+---
+  {% include components/hero.html src="../assets/img/hero-img-common.jpg" class_modifier="hero--parallax hero--secondary" overlay="true" %}
+<div class="parallax-mask clearfix">
+  <section class="section--page-starter">
+    <div class="page-starter">
+      <div class="page-starter__inner">
+        {% if page.breadcrumbs %}
+          {% include components/breadcrumbs.html classes="breadcrumbs" %}
+        {% endif %}
+        <h1>{{page.title}}</h1>
+        <p class="intro-text">Intro Text Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+      </div>
+    </div>
+  </section>
+  <section class="section--global-spacing section--navigation section--navigation--center">
+    <div class="row">
+        <div class="small-12 columns">
+          <nav>
+            <h2 class="eyebrow">Keep Exploring</h2>
+            <ul>
+                <li><a href="#">Dolor Sit Nibh</a></li>
+                <li><a href="#">Ligula Sit</a></li>
+                <li><a href="#">Vulputate Elit Porta Tortor</a></li>
+                <li><a href="#">Purus Quam</a></li>
+                <li><a href="#">Sit Vehicula</a></li>
+                <li><a href="#">Ornare Adipiscing Condimentum</a></li>
+            </ul>
+          </nav>
+        </div>      
+    </div>
+  </section>
+  <section class="section--global-spacing section--dept-ctr-info">
+    <div class="row">
+      <div class="small-12 medium-8 columns">
+        <h2>About Starr Center for the Study of the American Experience</h2>
+        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec id elit non mi porta gravida at eget metus. Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctor fringilla.</p>
+      </div>
+      <div class="small-12 medium-4 columns">
+          {% include components/contact-block.html src="true" name="Purus Porta" position="Position or Title" %}
+      </div>
+    </div>
+  </section>
+  {% include components/modules/checkerboard.html %}
+  {% include components/modules/text-cards.html %}
+  {% include components/modules/featured-stories.html %}	
+  {% include components/modules/secondary-promos.html %}
+  {% include components/modules/faculty-spotlight.html %}
+  {% include components/modules/profile-feature.html %}
+  {% include components/modules/featured-events.html %}
+  {% include components/modules/featured-news.html updates="true" updates-slider="true" %}
+</div>

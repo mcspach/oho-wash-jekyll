@@ -1,0 +1,208 @@
+/*
+---------------
+SECTION BLOCKS
+---------------
+*/
+
+// ------ BANDED SECTIONS
+%section--banded--small,
+.section--banded--small {
+  @include paddings-top(30, 50, 50);
+  @include paddings-bottom(30, 50, 50);
+  background: $deep-red;
+}
+
+%section--banded,
+.section--banded {
+  @include paddings-top(40, 60, 100);
+  @include paddings-bottom(40, 60, 100);
+  background: $deep-red;
+}
+
+%section--banded--large,
+.section--banded--large {
+  @include paddings-top(60, 80, 120);
+  @include paddings-bottom(60, 80, 120);
+  background: $deep-red;
+}
+
+.section--banded--dark-blue {
+  background: $dark-blue;
+}
+
+// ------ GLOBAL SPACING
+%section--global-spacing--small,
+.section--global-spacing--small {
+  @include margins-bottom(30, 40, 40);
+}
+
+%section--global-spacing,
+.section--global-spacing {
+  @include paddings-bottom(30, 60, 60);
+}
+
+%section--global-spacing--large,
+.section--global-spacing--large {
+  @include margins-bottom(40, 60, 100);
+}
+
+.section--banded.section--global-spacing:last-child,
+.section--four-year-plan:last-child {
+  margin-bottom: 0;
+}
+
+// ----------- GLOBAL ADJECENT SECTIONS
+.section--banded+.section--banded.section--global-spacing,
+.section--banded+.section--news,
+.section--navigation+.section--banded,
+.section--navigation+.section--news,
+.section--banded+.section--four-year-plan,
+.section--banded--large+.section--four-year-plan,
+.section--banded--large+.section--banded,
+{
+@include margins-top(-40, -60, -60);
+}
+
+.section--global-spacing:not(.section--hero-ctas)+.section--differentiators {
+  @media #{$small-only} {
+    margin-top: rem-calc(-30);
+  }
+}
+
+// ---------- STORY FEATURE ADJACENT BLOCK TYPES
+.section--story-feature {
+  z-index: 4;
+}
+
+.section--story-feature+.section--events {
+  @include margins-top(40, 60, 100);
+}
+
+.section--story-feature+.section--banded {
+  @include paddings-top(30, 60, 100);
+  @include margins-top(-40, -60, -140);
+}
+
+.section--story-feature+.section--banded--large {
+  @include margins-top(-40, -60, -140);
+}
+
+.section--story-feature+.section--global-spacing:not(.section--banded):not(.section--banded--large) {
+  @include margins-top(0, 60, 60);
+}
+
+// This class is added via JS
+.section--preceeds-story-feature.section--banded {
+  margin-bottom: 0;
+
+  @media #{$xlarge-up} {
+    padding-bottom: rem-calc(120);
+  }
+
+  &+.section--story-feature {
+    @media #{$xlarge-up} {
+      margin-top: rem-calc(-40);
+    }
+  }
+}
+
+.section--preceeds-story-feature.section--banded--large {
+  margin-bottom: 0;
+
+  @media #{$xlarge-up} {
+    padding-bottom: rem-calc(160);
+  }
+
+  &+.section--story-feature {
+    @media #{$xlarge-up} {
+      margin-top: rem-calc(-40);
+    }
+  }
+}
+
+// -------
+
+.section--main-title {
+  @include margins-top(30, 60, 60);
+
+  h1 {
+    margin-bottom: 0;
+  }
+}
+
+.detail-page {
+  @include margins-top(20, 30, 30);
+}
+
+.section__btn-row {
+  @include margins-top(20, 40, 40);
+}
+
+.section--page-starter {
+  @include margins-bottom(0, 20, 20);
+}
+
+.section--dept-ctr-info .medium-8 {
+  @media #{$small-only} {
+    margin-bottom: rem-calc(20);
+  }
+}
+
+.section--navigation {
+  @media #{$medium-only} {
+    padding: rem-calc(0 10);
+  }
+}
+
+.section--wysiwyg:not(.columns) {
+  @media #{$medium-up} {
+    padding: rem-calc(0 30);
+  }
+}
+
+.news-detail .section--wysiwyg:not(.columns),
+.event-detail .section--wysiwyg:not(.columns) {
+  @media #{$medium-up} {
+    padding: 0;
+  }
+}
+
+// ----------- ALL SPECIFIC PADDING ADJUSTMENTS
+.section--differentiators--standard {
+  @media #{$small-only} {
+    padding-left: rem-calc(10);
+    padding-right: rem-calc(10);
+  }
+
+  @media #{$medium-up} {
+    padding-left: rem-calc(20);
+    padding-right: rem-calc(20);
+  }
+}
+
+.section--events,
+.section--news,
+.section--program-detail-info,
+.section--concentrations>.padded-row,
+.section--text-cards,
+.section--secondary-promos,
+.section--faculty-spotlight,
+.section--profiles,
+.section--related-programs,
+.news-detail,
+.story-listing,
+.story-detail__upper,
+.directory-listing,
+.profile-detail,
+.section--featured-in,
+.program-listing,
+.event-listing,
+.section--dept-ctr-info,
+.section--navigation--center,
+.lined-section-title--outer,
+.section--navigation {
+  @media #{$medium-up} {
+    padding-left: rem-calc(10);
+    padding-right: rem-calc(10);
+  }
+}

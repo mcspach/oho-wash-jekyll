@@ -1,0 +1,47 @@
+/* Padded Rows are for rows that will not contain columns.
+ * These instances are usually where normal columns are more
+ * a hindrance than a help such as complex areas such as the header.
+ */
+
+@mixin padded-row($gutter: $grid-column-gutter) {
+  @include grid-row()
+
+  // Gutters - Sourced from Foundation's "grid/_column.scss"
+  @if type-of($gutter) == 'map' {
+    @each $breakpoint, $value in $gutter {
+      $padding: rem-calc($value) / 2;
+
+      @include breakpoint($breakpoint) {
+        padding-left: $padding;
+        padding-right: $padding;
+      }
+    }
+  }
+}
+
+.padded-row {
+  @include padded-row();
+}
+
+// we need to use grid classes on ULs sometimes but in Drupal we can't easily class LIs
+ul.row {
+  padding: 0;
+  li {
+    @extend .columns;
+    list-style: none;
+  }
+}
+.grid-max-760 {
+  max-width: rem-calc(760);
+  &.padded-row {
+    max-width: rem-calc(800);
+  }
+}
+.grid-max-960 {
+  max-width: rem-calc(760);
+}
+
+.no-hero .main-content {
+  position: relative;
+  z-index: 4;
+}

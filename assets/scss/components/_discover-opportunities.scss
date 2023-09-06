@@ -1,0 +1,228 @@
+/*
+------------------------
+DISCOVER OPPORTUNITIES
+------------------------
+*/
+.discover-opportunities {
+  position: relative;
+  z-index: 3;
+  @include paddings-bottom(40,40,80);
+  padding-left: rem-calc(20);    
+  padding-right: rem-calc(20);    
+  // aid in extending the gradient background
+  @media #{$small-only} {
+    background: #242424;
+  }
+  @media #{$medium-up} {
+    padding-left: rem-calc(40);    
+    padding-right: rem-calc(40);    
+  }
+  &__inner {
+    max-width: rem-calc(1160);
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    text-align: left;
+    @media #{$medium-up} {
+      border: rem-calc(1) solid rgba(255,255,255,.3);
+      border-top: none;
+      text-align: center;
+    }
+  }
+  h3  {
+    font-family: $sans-serif;
+    @include font-sizes(13,16,16);
+    letter-spacing: rem-calc(2);
+    text-transform: uppercase;
+    width: 100%;
+    color: #fff;
+    line-height: 1;
+    font-weight: $benton-bold;
+    text-align: center;
+    @media #{$small-only} {
+      margin-bottom: rem-calc(30);
+    }
+    @media #{$medium-up} {
+      transform: translateY(-50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &:before,
+    &:after {
+      height: rem-calc(1);
+      background: rgba(255,255,255,.3);
+      display: block;
+      @media #{$medium-up} {
+        content: "";
+        flex: 1;
+      }
+    }
+    &:before {
+      @media #{$small-only} {
+        content: "";
+        max-width: rem-calc(180);
+        width: 100%;
+        margin-bottom: rem-calc(15);
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+  // the break is needed for desktop only.
+  br {
+    @media #{$small-only} {
+      display: none;
+      & + p {
+        padding-left: rem-calc(3);
+      }
+    }
+  }
+  &__heading-inner {
+    @media #{$medium-up} {
+      padding: rem-calc(0 20);
+    }
+  }
+  .accordion-container,
+  p {
+    display: inline-block;
+  }
+  .accordion-container {
+    width: 100%;
+    position: relative;
+    @media #{$medium-up} {
+      max-width: rem-calc(300);      
+    }
+    @media (min-width: rem-calc(1160)) {
+      max-width: rem-calc(500);
+    }
+  }
+}
+#discover-opportunities-container {
+  display: block;
+  @media #{$medium-up} {
+    padding: rem-calc(0 40 40);    
+    line-height: 2.8; // This allows text and accordions to behave like wrapping text
+  }
+  @media #{$large-up} {
+    padding: rem-calc(15 40 80);    
+  }
+  > p {
+    @include font-sizes(20,20,28);
+    color: #fff;
+    font-family: $serif;
+    display: inline;
+    @media #{$medium-up} {
+      padding: rem-calc(0 15);
+      display: inline-block;
+    }
+    @media #{$small-only} {
+      margin-bottom: rem-calc(15);
+    }
+  }
+  a {
+    line-height: 1.4;
+    &:not(:first-child) {
+      margin-top: rem-calc(10);
+    }
+  }
+}
+.btn--random {
+  font-weight: bold;
+  text-transform: none;
+  font-size: rem-calc(16);
+  margin: auto;
+  max-width: rem-calc(193);
+  height: rem-calc(50);
+  padding-left: rem-calc(30);
+  padding-right: rem-calc(30);
+  display: block;
+  letter-spacing: 0;
+  display: flex;
+  align-items: center;
+  @media #{$small-only} {
+    margin-top: rem-calc(15);
+  }
+  @media #{$medium-up} {
+    height: rem-calc(60);
+    transform: rotate(90deg) translateY(-223px);
+    position: absolute;
+    top: rem-calc(68);
+    transform-origin: left top;
+    right: 0;
+  }
+  div {
+    color: $yellow;
+    font-size: rem-calc(20);
+    margin-right: rem-calc(10);
+    transition: transform 3s ease;
+  }
+  &:hover,
+  &:focus {
+    background: $teal;
+    border-color: $teal;
+    div {
+      transform: rotate(800deg);
+    }
+  }
+}
+// ---- MODAL
+.discover-opportunities__modal {
+  background: #fff;
+  text-align: left;
+  color: #000;
+  position: relative;
+  @include margins-top(20,20,80);
+  display: none;
+  h4 {
+    @extend %h3;
+    margin-bottom: rem-calc(15);
+  }
+  p:not(:last-child),
+  ul {
+    line-height: 1.68;
+    margin-bottom: rem-calc(20);
+  }
+  p + ul {
+    margin-top: rem-calc(-15);
+  }
+  @media #{$large-up} {
+    padding: rem-calc(40 20);    
+  }
+  .columns {
+    @media #{$small-only} {
+      padding: 0;
+    }
+  }
+  &__close {
+    @include unset-button;
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    background-image: url("../icons/discover-close.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: .6s ease transform;
+    width: rem-calc(68);
+    height: rem-calc(68);
+    @media #{$medium-up} {
+      width: rem-calc(88);
+      height: rem-calc(88);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: translate(-2px, -2px);
+    }
+    &:hover,
+    &:focus {
+      transform: translate(-2px, -2px) scale(1.05);
+    }
+  }
+  &__content {
+    @media #{$small-only} {
+      padding: rem-calc(15);
+    }
+  }
+}

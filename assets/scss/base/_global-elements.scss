@@ -1,0 +1,393 @@
+/*
+-------------------
+GLOBAL ELEMENTS
+-------------------
+*/
+
+// border box
+* {
+  box-sizing: border-box;
+}
+
+html {
+  // iOS does some auto adjusting of text that causes lots of issues
+  text-size-adjust: 100%;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+}
+
+.page {
+  overflow: hidden;
+}
+
+//img
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+figure {
+  display: table;
+  margin: rem-calc(0 0 40 0);
+}
+
+figcaption {
+  margin-top: 5px;
+  font-size: rem-calc(15);
+  color: $accent-gray;
+  display: table-caption;
+  caption-side: bottom;
+}
+
+table[align="left"] {
+  float: none;
+
+  @media (min-width: 768px) {
+    margin-right: 35px;
+    float: left;
+  }
+}
+
+table[align="right"] {
+  float: none;
+
+  @media (min-width: 768px) {
+    margin-left: 35px;
+    float: right;
+  }
+}
+
+.obj-right,
+.align-right,
+.obj-left,
+.align-left,
+.obj-center,
+.align-center {
+  img {
+    display: block;
+  }
+}
+
+.obj-right,
+.align-right {
+  @include obj-right;
+}
+
+.obj-left,
+.align-left {
+  @include obj-left;
+}
+
+.obj-center,
+.align-center {
+  @include obj-center;
+
+  figcaption {
+    margin-top: rem-calc(15);
+  }
+}
+
+code {
+  border: solid 1px #999;
+  background-color: #F1F1F1;
+  display: block;
+  padding: rem-calc(3 5);
+}
+
+// STYLES FOR BASE KEY
+.base-key {
+  border: solid 1px #fe5000;
+  background-color: #f1f1f1;
+  padding: 0.25rem 0.5rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  font-family: $sans-serif;
+  @include clearfix;
+
+  dt {
+    font-weight: 700;
+    float: left;
+    width: 5rem;
+    clear: left;
+  }
+
+  dt,
+  dd {
+    margin-bottom: 0.25rem;
+  }
+
+  dd {
+    font-family: monospace;
+  }
+}
+
+.skip-link a {
+
+  &:focus {
+    position: absolute !important;
+    z-index: 999;
+    overflow: visible;
+    clip: unset;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    color: $white;
+    background: $black;
+    font-family: $sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+  }
+}
+
+.maintenance-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  &>.main-content {
+    padding-top: rem-calc(40);
+    margin-bottom: rem-calc(100);
+  }
+
+  &>footer {
+    align-self: flex-end;
+    flex: 1 1 auto;
+    width: 100%;
+    padding-top: rem-calc(20);
+  }
+}
+
+.fa-list-item {
+  font-family: $sans-serif;
+  width: 100%;
+  display: block;
+  position: relative;
+  padding-left: rem-calc(20);
+
+  &:before,
+  &:after {
+    font-family: $fontAwesomeFamily;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: $yellow;
+  }
+
+  >span {
+    width: 100%;
+    display: block;
+  }
+}
+
+.social-media-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: inline-block;
+    margin-bottom: rem-calc(10);
+
+    &:not(:last-child) {
+      margin-right: rem-calc(20);
+    }
+  }
+
+  a {
+    font-size: rem-calc(20);
+  }
+}
+
+.clearfix {
+  @include clearfix();
+}
+
+.lined-section-title {
+  @extend %section--global-spacing--small;
+
+  h2:last-child {
+    margin: 0;
+  }
+
+  .line-decoration {
+    @include line-decoration(100%, rem-calc(80), rem-calc(2), rgba(0, 0, 0, 0), $light-teal, top, rem-calc(10));
+  }
+}
+
+.vertical-title {
+  position: absolute;
+  transform: rotate(-90deg);
+  opacity: .16;
+  @include font-sizes(0, 128, 128);
+  font-family: $serif;
+  font-weight: bold;
+
+  &--top-left {
+    top: rem-calc(-40);
+    left: 0;
+    transform-origin: bottom;
+  }
+
+  &--bottom-right {
+    bottom: rem-calc(38);
+    right: rem-calc(-44);
+    transform-origin: top;
+  }
+}
+
+.section--preceeds-story-feature .vertical-title--bottom-right {
+  bottom: rem-calc(78);
+}
+
+.tags {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    padding: rem-calc(4 20);
+    text-transform: uppercase;
+    font-weight: $benton-medium;
+    font-size: rem-calc(11);
+    letter-spacing: rem-calc(1);
+    background: $pale-teal;
+    display: inline-block;
+    border-radius: rem-calc(100);
+
+    &:not(:last-child) {
+      margin-right: rem-calc(10);
+    }
+  }
+}
+
+// VIDEO
+.iframe-video-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  margin: 0 auto;
+  margin-bottom: rem-calc(40);
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+.anim-item .slider-row {
+  position: relative;
+  transform: translateX(-100%);
+  transition: transform 1.8s ease, opacity 2.5s ease;
+  opacity: 0;
+}
+
+.anim-item--active .slider-row {
+  transform: none;
+  opacity: 1;
+}
+
+.card-slider-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .slick-arrow {
+    @include unset-button();
+    display: flex;
+    background: url("../icons/angle-right.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    width: rem-calc(40);
+    height: rem-calc(40);
+    background-size: rem-calc(12);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 0;
+  }
+
+  .slick-prev {
+    display: none !important;
+  }
+}
+
+.card-slider {
+  .slick-slide {
+    transition: opacity .6s ease;
+    padding-right: rem-calc(20);
+    position: relative;
+  }
+
+  .slick-slide {
+    opacity: 0;
+  }
+
+  .slick-active,
+  .slick-active+.slick-slide {
+    opacity: 1;
+  }
+
+  .slick-active+.slick-slide:not(.slick-active) {
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -30px;
+      bottom: 0;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, #FFFFFF 66%);
+      width: 100%;
+      height: calc(100% + 50px);
+      z-index: 3;
+    }
+  }
+}
+
+.video-modal-container {
+  position: relative;
+
+  img {
+    width: 100%;
+    max-width: none;
+  }
+
+  div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    margin: auto;
+    color: $teal;
+    width: rem-calc(54);
+    height: rem-calc(54);
+    background: url("../icons/play.svg");
+    background-size: contain;
+  }
+}
+
+// global spacing
+.global-spacing {
+  &--default {
+    @include margins-top(20, 30, 50);
+  }
+}
+
+.bg-red {
+  background-color: $deep-red;
+}

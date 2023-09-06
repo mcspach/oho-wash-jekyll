@@ -1,0 +1,29 @@
+---
+layout: default
+title: Homepage Updates Slider
+---
+<span class="show-for-sr"><h1>{{page.title}}</h1></span>
+{% include components/hero--home.html class_modifier="hero--home hero--parallax" video_src="https://player.vimeo.com/external/203721820.hd.mp4?s=ca428c7f77800bf2a9a1a2e01d6e0dfd1de9530d&profile_id=174" src="http://placehold.it/1920x1080" overlay="true" %}
+
+<div class="parallax-mask parallax-mask--home clearfix">
+  {% include components/modules/featured-stories.html classModifier="section--story-feature--home" %}	
+  <section class="section--explore section--banded section--global-spacing">
+    <span aria-hidden="true" class="vertical-title vertical-title--top-left">Explore</span>
+    <div class="padded-row section--global-spacing--small explore-title-lockup">
+      <h2><span class="eyebrow">Explore</span> <span>Washington College's Centers</span></h2>
+      <p>Each center is linked to a broad intellectual community and provides programming, events, internships, and coursework that complement the College’s diverse academic departments and programs.</p>
+    </div>
+    <div class="explore-grid-container">
+      <button href="#" class="accordion-drop-down__toggle arrow-link arrow-link--button" tabindex="0"><span class="arrow-link__link">Center for Environment and Safety</span><div class="arrow-link__icon" aria-hidden="true"></div><svg version="1.1" class="accordion-drop-down__icon plus" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve"><rect class="vertical" x="14" width="2" height="30"/><rect class="horizontal" y="14" width="30" height="2"/></svg></button>
+      {% include components/explore-panel.html title="Center for Environment & Society" %}
+      
+      <button href="#" class="accordion-drop-down__toggle arrow-link arrow-link--button" tabindex="0"><span class="arrow-link__link">The Starr Center for the Study of the American Experience</span><div class="arrow-link__icon" aria-hidden="true"></div><svg version="1.1" class="accordion-drop-down__icon plus" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve"><rect class="vertical" x="14" width="2" height="30"/><rect class="horizontal" y="14" width="30" height="2"/></svg></button>
+      {% include components/explore-panel.html title="Vivamus Sagittis Lacus vel augue laoreet rutrum faucibus dolor auctor." %}
+      <button href="#" class="accordion-drop-down__toggle arrow-link arrow-link--button" tabindex="0"><span class="arrow-link__link">The Rose O’Neill Literary House</span><div class="arrow-link__icon" aria-hidden="true"></div><svg version="1.1" class="accordion-drop-down__icon plus" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve"><rect class="vertical" x="14" width="2" height="30"/><rect class="horizontal" y="14" width="30" height="2"/></svg></button>
+      {% include components/explore-panel.html title="Ipsum Amet" %}
+    </div>
+  </section>
+  {% include components/modules/featured-events.html %}
+  {% include components/modules/featured-news.html updates="true" updates-slider="true" %}
+
+</div>

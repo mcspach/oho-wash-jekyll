@@ -1,0 +1,74 @@
+---
+layout: default
+title: Stories
+page_classes: no-hero
+breadcrumbs:
+  - Landing L1 Page
+  - Another Page
+  - Another Page Lower than the Above
+content_type: story
+---
+<article class="story-listing">
+  <div class="padded-row section--global-spacing section--main-title">
+    {% if page.breadcrumbs %}
+      {% include components/breadcrumbs.html classes="breadcrumbs" %}
+    {% endif %}
+    <h1>All Stories</h1>
+  </div>
+  <div class="padded-row">
+    <form class="filter section--global-spacing" id="story-filter">
+      <div class="padded-row"><h2>Find a Story</h2></div>
+      <div class="row">
+        <div class="small-12 medium-4 columns">
+          <span class="form-label">Filter by Story Topic</span>
+          <fieldset class="masquerade-select" id="story-topics-criteria">
+          <div class="checkbox">
+            <input type="checkbox" value="All Story Topics" class="checkboxes-reset active" name="All Story Topics" id="AllStoryTopics">
+            <label for="AllStoryTopics">All Story Topics</label>
+          </div>
+          </fieldset>
+        </div>
+        <div class="small-12 medium-4 columns">
+          <span class="form-label">Filter by Story Type</span>
+          <fieldset class="masquerade-select" id="story-types-criteria">
+            <div class="checkbox">
+              <input type="checkbox" value="All Story Types" class="checkboxes-reset active" name="All Story Types" id="AllStoryTypes">
+              <label for="AllStoryTypes">All Story Types</label>
+            </div>
+          </fieldset>
+        </div>
+        <div class="small-12 medium-4 columns">
+          <label class="sr-only" for="reset">Reset</label>
+          <input class="btn btn--reset" id="reset" style="display: none;" class="inactive" type="reset" name="reset" value="Clear All">
+        </div>
+      </div>
+    </form>
+    
+    <div id="storyList" class="story-list full-list-container"></div>
+    <div class="no-results"><h2>No results found.</h2></div>
+    <div id="pagination" class="pagination-container"></div>
+    <span id="per_page"></span>
+  </div>
+</article>
+
+<script id="story-template" type="text/html">
+  <article class="story-large-list">
+      <div class="story-large-list__media">
+        <a href="<%= href %>"><img src="<%= src %>" alt="<%= alt %>" width="180" height="270"></a>
+      </div>
+    <div class="story-large-list__content">
+      <span class="eyebrow"><%= type %></span>
+      <h2><a href="<%= href %>"><%= title %></a></h2>
+      <p><%= description %></p>
+      <% if (topics.length) { %>
+        <div class="story-topics tags">
+          <ul>
+            <% for(var i = 0; i < topics.length; ++i) { %>
+              <li><%= topics[i] %></li>
+            <% } %>
+          </ul>
+        </div>
+      <% } %>
+    </div>
+  </article>
+</script>

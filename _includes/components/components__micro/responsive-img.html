@@ -1,0 +1,5 @@
+<img srcset="{% if include.src-small %}{{include.src-small}} {{include.size-small}}w,{% endif %}
+             {% if include.src-medium %}{{include.src-medium}} {{include.size-medium}}w,{% endif %}
+             {% if include.src-large %}{{include.src-large}} {{include.size-large}}w,{% endif %}
+             {% if include.src-xlarge %}{{include.src-xlarge}} {{include.size-xlarge}}w{% endif %}"
+             src="{{include.src-default}}" alt="Alt Text">

@@ -1,0 +1,64 @@
+
+
+
+
+<div class="view-filters ">
+      <form action="" method="get" id="" accept-charset="UTF-8" class="jquery-once-3-processed">
+          <div>
+              <div class="views-exposed-form">
+                  <div class="views-exposed-widgets clearfix">
+                    
+                    {% for item in include.fields %}
+                      {{ item }}
+                    {% endfor %}
+                      
+                      
+                      {% for item in include.elements %}
+  
+                        {% if item == 'text' %}
+                          
+                          <div id="edit-title-wrapper" class="views-exposed-widget views-widget-filter-title">
+                            <label for="edit-title">
+                                Title </label>
+                            <div class="views-widget">
+                                <div class="form-item form-type-textfield form-item-title">
+                                    <input placeholder="Search title" type="text" id="edit-title" name="title" value="" size="30" maxlength="128" class="form-text">
+                                </div>
+                            </div>
+                        </div>
+                          
+                        {% endif %}
+                        
+                        {% if item == 'select' %}
+                          
+                          <div id="edit-tag-wrapper" class="views-exposed-widget views-widget-filter-field_news_tags_tid">
+                          <label for="edit-tag">
+                              Tag </label>
+                          <div class="views-widget">
+                                <div class="form-item form-type-select form-item-tag">
+                                    <select id="edit-tag" name="tag" class="form-select">
+                                        <option value="All" selected="selected">- All Terms -</option>
+                                        <option value="3">News Tag One</option>
+                                        <option value="2">News Tag Two</option>
+                                        <option value="1">News Tag Three</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                          
+                        {% endif %}
+                        
+                      {% endfor %}
+                      
+                      
+                      <div class="views-exposed-widget views-submit-button">
+                          <button id="edit-submit-news-listing" name="" value="Filter" type="submit" class="form-submit">Filter</button>
+                      </div>
+                      <div class="views-exposed-widget views-reset-button">
+                          <button id="edit-reset" name="op" value="Clear All" type="submit" class="form-submit">Clear All</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </form>
+  </div>

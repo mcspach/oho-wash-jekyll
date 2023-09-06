@@ -1,0 +1,57 @@
+/*
+ INTRUCTIONS FOR USE: 
+		nav > ul { rules }
+		.parent nav > ul { rules }
+		nav > ul .child { rules }
+*/
+/*
+ * Solid color transition from left to right on hover
+ * Credit: https://stackoverflow.com/a/17212432
+ */
+/*
+RESPONSIVE PADDING MARGINS AND FONT SIZES
+------------------------------------------
+*/
+/**
+ * Foundation for Sites by ZURB
+ * Version 6.2.4
+ * foundation.zurb.com
+ * Licensed under MIT Open Source
+ */
+img {
+  max-width: 100%; }
+
+.obj-left,
+.align-left {
+  margin-bottom: 20px; }
+  @media screen and (min-width: 48em) {
+    .obj-left,
+    .align-left {
+      margin: 0;
+      float: left;
+      padding: 10px 35px 10px 0px; }
+      .obj-left figcaption,
+      .align-left figcaption {
+        padding: 0px 15px 10px 0px; } }
+
+.obj-right,
+.align-right {
+  margin-bottom: 20px; }
+  @media screen and (min-width: 48em) {
+    .obj-right,
+    .align-right {
+      float: right;
+      padding: 10px 0px 10px 35px;
+      margin: 0; }
+      .obj-right figcaption,
+      .align-right figcaption {
+        padding: 0px 0px 10px 35px; } }
+
+.obj-center,
+.align-center {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  margin-left: auto;
+  margin-right: auto; }
+
+/*# sourceMappingURL=../maps/wysiwyg.css.map */

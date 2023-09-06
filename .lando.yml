@@ -1,0 +1,58 @@
+name: washington
+recipe: lemp
+config:
+  php: "8.0"
+  webroot: _site
+
+services:
+  appserver:
+    type: ruby:2.6
+    composer_version: 2
+    build:
+      - composer install
+      - /bin/sh -c "gem install bundler -v 2.0.1"
+      - /bin/sh -c "gem install jekyll"
+      - /bin/sh -c "bundle install"
+    run:
+      - gem install bundler
+      - bundle install
+      - jekyll build
+    webroot: _site
+  node:
+    type: node:10
+    run:
+      - /bin/sh -c "npm install -g gulp-cli"
+      - yarn install
+    build_as_root:
+      - apt-get update -y
+      - apt-get install -y libnotify-bin
+      - "apt-get install -y build-essential"
+    globals:
+      yarn: latest
+
+tooling:
+  yarn:
+    service: node
+  node:
+    service: node
+  npm:
+    service: node
+  gulp:
+    service: node
+    cmd: gulp
+  jekyll-build:
+    service: appserver
+    description: "Build the Jekyll site"
+    cmd: /bin/sh -c "bundle exec jekyll build"
+  jekyll-watch:
+    service: appserver
+    description: "watch and build the Jekyll site"
+    cmd: /bin/sh -c "bundle exec jekyll build --watch"
+  ruby:
+    service: appserver
+  gem:
+    service: appserver
+  jekyll:
+    service: appserver
+  bundler:
+    service: appserver

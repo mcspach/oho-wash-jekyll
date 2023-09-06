@@ -1,0 +1,35 @@
+  <section class="section--global-spacing section--navigation {% if include.contact-block %}section--navigation--has-contact-block{% endif %}">
+    <div class="row">
+    {% if include.contact-block %}
+      <div class="small-12 large-8 columns">
+        <nav>
+          <h2 class="eyebrow">{{page.title}}</h2>
+          <ul>
+            {% for i in (1..3) %}
+              <li><a href="#">Dolor Sit Nibh</a></li>
+              <li><a href="#">Ligula Sit</a></li>
+              <li><a href="#">Vulputate Elit Porta Tortor</a></li>
+            {% endfor %}
+          </ul>
+        </nav>
+      </div>      
+      <div class="small-12 large-4 columns contact-block-column">
+        {% include components/contact-block.html src="true" name="Purus Porta" position="Position or Title" %}
+      </div>
+      {% else %}
+        <div class="small-12 columns">
+          <nav>
+            <h2 class="eyebrow">{{page.title}}</h2>
+            <ul>
+              {% for i in (1..4) %}
+                <li><a href="#">Dolor Sit Nibh</a></li>
+                <li><a href="#">Ligula Sit</a></li>
+                <li><a href="#">Vulputate Elit Porta Tortor</a></li>
+                <li><a href="#">Commodo Mollis</a></li>
+              {% endfor %}
+            </ul>
+          </nav>
+        </div>      
+      {% endif %} 
+    </div>
+  </section>

@@ -1,0 +1,97 @@
+ <nav class="sidebar-nav">
+  {% if include.style == "border-levels" %}
+    <!-- Sidebar Nav -->
+      <div class="sidebar-menu sidebar-menu--border-levels">
+        <button class="more-in-this-section">More In This Section <span class="toggle-text show-for-sr">Click to expose navigation links on mobile.</span></button>
+        <ul class="menu">
+          <li><a href="#">Level 2 Ipsum</a></li>
+          <li class="menu-item--expanded">
+            <a href="#" class="active-trail">Level 2 Ipsum (Active Ancestor)</a>
+            <ul class="menu">
+              <li class="menu-item--expanded">
+                <a href="#">Level 3 Ipsum</a>
+                <ul class="menu">
+                  <li><a href="#">Level 4 Ipsum</a></li>
+                  <li class="menu-item--expanded">
+                    <a href="#">Level 4 Ipsum</a>
+                    <ul class="menu">
+                      <li><a href="#">Level 5 Ipsum</a></li>
+                      <li><a class="active" href="#">Level 5 Ipsum (Active)</a></li>
+                      <li><a href="#">Level 5 Ipsum</a></li>
+                      <li><a href="#">Level 5 Ipsum</a></li>
+                    </ul>
+                  </li><!-- li--level-three -->
+                </ul>
+              </li><!-- li--level-two -->
+              <li><a href="#">Level 3 Ipsum</a></li>
+              <li><a href="#">Level 3 Ipsum</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Level 2 Ipsum</a></li>
+          <li><a href="#">Level 2 Ipsum</a></li>
+        </ul>
+      </div>
+    </nav>
+  {% endif %}
+  {% if include.style == "padding-levels" %}
+    <!-- Sidebar Nav -->
+    <div class="sidebar-menu sidebar-menu--padded-border-levels">
+      <button class="more-in-this-section">More In This Section <span class="toggle-text show-for-sr">Click to expose navigation links on mobile.</span></button>
+      <ul class="menu">
+        <li><a href="#">Level 2 Ipsum</a></li>
+        <li class="menu-item--expanded">
+          <a href="#" class="active-trail">Level 2 Ipsum (Active Ancestor)</a>
+          <ul class="menu">
+            <li class="menu-item--expanded">
+              <a href="#">Level 3 Ipsum</a>
+              <ul class="menu">
+                <li><a href="#">Level 4 Ipsum</a></li>
+                <li class="menu-item--expanded">
+                  <a href="#">Level 4 Ipsum</a>
+                  <ul class="menu">
+                    <li><a href="#">Level 5 Ipsum</a></li>
+                    <li><a class="active" href="#">Level 5 Ipsum (Active)</a></li>
+                    <li><a href="#">Level 5 Ipsum</a></li>
+                    <li><a href="#">Level 5 Ipsum</a></li>
+                  </ul>
+                </li><!-- li--level-three -->
+              </ul>
+            </li><!-- li--level-two -->
+            <li><a href="#">Level 3 Ipsum</a></li>
+            <li><a href="#">Level 3 Ipsum</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Level 2 Ipsum</a></li>
+        <li><a href="#">Level 2 Ipsum</a></li>
+      </ul>
+    </div>
+  {% endif %}
+  {% if include.style == "streamlined" %}
+<div class="sidebar-menu sidebar-subnav">
+  <button class="sidebar-subnav--button">More In This Section <span class="toggle-text show-for-sr">Click to expose navigation links on mobile.</span></button>  
+  <div class="sidebar-subnav--content">
+    <h2>Level 2 Parent Page</h2>
+    <ul class="menu">
+        <li><a href="#">Level 3 Uncle</a></li>
+        <li class="menu-item--expanded menu-item--active-trail">
+          <a href="#" >Level 3 Parent (Active Ancestor)</a>
+          <ul class="menu">
+        <li><a href="#">Level 4 Sibling</a></li>
+        <li class="menu-item--active-trail"><a href="#" class="is-active">Level 4 (Is Active)</a></li>
+        <li><a href="#">Level 4 Sibling</a></li>
+      </ul>
+        </li>
+        <li class="menu-item--expanded">
+          <a href="#">Level 3 Aunt</a>
+          <ul class="menu">
+        <li><a href="#">Level 4 Cousin</a></li>
+        <li><a href="#" >Level 4 Cousin</a></li>
+        <li><a href="#">Level 4 Cousin</a></li>
+      </ul>
+        </li>
+        <li><a href="#">Level 3 Uncle</a></li>
+      </ul>
+  </div>
+</div>  
+  {% endif %}
+</nav>

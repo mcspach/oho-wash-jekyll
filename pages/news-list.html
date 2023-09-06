@@ -1,0 +1,78 @@
+---
+layout: default
+title: News Listing
+content_type: news
+---
+
+<div class="padded-row section--global-spacing section--main-title">
+  {% include components/breadcrumbs.html classes="breadcrumbs" %}
+  <h1>All News</h1>
+</div>
+<section class="section--global-spacing--large">
+  <div class="padded-row">
+    <form class="filter section--global-spacing" id="news-filter">
+      <div class="row">
+        <div class="small-12 medium-4 large-5 columns">
+            <label class="form-label" for="searchbox">Search All News</label>
+            <div class="search-elements-container">
+              <input type="text" class="search" id="searchbox" placeholder="Search All News" autocomplete="off">
+              <input type="submit" id="directory-submit" name="op" value="Go" class="btn btn--small btn--submit">
+            </div>
+        </div>
+        <div class="small-12 medium-5 large-3 columns">
+          <label for="all-news-categories">Filter by Category</label>
+          {% include components/components__micro/select.html id="all-news-categories" defaultSelect="All News Categories" %}
+        </div>
+        <div class="small-12 medium-2 columns">
+          <label class="sr-only" for="reset">Reset</label>
+          <input class="btn btn--reset" id="reset" style="display: none;" class="inactive" type="reset" name="reset" value="Clear All">
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="padded-row">
+    <div id="newsList" class="news-list">
+      {% include components/news-list-item.html src="true" description=" consectetur. Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." title="Mattis Justo Quam" %}
+      {% include components/news-list-item.html description="Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." title="Sed posuere consectetur est at lobortis"%}
+      {% include components/news-list-item.html src="true" description="  sed consectetur. Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." title="Ultricies Sollicitudin"  %}
+      {% include components/news-list-item.html src="true" description=" consectetur. Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." title="Nullam Quam Dolor" %}
+      {% include components/news-list-item.html src="true" description="Aenean lac bitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." title="Tortor Consectetur Vehicula Elit" %}
+      {% include components/news-list-item.html src="true" description="Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." title="Commodo Condimentum Consectetur Dolor" %}
+      {% include components/news-list-item.html src="true" description=" nulla sed consectetur. Curabitur blandit tempus porttitor. Praesent commodo cursus magna, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." title="Vehicula Commodo Etiam" %}
+      {% include components/news-list-item.html src="true" description=" consectetur. Curabitur blandit tempus porttitor Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." title="Commodo Dapibus Bibendum Vestibulum" %}
+      {% include components/news-list-item.html src="true" description=" vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." title="Euismod Sollicitudin" %}
+      {% include components/news-list-item.html src="true" description=" Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." title="Fermentum Tristique Amet" %}
+<!--
+      {% include components/news-list-item.html src="true" description="Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." title="Magna Ullamcorper" dayOfWeek="Thursday" date="11" month="May"   %}
+      {% include components/news-list-item.html description="urabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." title="Lorem Fermentum Pellentesque Quam" dayOfWeek="Thursday" date="12" month="May"   %}
+      {% include components/news-list-item.html src="true" description="scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." title="Mollis Ultricies Tristique Dolor" dayOfWeek="Thursday" date="13" month="May"   %}
+      {% include components/news-list-item.html src="true" description="rsus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." title="Vulputate Tortor Sollicitudin Ornare" dayOfWeek="Thursday" date="14" month="May"   %}
+      {% include components/news-list-item.html src="true" description="vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." title="Ultricies Ipsum" dayOfWeek="Thursday" date="15" month="May"   %}
+      {% include components/news-list-item.html description="Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." title="Vestibulum Elit Cras" dayOfWeek="Thursday" date="16" month="May"   %}
+      {% include components/news-list-item.html description="blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." title="Sollicitudin Cursus Fusce" dayOfWeek="Thursday" date="17" month="May"   %}
+      {% include components/news-list-item.html description="Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." title="Lorem Amet" dayOfWeek="Thursday" date="18" month="May"   %}
+      {% include components/news-list-item.html src="true" description="bitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." title="Porta Amet Ridiculus Commodo" dayOfWeek="Thursday" date="19" month="May"   %}
+      {% include components/news-list-item.html src="true" description="cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." title="Dolor Parturient" dayOfWeek="Thursday" date="20" month="May"   %}
+      {% include components/news-list-item.html src="true" description="porttitor ligula, eget lacinia odio sem nec elit." title="Sit Vulputate Ullamcorper" dayOfWeek="Thursday" date="21" month="May"   %}
+      {% include components/news-list-item.html src="true" description="Am commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." title="Porta Nibh" dayOfWeek="Thursday" date="22" month="May"   %}  
+-->
+    </div>
+  </div>
+  <div id="pagination" class="pagination-container">
+    <nav>
+      <ul class="pagination">
+        <li><a href="#" data-page="first" aria-label="First"><div></div><span>First</span></a></li>
+        <li><a href="#" data-page="prev" aria-label="Previous"><div></div><span>Previous</span></a></li>
+        <li class=""><a href="#" data-page="1">1</a></li>
+        <li class=""><a href="#" data-page="2">2</a></li>
+        <li class=""><a href="#" data-page="3">3</a></li>
+        <li class="active"><a href="#" data-page="4">4</a></li>
+        <li class=""><a href="#" data-page="5">5</a></li>
+        <li class=""><a href="#" data-page="6">6</a></li>
+        <li><a href="#" data-page="next" aria-label="Next"><span>Next</span><div></div></a></li>
+        <li><a href="#" data-page="last" aria-label="Last"><span>Last</span><div></div></a></li>
+      </ul>
+    </nav>
+  </div>
+</section>
+

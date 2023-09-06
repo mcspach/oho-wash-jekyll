@@ -1,0 +1,561 @@
+//
+// @variables
+//
+
+// --------------------------- FONTS
+$serif: 'Playfair Display', serif;
+
+$sans-serif: 'benton-sans', sans-serif;
+$benton-book: 400;
+$benton-medium: 600;
+$benton-bold: 700;
+
+%font-defaults {
+  font-family: $sans-serif;
+  line-height: 1.6;
+  color: #000;
+  @include font-sizes(16, 20, 20);
+}
+
+%small-body,
+.small-body {
+  font-family: $sans-serif;
+  font-size: rem-calc(16);
+  line-height: 1.5;
+}
+
+%heading-defaults {
+  font-family: $serif;
+  font-weight: 600;
+  margin-top: 0px;
+  line-height: 1.2;
+}
+
+.fal {
+  font-weight: 400;
+}
+
+/* Typography resets */
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+// Global Text Styles
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-justify {
+  text-align: justify !important;
+}
+
+body {
+  @extend %font-defaults;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @extend %heading-defaults;
+  @include margins-bottom(15, 20, 20);
+}
+
+h1,
+.h1 {
+  @include font-sizes(24, 30, 44);
+  line-height: 1.27;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+h2,
+.h2,
+%h2 {
+  @include font-sizes(22, 26, 36);
+  line-height: 1.3;
+}
+
+h3,
+.h3,
+%h3 {
+  @include font-sizes(20, 23, 30);
+  line-height: 1.3;
+}
+
+h4,
+%h4,
+.h4 {
+  @include font-sizes(18, 21, 24);
+  line-height: 1.3;
+}
+
+%h5,
+h5,
+.h5 {
+  @include font-sizes(16, 18, 20);
+  line-height: 1.3;
+
+}
+
+h6,
+.h6 {
+  @include font-sizes(16, 20, 20);
+  line-height: 1.2;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  &:not(:last-child) {
+    margin-bottom: rem-calc(20);
+  }
+}
+
+em {
+  font-style: italic;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: $link-color;
+
+  &:not(.btn):hover {
+    text-decoration: underline;
+    color: $deep-red;
+    transition: color .4s ease;
+  }
+}
+
+ul {
+  padding-left: rem-calc(15);
+}
+
+li {
+  padding-left: rem-calc(5);
+}
+
+ol:not(.breadcrumbs) {
+  counter-reset: ol-counter;
+  list-style: none;
+
+  &>li {
+    @extend %font-defaults;
+    counter-increment: ol-counter;
+    position: relative;
+    padding-left: rem-calc(30);
+
+    &:before {
+      content: counter(ol-counter) ".";
+      position: absolute;
+      left: 0;
+      top: rem-calc(5);
+      font-weight: $benton-medium;
+      line-height: 1;
+      color: $deep-red;
+    }
+  }
+}
+
+.intro-text {
+  font-size: rem-calc(24);
+  font-weight: 200;
+  font-family: $sans-serif;
+  @include font-sizes(20, 20, 26);
+  @include line-heights(34, 34, 44);
+}
+
+blockquote {
+  font-family: $serif;
+  font-size: rem-calc(21);
+
+  .credit {
+    color: #fff;
+    font-size: rem-calc(12);
+  }
+}
+
+.section--wysiwyg {
+  blockquote {
+    @include font-sizes(18, 28, 28);
+    @include line-heights(27, 42, 42);
+    color: $dark-teal;
+    border-bottom: rem-calc(2) solid $deep-red;
+    border-top: rem-calc(2) solid $deep-red;
+    margin-bottom: rem-calc(40);
+    padding: rem-calc(20);
+
+    @media #{$medium-up} {
+      padding: rem-calc(40 60);
+    }
+  }
+
+  ul {
+    padding-left: 0;
+  }
+
+  ul li {
+    list-style: none;
+    padding-left: rem-calc(30);
+    position: relative;
+    margin-bottom: rem-calc(16);
+    background-image: url("../icons/list-style.svg");
+    background-position: left rem-calc(11);
+    background-repeat: no-repeat;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .directory-positions,
+  .contact-block {
+    li {
+      padding-left: 0;
+      background: none;
+    }
+  }
+}
+
+// --------------------------- GLOBAL
+%btn,
+.btn {
+  padding: rem-calc(11 25 8);
+  text-decoration: none;
+  transition: all 0.2s ease-out;
+  text-transform: uppercase;
+  color: #fff;
+  background: $primary-color;
+  display: inline-block;
+  margin-bottom: 20px;
+  font-family: $sans-serif;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 20px;
+  font-weight: $benton-medium;
+  border-radius: rem-calc(40);
+  text-align: center;
+  //border: rem-calc(2) solid $primary-color;
+  font-size: rem-calc(13);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.20);
+  letter-spacing: rem-calc(1);
+  border: none;
+
+  @media #{$large-up} {
+    font-size: rem-calc(16);
+    padding: rem-calc(16 40 14);
+    letter-spacing: rem-calc(1);
+  }
+
+  &:hover {
+    background: $dark-blue;
+    text-decoration: none;
+  }
+}
+
+%btn--teal,
+.btn--teal {
+  border-color: $teal;
+  background: $teal;
+
+  &:hover,
+  &:focus {
+    background: $dark-teal;
+    color: #fff;
+    border-color: $dark-teal;
+  }
+}
+
+%btn--large,
+.btn--large {
+  background: $teal;
+  padding: rem-calc(16 40 14);
+  width: 100%;
+  max-width: rem-calc(240);
+  border-color: $teal;
+  @include font-sizes(13, 16, 20);
+
+  @media #{$large-up} {
+    max-width: rem-calc(360);
+    padding: rem-calc(20 60 18);
+    letter-spacing: rem-calc(1.3);
+  }
+
+  &:hover,
+  &:focus {
+    background: none;
+    color: #fff;
+    border-color: #fff;
+  }
+}
+
+%btn--small,
+.btn--small {
+  padding: rem-calc(10 29 7);
+  font-size: rem-calc(13);
+  border-radius: rem-calc(20);
+}
+
+%btn--yellow,
+.btn--yellow {
+  background: $yellow;
+  color: #000;
+  border-color: $yellow;
+}
+
+%btn--white,
+.btn--white {
+  background: $light-gray;
+  color: #000;
+  border: rem-calc(2) solid $light-gray;
+
+  &:hover,
+  &:focus {
+    background: none;
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
+%btn--light-teal,
+.btn--light-teal {
+  background: $light-teal;
+  border-color: $light-teal;
+  color: #000;
+  text-transform: none;
+  border: rem-calc(2) solid $light-teal;
+
+  &:hover,
+  &:focus {
+    color: #000;
+    background: none;
+  }
+}
+
+%btn--light,
+.btn--light {
+  @extend %btn;
+  background: #fff;
+  color: #000;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.btn--external,
+%btn--external {
+  display: inline-flex;
+  align-items: center;
+  text-transform: none;
+
+  &:before {
+    font-family: $fontAwesomeFamily;
+    font-weight: 400;
+    content: "\f14c";
+    color: $yellow;
+    margin-right: 0.625rem;
+    font-size: rem-calc(20);
+    display: block;
+  }
+}
+
+.btn-centered {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+%show-for-sr,
+.show-for-sr,
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+%arrow-link,
+.arrow-link {
+  display: block;
+  @extend %small-body;
+
+  &__link {
+    display: inline;
+    font-weight: $benton-medium;
+    padding-right: rem-calc(12);
+    font-family: $sans-serif;
+  }
+
+  &__icon {
+    display: inline;
+    position: relative;
+    @include flex-column(rem-calc(40));
+    width: auto;
+
+    &:after {
+      content: url('../icons/long-arrow.svg');
+      width: rem-calc(40);
+      height: rem-calc(13);
+    }
+  }
+
+  &__chevron {
+    display: inline;
+    position: relative;
+    @include flex-column(rem-calc(40));
+    width: auto;
+
+    &:after {
+      content: "\f324";
+      font-family: $fontAwesomeFamily;
+      width: rem-calc(40);
+      height: rem-calc(13);
+    }
+  }
+}
+
+.eyebrow,
+%eyebrow {
+  font-family: $sans-serif;
+  font-weight: $benton-medium;
+  font-size: rem-calc(12);
+  color: $deep-red;
+  letter-spacing: rem-calc(1.5);
+  text-transform: uppercase;
+  line-height: 1.3;
+  @include margins-bottom(10, 10, 15);
+  display: block;
+
+  &--teal {
+    color: $teal;
+  }
+}
+
+%listing-title,
+.listing-title {
+  font-family: $sans-serif;
+  font-weight: $benton-medium;
+  font-size: rem-calc(22);
+  line-height: rem-calc(32);
+}
+
+// global margin settings 
+table:not(:last-child) {
+  margin-bottom: rem-calc(40);
+}
+
+p,
+ul,
+ol,
+blockquote,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+  &+table,
+  &+.iframe-video-container,
+  &+.section--cta--small {
+    @include margins-top(20, 40, 40);
+  }
+}
+
+.section--wysiwyg {
+
+  p,
+  ul,
+  ol,
+  blockquote,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    &+blockquote {
+      @include margins-top(20, 40, 40);
+    }
+  }
+}
+
+p,
+ul,
+ol,
+.btn {
+  margin-bottom: rem-calc(20);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// this bit adds margin-top only when a title comes after another block elment in the WYSIWYG
+p,
+ul,
+ol,
+.intro-text,
+blockquote,
+table,
+.section--accordions,
+.btn,
+figure {
+
+  &+h2,
+  &+.h2,
+  &+h3,
+  &+.h3,
+  &+h4,
+  &+.h4,
+  &+h5,
+  &+.h5,
+  &+h6,
+  &+.h6,
+  {
+  @include margins-top(20, 40, 40); // values are not added to the margins-bottom - they overlap
+}
+}
+
+button {
+  cursor: pointer;
+}

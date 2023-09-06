@@ -1,0 +1,22 @@
+<section class="section--global-spacing section--concentrations">
+  <div class="lined-section-title--outer">
+    <div class="padded-row">
+      <div class="lined-section-title">
+        <div class="line-decoration" ariah-hidden="true"></div>
+        <h2>Do You at Washington College</h2>
+        <p class="grid-max-960">Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="concentrations">
+      {% include components/concentration-item.html title="Cell/Molecular Biology & Infectious Disease" %}
+      {% include components/concentration-item.html title="Ecology & Evolutionary Biology" %}
+      {% include components/concentration-item.html title="Physiology & Organismal Biology" %}
+      {% if include.max %}
+        {% include components/concentration-item.html title="Porta Bibendum Parturient" %}
+        {% include components/concentration-item.html title="Sit Porta Vehicula Venenatis" %}
+      {% endif %}
+    </div>
+  </div>
+</section>

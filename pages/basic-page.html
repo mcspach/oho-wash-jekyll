@@ -1,0 +1,39 @@
+---
+layout: default
+title: Basic Page
+oho_alert: true
+breadcrumbs:
+  - Landing L1 Page
+content_type: page
+---
+  {% include components/hero.html src="../assets/img/hero-img-common.jpg" class_modifier="hero--parallax hero--secondary" overlay="true" %}
+<div class="parallax-mask clearfix">
+  <section class="section--page-starter">
+    <div class="page-starter">
+      <div class="page-starter__inner">
+        {% if page.breadcrumbs %}
+          {% include components/breadcrumbs.html classes="breadcrumbs" %}
+        {% endif %}
+        <h1>{{page.title}}</h1>
+        <p class="intro-text">Intro Text Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+      </div>
+    </div>
+  </section>
+  {% include components/modules/section-navigation.html contact-block="true" %}
+  <div class="section--wysiwyg section--global-spacing padded-row grid-max-760">
+    {% include components/full-wysiwyg.html %}
+    <section class="section--cta--small">
+      <h2>Heading for CTA Component</h2>
+      <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur</p>
+      <a class="btn btn--light-teal" href="#">How to Get Involved</a>
+    </section>
+  </div>
+  {% include components/modules/accordions.html title="Optional Title for Accordions" %}
+  {% include components/modules/checkerboard.html %}
+  {% include components/modules/featured-stories.html %}	
+  {% include components/modules/differentiators.html classModifier="section--differentiators--standard" %}
+  {% include components/modules/profile-feature.html %}
+  {% include components/modules/secondary-promos.html %}
+  {% include components/modules/featured-events.html %}
+  {% include components/modules/featured-news.html small-news="true" %}
+</div>

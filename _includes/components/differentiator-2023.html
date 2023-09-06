@@ -1,0 +1,32 @@
+<article class="differentiator differentiator-2023">
+  <div class="differentiator__media">
+    {% if include.stat %}
+    <span class="stat">{{include.stat}}</span>
+    {% endif %}
+    {% if include.src %}
+    <img src="https://placedog.net/460/260" alt="dog">
+    {% endif %}
+    {% if include.icon %}
+    <img src="/assets/icons/differentiator.svg" alt="#">
+    {% endif %}
+  </div>
+  <div class="differentiator__content">
+    <h3>
+      {% if include.link_title %}
+      <a href="#">{{include.title}}</a>
+      {% else %}
+      {{include.title}}
+      {% endif %}
+    </h3>
+    {% if include.description %}
+    <p>{{include.description}}</p>
+    {% endif %}
+    <div class="btn-wrap">
+      <a href="#" class="btn btn--teal">Read More</a>
+      {% if include.button %}
+      <a href="#" class="btn btn--teal">{{include.button}}</a>
+      {% endif %}
+    </div>
+
+  </div>
+</article>

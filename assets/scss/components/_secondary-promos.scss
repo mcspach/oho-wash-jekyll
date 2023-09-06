@@ -1,0 +1,38 @@
+/*
+----------------
+SECONDARY PROMOS
+----------------
+*/
+.secondary-promo-item {
+  @extend %section--global-spacing;
+  display: flex;
+  flex-wrap: wrap;
+  @media #{$medium-up} {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+  .arrow-link {
+    color: #000;
+  }
+  &__media {
+      @media #{$small-only} {
+        margin-bottom: rem-calc(10);
+      }
+      @media #{$medium-up} {
+        @include flex-column(31%);
+      }    
+  }
+  &__content {
+      @media #{$medium-up} {
+        @include flex-column(69%);
+        padding-right: rem-calc(40);
+      }
+  }
+  .line-decoration {
+    @include line-decoration(100%, 100%, rem-calc(2), #fff, $deep-red, $deep-red, rem-calc(20));
+    @media #{$medium-up} {
+      min-width: calc(100% + 90px);  
+      @include line-decoration(100%, calc(100% - 50px), rem-calc(2), #fff, $deep-red, top, rem-calc(20));
+    }
+  }
+}

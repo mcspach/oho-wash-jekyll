@@ -1,0 +1,32 @@
+// Workbench
+div.workbench-info-block {
+  margin: 1em 0;
+}
+
+.user-login-form {
+  margin: 0 0 3em;
+
+  .form-required {
+    color: $primary-color !important;
+    font-weight: 400;
+  }
+
+  .description {
+    margin: .25em 0 0;
+    font-style: italic;
+  }
+
+  input {
+    width: 100%;
+    padding: 1em;
+    background-color: #ffffff;
+    border: 1px solid $primary-color;
+    border-radius: .125em;
+    color: $primary-gray--text;
+    text-transform: none;
+  }
+
+  input[type="submit"] {
+    width: auto;
+  }
+}

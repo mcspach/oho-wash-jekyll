@@ -1,0 +1,22 @@
+<article class="news listing-item news--listing-item row">
+  {% if include.src %}
+    <div class="news__media listing-item__media small-12 medium-4">
+      <img src="http://placehold.it/360x240" alt="news Listing Image" width="360" height="240">
+    </div>
+  {% endif %}
+  <div class="news__content small-12 medium-8">
+    <div class="news__meta listing-item__meta">
+      <h2 class="listing-title"><a href="#">{{include.title}}</a></h2>
+      <div class="news__date fa-list-item far fa-calendar-alt"><span>MM/DD/YYYY</span></div>
+      <p>{{include.description}}</p>
+      <div class="tags">
+        <ul>
+          <li>Nullam</li>
+          <li>Parturient Inceptos Nibh</li>
+          <li>Ornare</li>
+          <li>Tortor Malesuada</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</article>

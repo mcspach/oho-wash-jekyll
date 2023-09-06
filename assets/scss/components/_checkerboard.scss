@@ -1,0 +1,121 @@
+/*
+-------------
+CHECKERBOARD
+-------------
+*/
+.checkerboard {
+  max-width: rem-calc(1440);
+  margin-left: auto;
+  margin-right: auto;
+  @include margins-bottom(40,60,150);
+  @include clearfix();
+  @media #{$large-up} {
+    display: flex;
+    justify-content: space-between;
+  }
+  .video-modal-container div {
+    width: rem-calc(80);
+    height: rem-calc(80);
+  }
+  a:not(.btn) {
+    color: #fff;
+  }
+  &__content {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    background: $deep-red;
+    width: calc(100% - 40px);
+    max-width: rem-calc(590);
+    float: right;
+    padding: rem-calc(40 20 20);
+    margin-top: rem-calc(-20);
+    @media #{$medium-up} {
+      padding: rem-calc(70 30 40);
+      margin-top: rem-calc(-40);
+    }
+    @media #{$large-up} {
+      @include flex-column(calc(50% + 60px));
+      margin-left: rem-calc(-60);
+      top: rem-calc(50);
+      padding: rem-calc(60 120 60 140);      
+      float: none;
+      margin-top: 0;
+    }
+    &:before {
+      @media #{$medium-up} {
+        content: "";
+        width: rem-calc(60);
+      }
+    }
+  }
+  &__media {
+    z-index: 2;
+    position: relative;
+    @media #{$large-up} {
+      @include flex-column(50%);
+    }
+    img {
+      width: calc(100% - 40px);
+      max-width: rem-calc(460);
+      height: auto;
+      @media #{$medium-up} {
+        
+      }
+      @media #{$large-up} {
+        max-width: none;
+        width: 100%;
+      }
+    }
+    &:after {
+      content: "";
+      width: 100%;
+      height: rem-calc(20);
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      background: rgba(125,9,45,.88);
+      width: calc(100% - 40px);
+      max-width: rem-calc(590);
+      @media #{$medium-up} {
+        height: rem-calc(40);        
+      }
+      @media #{$large-up} {
+        top: rem-calc(50);
+        height: 100%;
+        width: rem-calc(60);
+      }
+    }
+  }
+}
+// ------- EVEN CHILDREN
+.checkerboard:nth-child(even) {
+  flex-direction: row-reverse;
+  .checkerboard__content {
+    background: $dark-blue;
+    float: none;
+    @media #{$large-up} {
+      transform: translateX(60px);
+      margin-left: 0;
+      padding: rem-calc(60 120 60 140);     
+    }
+  }
+  .video-modal-container a {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;  
+  }
+  .checkerboard__media {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    @media #{$large-up} {
+      display: block;
+    }
+    &:after {
+      right: auto;
+      left: 0;
+      background: rgba(14,43,71,.88);
+    }
+  }
+}

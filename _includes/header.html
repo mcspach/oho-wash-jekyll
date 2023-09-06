@@ -1,0 +1,24 @@
+<div class="skip-link">
+  <a href="#main-menu" class="element-focusable">Skip to main site navigation</a>
+  <a href="#main-content" class="element-focusable">Skip to main content</a>
+</div>
+
+{% if page.drupal_admin %}
+  {% include components/drupal/admin-toolbar.html %}
+{% endif %}
+
+<header data-directional-scroll-reveal="true" data-sticky-container class="site-header">
+  <div data-sticky-item class="sticky-header-item">
+    <div class="row">
+      <div class="header__logo">
+        <a href="/">
+          <img width="313" height="94" src="/assets/icons/main-logo.svg" alt="Washington Logo">
+        </a>
+      </div>
+      <button class="hamburger-menu-wrapper">
+        <div class="hamburger-menu"><span class="visually-hidden toggle-text">Click to Open Menu</span></div>
+      </button>
+  	  {% include components/menu/menu-primary.html %}
+    </div>
+  </div>
+</header><!-- /header -->

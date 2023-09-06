@@ -1,0 +1,103 @@
+.site-footer {
+  background: $dark-teal;
+  color: #fff;
+  @include paddings-top(30,30,40);
+  @include paddings-bottom(30,30,40);
+  padding-left: rem-calc(30);
+  padding-right: rem-calc(30);
+  position: relative;
+  z-index: 3;
+  font-size: rem-calc(16);
+  span {
+    &:not(:last-child):not(.arrow-link__link) {
+      margin-bottom: rem-calc(5);
+    }
+  }
+  &__middle {
+    @include paddings-bottom(30,30,40);
+    .fa-list-item {
+      padding-left: rem-calc(30);
+    }
+  }
+  a:not(.btn) {
+    color: #fff;
+    &:not(.arrow-link) {
+      display: block;
+    }
+  }
+  .fa-list-item:not(:last-child) {
+    margin-bottom: rem-calc(25);
+  }
+  .arrow-link {
+    margin-top: rem-calc(10);
+  }
+  .columns {
+    padding: 0;
+    order: 1;
+    @media #{$large-up} {
+      padding: rem-calc(0 20);
+    }
+  }
+  .contact-column {
+    order: 2;
+    padding-bottom: rem-calc(30);
+    border-bottom: rem-calc(1) solid $gray-border;
+    @media #{$large-up} {
+      max-width: rem-calc(337);
+      order: 1;
+      border: none;
+      padding-bottom: 0;
+    }
+  }
+  .social-column {
+    order: 3;
+    @media #{$large-up} {
+      max-width: rem-calc(300);
+    }    
+  }
+  .columns:not(:last-child) {
+    @include margins-bottom(30,30,0);
+  }
+  &__middle {
+    .row {
+      justify-content: space-between;
+    }
+  }
+  &__lower {
+    @media #{$large-up} {
+      text-align: center;
+    }
+    .padded-row {
+      padding-top: rem-calc(25);
+      border-top: rem-calc(1) solid $gray-border;
+      @media (max-width: rem-calc(1024)) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+    a {
+      font-weight: $benton-medium;
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      display: inline-block;
+      margin-bottom: rem-calc(20);
+      width: 100% ;
+      @media #{$medium-up} {
+        width: auto;
+      }
+    }
+    li:not(:last-child) {
+      @media #{$large-up} {
+        margin-right: rem-calc(30);
+      }
+    }
+    p {
+      @include margins-top(20,20,0);
+    }
+  }
+}

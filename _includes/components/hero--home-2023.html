@@ -1,0 +1,70 @@
+<article
+  class="hero {{include.class_modifier}} {% if include.video_src %}hero--video{% endif %} {% if include.iframe_src %}hero--iframe{% endif %} {% if include.src %}hero--img{% else %}hero--no-img{% endif %}">
+  {% if include.video_src or include.iframe_src or include.src %}
+  <div class="hero__media">
+    {% if include.video_src %}
+    <div class="video-feature">
+      <video id="hero" loop muted poster="{{inlude.src}}">
+        <source src="{{include.video_src}}">
+      </video>
+    </div>
+    {% endif %}
+    {% if include.iframe_src %}
+    <div class="video-feature">
+      <iframe width="560" height="315" src="{{include.iframe_src}}" frameborder="0"
+        allow="autoplay; encrypted-media; loop" allowfullscreen></iframe>
+    </div>
+    {% endif %}
+    {% if include.parallax_iframe_src %}
+    <div class="video-feature">
+      <div id="bgndVideo" class="player"
+        data-property="{videoURL:'{{include.parallax_iframe_src}}',containment:'body',autoPlay:true, showControls:false, mute:true, startAt:0, opacity:1, loop:true, anchor:'center,center', useOnMobile:false, mobileFallbackImage:'/assets/img/hero-img-common.jpg, optimizeDisplay:true'}">
+        My video</div>
+    </div>
+    {% endif %}
+    {% if include.src %}
+    <img srcset="https://source.unsplash.com/random/2400x1500/?city 2400w, {{include.src}} 1600w,"
+      src="https://source.unsplash.com/random/768x480/?city" alt="#">
+    {% endif %}
+  </div>
+  {% endif %}
+  {% if include.overlay %}
+  <div class="hero__overlay" aria-hidden="true"></div>
+  {% endif %}
+  <div class="hero__content">
+    <h2>An Environment for Success</h2>
+    <div class="btn-row">
+      <a href="#" class="btn btn--red">Visit</a>
+      <a href="#" class="btn btn--red">Apply</a>
+      <a href="#" class="btn btn--red">Request Info</a>
+    </div>
+  </div>
+
+
+  <div class="section--global-spacing small-12 section--hero-ctas">
+    <h3 class="h2 hero-cta-container"><a href="#" class=""><span class="">Explore All Programs</span></a></h3>
+    <h3 class="hero-cta-container"><a href="#" class=""><span class="">What is Learn by Doing?</span></a></h3>
+  </div>
+
+  <div class="section--differentiators section--differentiators-2023 bg-red section--global-spacing">
+    <div class="row">
+      <div class="small-4 large-4 columns">
+        {% include components/differentiator-2023.html src="true" title="John Seidel Named Inaugural Emeritus Director"
+        description="The Board of Visitors and Governors formally conferred the title of emeritus director to retiring
+        director of the Center for Environment and Society (CES) John Seidel at its December meeting"
+        %}
+      </div>
+      <div class="small-4 large-4 columns">
+        {% include components/differentiator-2023.html src="true" title="Washington Receives $2.1 Million from Hodson
+        Trust" description="Washington College has received a gift of $2,142,886 from The Hodson Trust to endow
+        merit-based scholarships and support the College’s Washington Scholars program." %}
+      </div>
+      <div class="small-4 large-4 columns">
+        {% include components/differentiator-2023.html src="true" title="Fall 2023 Application Available Until February
+        15" description="Apply today to join our community." button="Washington
+        Application" %}
+      </div>
+    </div>
+  </div>
+
+</article>

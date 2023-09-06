@@ -1,0 +1,97 @@
+---
+layout: default
+title: Event Listing
+---
+<article class="section--global-spacing--large event-listing">
+  <div class="padded-row section--global-spacing section--main-title">
+    <h1>All Events</h1>
+  </div>
+  <div class="row event-filter-row">
+    <div class="small-12 medium-8 columns">
+      <div class="event-listing-upper-filters">
+        <form class="filter section--global-spacing" id="event-filter">
+          <div class="row">
+            <div class="small-12 columns search-column">
+                <label class="form-label" for="searchbox">Search All Events</label>
+                <div class="search-elements-container">
+                  <input type="text" class="search" id="searchbox" placeholder="Search All Events" autocomplete="off">
+                  <input type="submit" id="directory-submit" name="op" value="Go" class="btn btn--small btn--submit">
+                </div>
+            </div>
+            <div class="small-12 medium-8 columns">
+              <label for="all-event-categories">Filter by Category</label>
+              {% include components/components__micro/select.html id="all-event-categories" defaultSelect="All Event Categories" %}
+            </div>
+            <div class="small-12 medium-4 columns">
+              <label class="sr-only" for="reset">Reset</label>
+              <input class="btn btn--reset" type="reset" id="reset" name="reset" value="Clear All">
+            </div>
+          </div>
+        </form>
+        <ul class="event-list-nav">			
+          <li><a href='#' title="All Events" class="active"><span class="">All Events</span></a></li>
+          <li><a href='#' title="Browse by Month"><span class="">Browse by Month</span></a></li>
+          <li><a href='#' title="Browse by Week"><span class="">Browse by Week</span></a></li>
+          <li><a href='#' title="Browse by Day"><span class="">Browse by Day</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="small-12 medium-4 columns">
+      <div class="calendar-column-upper-nav">
+        <h2 class="small-body">Events</h2>
+        <nav>
+      		<ul>
+      			<li><a href="http://helios.oudemo.com/index.php?com=submit" class="menu hc_mnu_sb">Submit Event</a></li>
+      			<li><a href="http://helios.oudemo.com/index.php?com=search" class="menu hc_mnu_se">Calendar Search</a></li>
+      		</ul>
+    		</nav>
+      </div>
+      {% include components/omni/calendar-widget.html %}
+    </div>
+  </div>
+  <div class="padded-row">
+    <div id="eventList" class="event-list">
+      {% include components/event-list-item.html src="true" description=" consectetur. Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." title="Mattis Justo Quam" dayOfWeek="Thursday" date="1" month="May"   %}
+      {% include components/event-list-item.html description="Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." title="Sed posuere consectetur est at lobortis" dayOfWeek="Thursday" date="2" month="May"   %}
+      {% include components/event-list-item.html src="true" description="  sed consectetur. Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." title="Ultricies Sollicitudin" dayOfWeek="Thursday" date="3" month="May"   %}
+      {% include components/event-list-item.html src="true" description=" consectetur. Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." title="Nullam Quam Dolor" dayOfWeek="Thursday" date="4" month="May"   %}
+      {% include components/event-list-item.html src="true" description="Aenean lac bitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." title="Tortor Consectetur Vehicula Elit" dayOfWeek="Thursday" date="5" month="May"   %}
+      {% include components/event-list-item.html src="true" description="Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." title="Commodo Condimentum Consectetur Dolor" dayOfWeek="Thursday" date="6" month="May"   %}
+      {% include components/event-list-item.html src="true" description=" nulla sed consectetur. Curabitur blandit tempus porttitor. Praesent commodo cursus magna, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." title="Vehicula Commodo Etiam" dayOfWeek="Thursday" date="7" month="May"   %}
+      {% include components/event-list-item.html src="true" description=" consectetur. Curabitur blandit tempus porttitor Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." title="Commodo Dapibus Bibendum Vestibulum" dayOfWeek="Thursday" date="8" month="May"   %}
+      {% include components/event-list-item.html src="true" description=" vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." title="Euismod Sollicitudin" dayOfWeek="Thursday" date="9" month="May"   %}
+      {% include components/event-list-item.html src="true" description=" Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." title="Fermentum Tristique Amet" dayOfWeek="Thursday" date="10" month="May"   %}
+<!--
+      {% include components/event-list-item.html src="true" description="Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." title="Magna Ullamcorper" dayOfWeek="Thursday" date="11" month="May"   %}
+      {% include components/event-list-item.html description="urabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." title="Lorem Fermentum Pellentesque Quam" dayOfWeek="Thursday" date="12" month="May"   %}
+      {% include components/event-list-item.html src="true" description="scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." title="Mollis Ultricies Tristique Dolor" dayOfWeek="Thursday" date="13" month="May"   %}
+      {% include components/event-list-item.html src="true" description="rsus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." title="Vulputate Tortor Sollicitudin Ornare" dayOfWeek="Thursday" date="14" month="May"   %}
+      {% include components/event-list-item.html src="true" description="vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." title="Ultricies Ipsum" dayOfWeek="Thursday" date="15" month="May"   %}
+      {% include components/event-list-item.html description="Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." title="Vestibulum Elit Cras" dayOfWeek="Thursday" date="16" month="May"   %}
+      {% include components/event-list-item.html description="blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." title="Sollicitudin Cursus Fusce" dayOfWeek="Thursday" date="17" month="May"   %}
+      {% include components/event-list-item.html description="Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." title="Lorem Amet" dayOfWeek="Thursday" date="18" month="May"   %}
+      {% include components/event-list-item.html src="true" description="bitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." title="Porta Amet Ridiculus Commodo" dayOfWeek="Thursday" date="19" month="May"   %}
+      {% include components/event-list-item.html src="true" description="cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." title="Dolor Parturient" dayOfWeek="Thursday" date="20" month="May"   %}
+      {% include components/event-list-item.html src="true" description="porttitor ligula, eget lacinia odio sem nec elit." title="Sit Vulputate Ullamcorper" dayOfWeek="Thursday" date="21" month="May"   %}
+      {% include components/event-list-item.html src="true" description="Am commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit." title="Porta Nibh" dayOfWeek="Thursday" date="22" month="May"   %}  
+-->
+    </div>
+  </div>
+  <div id="pagination" class="pagination-container">
+    <nav>
+      <ul class="pagination">
+        <li><a href="#" data-page="first" aria-label="First"><div></div><span>First</span></a> </li>
+        <li><a href="#" data-page="prev" aria-label="Previous"><div></div><span>Previous</span></a></li>
+        <li class=""><a href="#" data-page="1">1</a></li>
+        <li class=""><a href="#" data-page="2">2</a></li>
+        <li class=""><a href="#" data-page="3">3</a></li>
+        <li class="active"><a href="#" data-page="4">4</a></li>
+        <li class=""><a href="#" data-page="5">5</a></li>
+        <li class=""><a href="#" data-page="6">6</a></li>
+        <li><a href="#" data-page="next" aria-label="Next"><span>Next</span><div></div></a></li>
+        <li><a href="#" data-page="last" aria-label="Last"><span>Last</span><div></div></a></li>
+      </ul>
+    </nav>
+  </div>
+</article>
+

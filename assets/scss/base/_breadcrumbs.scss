@@ -1,0 +1,122 @@
+//
+// OHO Foundation Breadcrumb Mixin
+//
+
+//
+// Breadcrumb Variables
+//
+
+// We use these to set the padding around the breadcrumbs.
+$crumb-padding: rem-calc(0 0 30);
+$crumb-side-padding: rem-calc(5);
+
+// We use these to set various text styles for breadcrumbs.
+$crumb-font-size: rem-calc(14);
+$crumb-font-color-current: #333 !default;
+
+// We use these to control the slash between breadcrumbs
+$crumb-slash: "../icons/arrow-small.svg" !default;
+
+//
+// Breadcrumb Mixins
+//
+
+// We use this mixin to create a container around our breadcrumbs
+@mixin oho-crumb-container {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  margin: 0;
+  list-style: none;
+  @include paddings-bottom(20,20,30);
+  margin-bottom: rem-calc(40);
+  border-bottom: rem-calc(1) solid $gray-border;
+  margin-left: rem-calc(0);
+  &:last-child {
+    margin-bottom: rem-calc(40);
+  }
+}
+
+// We use this mixin to create breadcrumb styles from list items.
+@mixin oho-crumbs {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  font-size: $crumb-font-size;
+  font-family: $sans-serif;
+  padding-left: 0;
+  @media #{$small-only} {
+    display: none;
+  }
+  a {
+    @extend %eyebrow;
+    color: $teal;
+    margin: 0;
+  }
+  // Current is for the link of the current page
+  &.current,
+  &.active {
+    color: $crumb-font-color-current;
+    font-weight: $benton-medium;
+    font-size: rem-calc(13);
+    a {
+      color: $crumb-font-color-current;
+    }
+
+    &:hover, &:hover a,
+    &:focus, &:focus a { text-decoration: none; }
+  }
+
+  &:before {
+    content: url("#{$crumb-slash}");
+    margin: rem-calc(0 8 0 5);
+  }
+
+  &:first-child:before {
+    content: " ";
+    margin: 0;
+  }
+  &:nth-last-child(2) {
+    @media #{$small-only} {
+      display: flex;
+      align-items: center;
+      &:before {
+        content: url("#{$crumb-slash}");
+        margin: rem-calc(0 8 0 5);
+        display: block;
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+
+//
+// Breadcrumb CSS
+//
+
+.breadcrumbs {
+  @include oho-crumb-container;
+
+  &>* {
+    @include oho-crumbs;
+  }
+}
+
+.event-detail,
+.story-detail,
+.news-detail,
+.page--news,
+.page--story {
+  .section--main-title {
+    margin-top: 0;
+  }
+  .breadcrumbs {
+    @include margins-top(20,30,30);
+    @include margins-bottom(30,60,60);
+    @media #{$medium-up} {
+      padding: 0;
+      border: none;      
+    }
+  }
+}

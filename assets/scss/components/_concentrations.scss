@@ -1,0 +1,82 @@
+/*
+---------------
+CONCENTRATIONS
+---------------
+*/
+.section--concentrations > .row {
+  max-width: rem-calc(1160);
+}
+.concentrations {
+  display: flex;
+  flex-wrap: wrap;
+  padding: rem-calc(20);
+  background: $light-gray;
+  @media #{$medium-up} {
+    padding: rem-calc(30 27.5);    
+  }
+  .accordion-drop-down__toggle--concentrations {
+    &:not(:first-child) {
+      @media #{$small-only} {
+        margin-top: rem-calc(20);
+      }
+    }    
+    @media #{$medium-up} {
+      padding-right: rem-calc(20);
+    }
+    svg {
+      @media #{$medium-up} {
+        display: none;
+      }
+    }
+  }
+}
+.accordion-drop-down__toggle--concentrations {
+  @media #{$medium-up} {
+    order: 1;
+    flex: 1;
+    margin: rem-calc(0 2.5);
+  }
+}
+.concentrations__content {
+  @media #{$medium-up} {
+    order: 10;
+  }
+}
+.accordion-drop-down__toggled-content.concentrations__content {
+  padding: rem-calc(40 0 0);
+  @include margins-bottom(20,0,0);
+  background: none;
+  margin-top: 0;
+}
+.concentrations__content__upper {
+  margin-bottom: rem-calc(40);
+}
+.concentrations__content__courses {
+  h4 {
+    font-family: $sans-serif;
+    font-weight: $benton-medium;
+    @extend %font-defaults;
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    padding: rem-calc(25 20);
+    background: #fff;
+    border: rem-calc(1) solid $pale-teal;
+    font-size: rem-calc(16);
+    @media #{$small-only} {
+      width: 100%;
+    }
+    &:not(:last-child) {
+      margin-bottom: rem-calc(10);
+      @media #{$medium-up} {
+        margin-bottom: 0;
+        margin-right: rem-calc(15);
+      }
+    }
+  }
+}

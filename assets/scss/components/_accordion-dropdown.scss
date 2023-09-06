@@ -1,0 +1,351 @@
+/*
+--------------------
+ACCORDION DROPDOWN
+--------------------
+
+
+// --------- VARS
+Ajust these variables to make minor 
+changes to look and feel of Accordions
+*/
+
+// colors
+$accordion-accent: $primary-color;
+$active-background-color: #fff;
+$icon-fill: $yellow;
+$active-icon-fill: $yellow;
+$content-color: $primary-text-color;
+$content-background: #eaeaea;
+
+// spacing / padding
+$accordion-spacing: rem-calc(30);
+$accordion-padding: rem-calc(20 60 20 20);
+
+// Widths / Heights
+$icon-width: rem-calc(22);
+$icon-height: rem-calc(22);
+$icon-right-distance: rem-calc(20);
+
+// Icons may be a varaiety of SVG XML items
+$icon-scope: 'path, rect, circle, i';
+// ---------------------------------
+.section--accordions {
+  .padded-row {
+    max-width: rem-calc(1000);
+  }
+}
+.accordion-drop-down {
+  clear: both;
+  &:not(:last-child) {
+	  margin-bottom: $accordion-spacing;
+  }
+}
+.btn.accordion-drop-down__toggle,
+.accordion-drop-down__toggle--info-for {
+  border: none;
+  width: 100%;
+  text-align: left;
+  position: relative;
+  border: rem-calc(1) solid $accordion-accent;
+  transition: background .4s ease, color .4s ease;
+  margin-bottom: 0;
+  padding: $accordion-padding;
+  &:after {
+	  display: none;
+  }
+  &:hover,
+  &:focus {
+	  background: $active-background-color;
+	  color: $accordion-accent;
+	  .accordion-drop-down__icon {
+  	  #{$icon-scope} {
+  		  fill: $accordion-accent;
+  		  color: $accordion-accent;
+  		}
+		}
+  }
+}
+.accordion-drop-down__icon {
+  height: $icon-width;
+  width: $icon-height;
+  right: $icon-right-distance;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  #{$icon-scope} {
+		fill: $icon-fill;
+		color: $icon-fill;
+		transition: fill .4s ease, transform .4s ease;
+		transform-origin: center;
+		transform: translateX(0); // 3D declaration for DOM to reconsider in Safari (wasn't unsetting active CSS)
+  }
+}
+.accordion-drop-down__toggle--active .accordion-drop-down__icon {
+	#{$icon-scope} {
+	  fill: $active-icon-fill;
+  }  		
+  &.caret .caret-path {
+	  transform: rotate(180deg);
+	}
+	&.plus .vertical {
+		transform: rotate(90deg);
+	}
+}
+.accordion-drop-down__toggle + * {
+  display: none;
+}
+.section--accordions .accordion-drop-down__toggle {
+  background-color: #fff;
+}
+.btn.accordion-drop-down__toggle--active,
+.accordion-drop-down__toggle--info-for.accordion-drop-down__toggle--active {
+  background: $active-background-color;
+  color: $accordion-accent;
+	.accordion-drop-down__icon {
+  	#{$icon-scope} {
+  	  fill: $active-icon-fill;
+    }  		
+	  &.caret .caret-path {
+		  transform: rotate(180deg);
+		}
+		&.plus .vertical {
+  		transform: rotate(90deg);
+		}
+	}
+}
+.mobile-accordion-container--filter {
+	@media #{$small-only} {
+		margin-bottom: rem-calc(20);
+	}
+	.accordion-drop-down__toggle {
+		box-shadow: none;
+		border-radius: 0;
+		background: $primary-gray--text;
+		color: #000;
+		border: none;
+		@extend %h4;
+		@media #{$medium-up} {
+			display: none;
+		}
+	}	
+	.accordion-drop-down__icon path {
+		fill: $accordion-accent;
+	}
+	form {
+		@media #{$small-only} {
+			margin-bottom: 0;
+			padding: rem-calc(0 20 20 20);
+		}
+	}
+}
+.accordion-drop-down__toggled-content {
+  padding: rem-calc(50 30 30);
+  background: $content-background;
+  color: $content-color;
+  margin-top: rem-calc(-24px);
+  h4:first-of-type {
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }  
+}
+.accordion-drop-down__toggle--mobile + * {
+	@media #{$small-only} {
+		display: none;
+	}
+}
+
+// ------ INFO FOR
+.accordion-drop-down__toggle.accordion-drop-down__toggle--info-for {
+  border: none;
+  font-weight: $benton-medium;
+  font-size: rem-calc(13);
+  color: #fff;
+  background: $deep-red;
+  border-top: rem-calc(1) solid #9f4b65;
+  position: relative;
+  margin-top: 0;
+  @media #{$large-up} {
+    padding: rem-calc(0 35 0 0);
+    background: none;
+    border: none;
+  }
+  &:after {
+    position: absolute;
+    width: rem-calc(7);
+    right: rem-calc(20);
+    content: "\f105";
+    display: inline-block;
+    font-family: "Font Awesome 5 Pro", "FontAwesome";
+    font-weight: 500;
+    color: $yellow;
+    font-size: 1.6875rem;
+    top: rem-calc(15);
+    margin: auto;
+    @media #{$large-up} {
+      display: none;
+    }
+  }
+  &.accordion-drop-down__toggle--active:after {
+    transform: rotate(90deg);
+  }
+  .accordion-drop-down__icon {
+    width: rem-calc(18);
+    height: rem-calc(18);
+    right: 0;
+    display: none;
+    @media #{$large-up} {
+      display: block;
+    }
+  }
+  #{$icon-scope} {
+    fill: $yellow;
+  }
+  &:hover,
+  &:focus {
+    #{$icon-scope} {
+      fill: #fff;
+    }
+  }
+}
+
+// ----------------------- DISCOVER OPPORTUNITIES
+.accordion-drop-down__toggle--discover-opportunities {
+  @include unset-button();
+  padding: rem-calc(12 60 12 22);
+  border: rem-calc(1) solid rgba(255,255,255,.3);
+  position: relative;
+  @include font-sizes(16,21,21);
+  color: $yellow;
+  width: 100%;
+  text-align: left;
+  transition: color .6s ease;
+  width: 100%;
+  @include margins-bottom(25,0,0);
+  @include margins-top(15,0,0);
+  .accordion-drop-down__icon {
+    position: absolute;
+    height: rem-calc(26);
+    width: rem-calc(26);
+    right: rem-calc(16);
+    transition: transform .6s ease;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  #{$icon-scope} {
+    transition: fill .6s ease;
+    fill: $yellow;
+  }
+  &:hover,
+  &:focus {
+    color: #fff;
+    #{$icon-scope} {
+      fill: #fff;
+    }
+  }
+  &.accordion-drop-down__toggle--active {
+    color: #fff;
+    .accordion-drop-down__icon {
+      transform: rotate(-180deg);
+    }
+    #{$icon-scope} {
+      fill: #fff;
+    }    
+  }
+}
+.discover-opportunities__select {
+  background: #fff;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  z-index: 3;
+  line-height: 1.4;
+  padding: rem-calc(7.5 0);
+  transform: translateY(-75%);
+  text-align: center;
+  @media #{$medium-up} {
+    max-width: rem-calc(300);    
+  }
+  @media (min-width: rem-calc(1160)) {
+    max-width: rem-calc(500);    
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    padding: 0;
+  }
+  a {
+    display: block;
+    width: 100%;
+    padding: rem-calc(7.5 15);
+    color: #000;
+    font-size: rem-calc(20);
+    transition: background .6s ease, color .6s ease;
+    &:hover,
+    &:focus,
+    &.option-selected {
+      color: #fff;
+      background: $deep-red;
+    }
+  }
+}
+// --------- STANDARD ACCORDIONS
+.accordion-drop-down--standard,
+.concentrations {
+  width: 100%;
+  .accordion-drop-down__toggle {
+    padding: $accordion-padding;
+    position: relative;
+    width: 100%;
+    text-align: left;
+    border: rem-calc(3) solid $pale-teal;
+    transition: all .6s ease;
+    @include font-sizes(16,20,20);
+    font-weight: $benton-medium;
+    &:hover,
+    &:focus {
+      background: $dark-teal;
+      color: #fff;
+      border-color: $dark-teal;
+      #{$icon-scope} {
+        fill: #fff;
+      }
+    }
+    &--active,
+    &--active:focus,
+    &--active:hover {
+      background: $pale-teal;
+      border-color: $pale-teal;
+      color: #000;
+      #{$icon-scope} {
+        fill: $deep-red;
+      }
+    }
+  }
+  .accordion-drop-down__icon {
+    width: rem-calc(30);
+    height: rem-calc(30);
+  }
+  #{$icon-scope} {
+    transition: fill .6s ease;
+    fill: $deep-red;
+  }
+}
+.accordion-drop-down--standard {
+  .accordion-drop-down__toggled-content {
+    font-size: rem-calc(16);
+    padding: rem-calc(20 20 25 20);
+    background: #fff;
+    border: rem-calc(3) solid $pale-teal;
+    margin-top: 0;
+    width: 100%;
+    &__inner {
+      padding-left: rem-calc(30);
+      border-left: rem-calc(2) solid $yellow;
+    }
+  }
+}

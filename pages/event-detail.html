@@ -1,0 +1,63 @@
+---
+layout: default
+title: Event Detail
+breadcrumbs:
+  - All Events
+content_type: event
+---
+<article class="event-detail">
+  {% if page.breadcrumbs %}
+    <div class="padded-row">
+      {% include components/breadcrumbs.html classes="breadcrumbs" %}
+    </div>
+  {% endif %}
+  <div class="section--global-spacing--large">
+    <div class="padded-row row grid-max-760">
+      <div class="event-detail__title-lockup">
+        <h1>Nullam id dolor id nibh ultricies vehicula ut id elit.</h1>
+        <div class="event event-detail__meta">
+        <div class="event__date-row row">
+          <span class="event__day-of-week eyebrow">Thursday</span>
+          <span class="event__date">10</span>
+          <span class="event__month">May</span>
+        </div>
+          <div class="event__time-location-row">
+            <div class="time fa-list-item far far fa-clock"><span>3:00pm-4:30pm</span></div>
+            <div class="location fa-list-item fa-map-marker-alt"><span>Location</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="section--wysiwyg section--global-spacing--small">
+        <p class="intro-text">It is probably the dream of any amateur astronomer to be able to be the boss of one of the great multi million dollar telescopes even if it was just for one hour or for a few shots. Sure, we can have a lot of fun with our binoculars. And as we improve our personal equipment set, we get better and better at pinpointing what we want to see in the sky.</p>
+        {% include components/components__micro/responsive-img.html src-default="http://placehold.it/760x507" src-small="http://placehold.it/400x267" src-medium="http://placehold.it/760x507" size-small="600" size-medium="1024" %}      
+        <p>This is a story and a full WYSIWYG. It seems from the moment you begin to take your love of astronomy seriously, the thing that is on your mind is what kind of telescope will you get. And there is no question, investing in a good telescope can really enhance your enjoyment of your new passion in astronomy. </p>
+        <p>But don’t be too hasty to keep up with the big wigs in the astronomy clubs that have advanced telescopes. There is another alternative that can give you most of the advantages of a telescope and some extra flexibility and reduced cost to boot. That alternative is a good pair of astronomy binoculars. Mostly we think of binoculars as the thing you use to see the football game when you have to sit in the cheap seats. </p>
+        <p>But if you do some homework and had a good grasp on what your stargazing objectives are, the advantages of astronomy binoculars over an entry level telescope can be pretty convincing.</p>
+        <a href="#" class="btn btn--external">Register for this event</a>
+      </div>
+      <div class="tags">
+        <ul>
+          <li>Nullam</li>
+          <li>Parturient Inceptos Nibh</li>
+          <li>Ornare</li>
+          <li>Tortor Malesuada</li>
+        </ul>
+      </div>
+      {% include components/contact-block.html src="true" name="Purus Porta" position="Position or Title" %}
+    </div>
+  </div>
+  <section class="section--global-spacing section--events">
+    {% include components/components__micro/section-title.html title="Related Events" %}
+    <div class="row sequence-anim-parent">
+      <div class="small-12 medium-4 columns sequence-anim-item fade-up-in">
+        {% include components/featured-event-item.html day="31" month-year="November 2019" title="Pharetra Dapibus Tellus Tortor Ridiculus" %}
+      </div>
+      <div class="small-12 medium-4 columns sequence-anim-item fade-up-in">
+        {% include components/featured-event-item.html day="1" month-year="May 2019" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna." %}
+      </div>
+      <div class="small-12 medium-4 columns sequence-anim-item fade-up-in">
+        {% include components/featured-event-item.html day="25" month-year="December 2019" title="Cras Quam" %}
+      </div>
+    </div>
+  </section>
+</article>

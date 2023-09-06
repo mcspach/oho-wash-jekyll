@@ -1,0 +1,108 @@
+---
+layout: default
+title: Functionality Overview
+wrapper_classes: padded-row
+---
+
+<h1>{{ page.title }}</h1>
+
+<h2>Layouts</h2>
+<p>All layouts have been removed except for <em>default</em> and <em>empty</em>. Front Matter now controls column and wrapping classes, which should allow for easier integration. See the basic-page.html front matter for a working example.</p>
+<p><strong>Front Matter Options:</strong></p>
+<pre>
+  <code>
+    --
+    layout: default # This should not change without good reason.
+    title: Page Title
+
+    # Set the (Drupal) content type machine name
+    content_type: page|home|landing_page|etc.
+
+    # Activate OHO Alert
+    oho_alert: true
+
+    # Add Breadcrumbs. Current page added automatically.
+    breadcrumbs:
+      - Home
+      - First Level
+      - Second Level
+
+    # Add page-specific CSS and JS.
+    css:
+      - /path/to/css.css
+    js:
+      - /path/to/js.js
+
+    # Add components to include before &lt;div class="main-content"&gt;
+    content_top:
+      - component/to-include.html
+
+    # Add components to include after &lt;div class="main-content"&gt;
+    content_bottom:
+      - component/to-include.html
+
+    # Set any additional classes on &lt;div class="page"&gt;
+    page_classes: class-to-add
+
+    # Set wrapper classes, on the first &lt;div&gt; inside &lt;div class="main-content"&gt;
+    wrapper_classes: row
+
+    # Set additional classes on &lt;div class="content"&gt;
+    content_classes: columns medium-9
+
+    # Include some sidebar content
+    sidebar_content: component/to-include.html
+
+    # For sidebar nav include, set content style
+    sidebar_content_style: padding-levels
+
+    # Set sidebar classes
+    sidebar_classes: columns medium-3
+
+    # Enable Drupal 8 Admin markup
+    drupa_admin: true
+  </code>
+</pre>
+
+<h2>Adding CSS & JS</h2>
+<p>CSS & JS are added through the _data/assets.yml file. All sitewide scripts and styles should be added here.</p>
+
+<h2>Gulp Tasks</h2>
+<pre>
+  <code>
+    #Accessibility test with <a href="https://github.com/pa11y/pa11y">Pa11y</a>
+    gulp a11y
+  </code>
+</pre>
+
+<h2>Notable Tools</h2>
+
+<h3>Platform</h3>
+<ul>
+  <li><a href="https://jekyllrb.com/">Jekyll</a></li>
+  <li><a href="https://sass-lang.com/libsass">LibSass</a></li>
+  <li><a href="https://bower.io/">Bower</a></li>
+  <li><a href="http://bundler.io/">Bundler</a></li>
+</ul>
+
+<h3>JavaScript</h3>
+<ul>
+  <li><a href="https://jquery.com/">jQuery</a></li>
+  <li><a href="https://modernizr.com/">Modernizr</a></li>
+  <li><a href="http://wicky.nillia.ms/enquire.js/">Enquire</a></li>
+  <li><a href="http://kenwheeler.github.io/slick/">Slick Slider</a></li>
+  <li><a href="https://github.com/filamentgroup/tablesaw">TableSaw</a></li>
+  <li><a href="#">ViewPort JS</a></li>
+  <li><a href="http://scrollmagic.io/">ScrollMagic</a></li>
+</ul>
+
+<h3>CSS</h3>
+<ul>
+  <li><a href="https://fontawesome.com/">FontAwesome</a></li>
+</ul>
+
+<h3>Gulp</h3>
+<ul>
+  <li><a href="https://github.com/postcss/autoprefixer">AutoPrefixer</a></li>
+  <li><a href="https://browsersync.io/">Browser Sync</a></li>
+</ul>

@@ -1,0 +1,167 @@
+/*
+---------
+PROGRAMS
+---------
+*/
+.program-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  .letter-divider {
+    @include flex-column(100%);
+  }
+}
+.program-large-list {
+  @include margins-bottom(30,40,40);
+  @include paddings-bottom(30,40,40);
+  border-bottom: rem-calc(1) solid $gray-border;
+  width: 100%;
+  max-width: calc(100% - 60px);
+  h3 {
+    @include font-sizes(20,22,22);
+    font-family: $sans-serif;
+    margin-bottom: 0;
+  }
+  .degree-type {
+    @extend %eyebrow;
+    @media #{$medium-up} {
+      font-size: 0;
+      height: 0;
+      width: 0;
+      overflow: hidden;
+      margin: 0;
+    }
+  }
+  .columns:not(:last-child) {
+    @media #{$small-only} {
+      margin-bottom: rem-calc(20);
+    }
+  }
+  .tags li {
+    margin-bottom: rem-calc(10);
+  }
+}
+.letter-divider:last-child .program-large-list {
+  @include margins-bottom(30,40,40);
+  @include paddings-bottom(30,40,40);
+  border-bottom: rem-calc(1) solid $gray-border;
+}
+.program-large-list--last,
+[data-filtered]:last-of-type {
+  border: none;
+  padding: 0;
+  margin-bottom: rem-calc(10);
+}
+.row.row.columns.degree-column {
+  display: flex;
+  @media #{$small-only} {
+    padding-left: rem-calc(20);
+  }
+}
+.degree-column__inner-column .small-12,
+.program-list-label .degree-column .small-4 {
+  @incldue flex-column(37%);
+}
+.degree-column {
+  .major-comma .degree-type {
+    @media #{$small-only} {
+      &:after {
+        content: ",";
+        margin-right: rem-calc(5);
+      }
+    }
+  }
+  @media #{$medium-up} {
+    justify-content: flex-end;
+    text-align: center;    
+  }
+  div {
+    color: $yellow;
+    @media #{$small-only} {
+      display: none;
+    }
+  }
+}
+.program-list-label {
+  margin-bottom: rem-calc(15);
+  display: none;
+  justify-content: flex-end;
+  @media #{$medium-up} {
+    display: flex;
+  }
+  > .row {
+    @include flex-column(calc(100% - 60px));
+    margin-right: 0;
+  }
+  .eyebrow {
+    margin: 0;
+  }
+}
+// ---------------------------- DETAIL PAGE INTRO META AND SIDEBAR
+.section--program-detail-info .section--wysiwyg {
+  @include margins-bottom(40,0,0);
+}
+.program-detail__meta {
+  margin-bottom: rem-calc(20);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  .eyebrow {
+    margin-bottom: 0;
+  }
+  .eyebrow:nth-child(2):before {
+    content: ",";
+    margin-right: rem-calc(5);
+  }
+  .eyebrow:nth-child(2):not(:last-child) {
+    margin-right: rem-calc(20);
+  }
+
+}
+.program-detail__sidebar-card {
+  padding: rem-calc(30);
+  border-left: rem-calc(8) solid $pale-teal;
+  background: $light-gray;
+  @include margins-top(40,60,60);
+  @media #{$small-only} {
+    transform: translate(-20px);
+    width: calc(100% + 40px);
+  }
+  &__info-item:not(:last-child) {
+    margin-bottom: rem-calc(30);
+  }
+  .eyebrow {
+    margin-bottom: rem-calc(10);
+  }
+  a {
+    font-weight: $benton-medium;
+  }
+}
+
+// -------- RELATED PROGRAMS COMPONENTS
+.section--related-programs {
+  .columns {
+    display: flex;
+  }
+  .columns:not(:last-child) {
+    @media #{$small-only} {
+      margin-bottom: rem-calc(20);
+    }
+  }
+}
+.related-program {
+  padding: rem-calc(30);
+  font-size: rem-calc(16);
+  border: rem-calc(3) solid $pale-teal;
+  h3, .related-program__degrees, p {
+    &:not(:last-child) {
+      margin-bottom: rem-calc(10);
+    }
+  }
+  li {
+    margin-bottom: rem-calc(5);
+  }
+  .related-program__degrees {
+    font-weight: $benton-medium;
+  }
+}

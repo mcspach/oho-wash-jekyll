@@ -1,0 +1,112 @@
+/*
+-------------
+General 
+-------------
+*/
+.element-invisible {
+  @extend %show-for-sr;
+}
+
+/*
+-------------
+Drupal - Special Pages (User, Search Results)
+-------------
+*/
+
+#user-login,
+.user-login-form,
+.page--utility .main-content {
+  @include grid-row();
+  padding: rem-calc(80 20);
+  .form-item {
+    max-width: rem-calc(300);
+  }
+}
+
+/*
+-------------
+Admin Tabs (Drupal - Local Tasks)
+-------------
+*/
+
+.admin-tabs {
+  background: #fff;
+  position: fixed;
+  bottom: rem-calc(20);
+  right: rem-calc(20);
+  padding: rem-calc(10);
+  margin: 0;
+  border: 0;
+  z-index: 10;
+  
+  ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+    list-style: none;
+
+    + li {
+      margin-left: .5em;
+    }
+  }
+
+  a {
+    background: $primary-color--dark;
+    margin: 0;
+    color: #fff;
+    display: block;
+    padding: .5em 1em;
+    transition: all .2s ease-out;
+    text-decoration: none;
+    border-radius: .25em;
+
+    &.is-active {
+      background: $primary-color--light;
+    }
+
+    &:hover {
+      background: $primary-color;
+    }
+  }
+  
+}
+
+//
+// System Messages
+// --------------------------------------------------
+$success-color: #3c763d;
+$alert-color: #a94442;
+
+.messages {
+  margin: 1em 0;
+  padding: 1em;
+  border: 1px solid;
+  border-radius: .25em;
+  
+  a {
+    text-decoration: underline;
+  }
+  
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+.messages--status {
+  background: lighten($success-color, 40%);
+  border-color: lighten($success-color, 30%);
+  color: $success-color;
+}
+
+.messages--error {
+  background: lighten($alert-color, 40%);
+  border-color: lighten($alert-color, 30%);
+  color: $alert-color;
+}

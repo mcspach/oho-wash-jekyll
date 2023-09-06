@@ -1,0 +1,31 @@
+---
+layout: default
+title: Basic Page Variation 3
+oho_alert: true
+breadcrumbs:
+  - Landing L1 Page
+  - Another Page
+  - Another Page Lower than the Above
+content_type: page
+---
+  {% include components/hero.html src="../assets/img/hero-img-common.jpg" class_modifier="hero--parallax hero--secondary" overlay="true" %}
+<div class="parallax-mask clearfix">
+  <section class="section--page-starter">
+    <div class="page-starter">
+      <div class="page-starter__inner">
+        {% if page.breadcrumbs %}
+          {% include components/breadcrumbs.html classes="breadcrumbs" %}
+        {% endif %}
+        <h1>{{page.title}}</h1>
+        <p class="intro-text">Intro Text Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+      </div>
+    </div>
+  </section>
+
+  {% include components/modules/differentiators.html classModifier="section--differentiators--standard" %}
+  {% include components/modules/featured-stories.html %}	
+  {% include components/modules/accordions.html %}
+  {% include components/modules/secondary-promos.html %}
+  {% include components/modules/featured-news.html small-news="true" %}
+  
+</div>

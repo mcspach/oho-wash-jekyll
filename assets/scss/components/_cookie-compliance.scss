@@ -1,0 +1,26 @@
+.cc-banner {
+  margin: auto;
+  text-align: center;
+  font-size: rem-calc(16);
+  font-family: $sans-serif;
+  padding: rem-calc(30 0);
+  @media (max-width: rem-calc(1050)) {
+    text-align: left;
+  }
+  .cc-btn {
+    @extend %btn;
+    @extend %btn--small;
+    margin: 0;
+    &:hover {
+      background: $dark-blue !important;
+      border-color: $dark-blue;
+      color: #fff;
+    }
+  }
+  .cc-message {
+    flex: none;
+    @media (max-width: rem-calc(1050)) {
+      margin-bottom: rem-calc(10);
+    }
+  }
+}

@@ -1,0 +1,28 @@
+<article class="program-large-list">
+  <div class="row small-12">
+    <div class="small-12 medium-4 columns name-column"><h3><a class="name-alpha" href="#">{{include.name}}</a></h3></div>
+    <div class="small-12 medium-5 columns areas-column">
+      <div class="program-areas tags">
+        <ul>
+          {% for i in (1..{{include.areasCount}}) %}
+            <li class="area-of-study-item" data-area-of-study="{{include.areasOfStudy}}">{{include.areasOfStudy}}</li>
+          {% endfor %}
+          <li class="area-of-study-item" data-area-of-study="{{include.areasOfStudy1}}">{{include.areasOfStudy1}}</li>
+          <li class="area-of-study-item" data-area-of-study="{{include.areasOfStudy2}}">{{include.areasOfStudy2}}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="small-12 medium-3 columns degree-column row">
+      <div class="medium-4 degree-column__inner-column {% if include.minor %}major-comma{% endif %}">
+        {% if include.major %}
+          <div data-major class="small-12"><div class="fas fa-check-square"></div><span class="degree-type">Major</span></div>
+        {% endif %}
+      </div>
+      <div class="medium-4 degree-column__inner-column">
+        {% if include.minor %}
+          <div data-minor class="small-12"><div class="fas fa-check-square"></div><span class="degree-type">Minor</span></div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</article>  

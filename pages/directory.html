@@ -1,0 +1,106 @@
+---
+layout: default
+title: Directory
+page_classes: no-hero
+breadcrumbs:
+  - Breadcrumb Item
+  - Another Breadcrumb Item
+---
+<article class="directory-listing">
+  <div class="padded-row section--global-spacing section--main-title">
+    {% include components/breadcrumbs.html classes="breadcrumbs" %}
+    <h1>Directory</h1>
+  </div>
+  <div class="padded-row">
+    <form class="filter section--global-spacing" id="directory-filter">
+      <div class="row">
+        <div class="small-12 columns search-column">
+          <span class="form-label">Search by Name</span> 
+            <label class="sr-only" for="searchbox">Search</label>
+            <div class="search-elements-container">
+              <input type="text" class="search" id="searchbox" placeholder="Search All..." autocomplete="off">
+              <input type="submit" id="directory-submit" name="op" value="Go" class="btn btn--small btn--submit">
+            </div>
+        </div>
+        <div class="small-12 medium-4 columns">
+          <span class="form-label">Search by Profile Type</span>
+          <fieldset class="masquerade-select" id="profile-types-criteria">
+          <div class="checkbox">
+            <input type="checkbox" value="All Profile Types" class="checkboxes-reset active" name="All Profile Types" id="AllProfileTypes">
+            <label for="AllProfileTypes">All Profile Types</label>
+          </div>
+          </fieldset>
+        </div>
+        <div class="small-12 medium-4 columns last-filter-column">
+          <span class="form-label">Search by Deptartment/Program</span>
+          <fieldset class="masquerade-select" id="profile-departments-criteria">
+            <div class="checkbox">
+              <input type="checkbox" value="All Departments" class="checkboxes-reset active" name="All Departments" id="AllDepartments">
+              <label for="AllDepartments">All Departments</label>
+            </div>
+          </fieldset>
+        </div>
+        <div class="small-12 medium-4 columns btn--column">
+          <label class="sr-only" for="reset">Reset</label>
+          <input class="btn btn--reset" id="reset" style="display: none;" class="inactive" type="reset" name="reset" value="Clear All">
+        </div>
+      </div>
+    </form>
+    
+    <div id="directoryList" class="directory-list full-list-container"></div>
+    <div class="no-results"><h2>No results found.</h2></div>
+    <div id="pagination" class="pagination-container"></div>
+    <span id="per_page"></span>
+  </div>
+</article>
+
+<script id="directory-template" type="text/html">
+  <div class="letter-divider letter-divider--<%= lastName.charAt(0) %>"><div class="letter-divider__row"><h2><%= lastName.charAt(0) %></h2></div></div>
+  <article class="directory-large-list data-sort-letter--<%= lastName.charAt(0) %>">
+    <div class="directory-large-list__inner">
+      <div class="directory-large-list__media">
+        <% if (src.length) { %>
+          <a href="<%= href %>"><img src="<%= src %>" alt="<%= alt %>" width="180" height="270"></a>
+        <% } %>
+      </div>
+      <div class="directory-large-list__content">
+        <div class="directory-large-list__content__column-left">
+          <div class="row">
+            <div class="small-12 medium-7">
+              <% if (department.length) { %>
+      <a class="eyebrow eyebrow-department" href="<%= departmentHref %>"><%= department %></span><div class="fal fa-angle-right" aria-hidden="true"></div></a>
+              <% } %>
+              <h2><a href="<%= href %>"><span><%= firstName %></span> <span id="lastName"><%= lastName %></span></a></h2>
+              <div class="directory-large-list__content__column-left__lower">
+                <% if (type.length) { %>
+                  <span class="directory-large-list__type"><%= type %></span>
+                <% } %>
+                <% if (position.length) { %>
+                  <div class="directory-positions">
+                    <ul>
+                      <% for(var i = 0; i < position.length; ++i) { %>
+                        <li><%= position[i] %></li>
+                      <% } %>
+                    </ul>
+                  </div>
+                <% } %>
+              </div>
+            </div>
+            <div class="small-12 medium-5">
+              <% if (email.length || phone.length) { %>
+                <ul class="contact-info-list">
+                  <% if (phone.length) { %>
+                    <li><div class="fal fa-phone" aria-hidden="false"></div><a href="tel:<%= phone %>"><%= phone %></a></span></li>
+                  <% } %>
+                  <% if (phone.length) { %>
+                    <li><div class="fal fa-envelope" aria-hidden="false"></div><a href="#"><%= email %></a></li>
+                  <% } %>                
+                </ul>
+              <% } %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</script>

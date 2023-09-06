@@ -1,0 +1,61 @@
+{% include head.html %}
+
+<div class="page page--{{ page.content_type }} {{ page.page_classes }} {% if page.oho_alert %}has-alert{% endif %}">
+
+  {% if page.oho_alert %}
+  {% include components/alert.html %}
+  {% endif %}
+
+  {% include header.html %}
+
+  {% if page.drupal_admin %}
+  {% include components/drupal/d8/messages-region.html %}
+  {% endif %}
+
+  {% for item in page.content_top %}
+  <div class="content-top">
+    {% include {{ item }} %}
+  </div>
+  {% endfor %}
+
+  <main class="main-content">
+
+    {% if page.hero_blank %}
+    {% include components/hero.html title="Justo Tortor Ornare" %}
+    {% endif %}
+
+    <div class="{{ page.wrapper_classes }}">
+      {% if page.sidebar_content %}
+      <div class="{{ page.sidebar_classes }}">
+        {% include {{ page.sidebar_content }} %}
+      </div>
+      {% endif %}
+
+      <div id="main-content" class="content {{ page.content_classes }}">
+        {{ content }}
+      </div>
+
+    </div>
+
+    {% include components/components__micro/cookie-compliance-popup.html %}
+
+  </main>
+
+  {% for item in page.content_bottom %}
+  <div class="content-bottom">
+    {% include {{ item }} %}
+  </div>
+  {% endfor %}
+  <!-- <section class="section--ctas section--banded section--banded--deep-red">
+    <h2>Do You. Do it All. Do it Here</h2>
+    <div class="btn-row">
+      <a href="#" class="btn btn--white btn--large">Visit</a>
+      <a href="#" class="btn btn--white btn--large">Request Info</a>
+      <a href="#" class="btn btn--white btn--large">Apply</a>
+    </div>
+  </section> -->
+  {% include footer.html %}
+
+</div>
+
+{% include foot.html %}

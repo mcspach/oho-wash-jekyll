@@ -1,0 +1,86 @@
+---
+layout: default
+title: Programs
+content_type: page
+---
+{% include components/hero.html src="../assets/img/hero-img-common.jpg" class_modifier="hero--parallax hero--secondary" overlay="true" %}
+<div class="parallax-mask clearfix">
+  <section class="section--page-starter">
+    <div class="page-starter">
+      <div class="page-starter__inner">
+        <h1>All Programs</h1>
+        <p class="intro-text">Intro text. A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.</p>
+      </div>
+    </div>
+  </section>
+  <article class="section--global-spacing--large program-listing">
+    <div class="padded-row">
+      <form class="filter section--global-spacing" id="program-filter">
+        <div class="padded-row"><h2>Find a program</h2></div>
+        <div class="row">
+          <div class="filter-column columns">
+            <span class="form-label">I am interested in:</span>
+            <fieldset class="masquerade-select" id="program-areas-criteria">
+            <div class="checkbox">
+              <input type="checkbox" value="Areas of Study" class="checkboxes-reset active" name="Areas of Study" id="AreasOfStudy">
+              <label for="AreasOfStudy">Areas of Study</label>
+            </div>
+            </fieldset>
+          </div>
+          <fieldset class="filter-column columns row" id="program-degree-criteria">
+            <div class="filter-column__checkbox columns">
+              <div class="checkbox checkbox--single">
+                <input type="checkbox" value="Major" name="Major" id="major">
+                <label for="major">Majors</label>
+              </div>
+            </div>
+            <div class="filter-column__checkbox columns">
+              <div class="checkbox checkbox--single">
+                <input type="checkbox" value="Minor" name="Minor" id="minor">
+                <label for="minor">Minors</label>
+              </div>
+            </div>
+          </fieldset>
+          <div class="filter-column columns">
+            <label class="sr-only" for="reset">Reset</label>
+            <input class="btn btn--reset" id="reset" style="display: none;" class="inactive" type="reset" name="reset" value="Clear All">
+          </div>
+        </div>
+      </form>
+      <div class="program-list-label">
+        <div class="row small-12">
+          <div class="small-12 medium-4 columns name-column"></div>
+          <div class="small-12 medium-5 columns areas-column"><span class="eyebrow">Areas of Study</span></div>
+          <div class="small-12 medium-3 columns degree-column row">
+            <div class="small-4">
+              <span class="eyebrow">Major</span>
+            </div>
+            <div class="small-4">
+              <span class="eyebrow">Minor</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="programList" class="program-list">
+        {% include components/program-large-list.html areasOfStudy1="Condimentum" areasOfStudy2="Fringilla" name="ATortor Sit Ridiculus" areasOfStudy="Pellentesque" areasCount="3" major="true"  %}
+        {% include components/program-large-list.html areasOfStudy1="Malesuada" areasOfStudy2="Cras" name="ATortor Sit Ridiculus" areasOfStudy="Elit Quam" areasCount="1" major="true" minor="true" %}
+        {% include components/program-large-list.html areasOfStudy1="Euismod" areasOfStudy2="Consectetur" name="BTortor Sit Ridiculus" areasOfStudy="Pellentesque" areasCount="3" major="true"  %}
+        {% include components/program-large-list.html areasOfStudy1="Ipsum" areasOfStudy2="Euismod" name="BTortor Sit Ridiculus" areasOfStudy="Elit Quam" areasCount="1" major="true" minor="true" %}
+        {% include components/program-large-list.html areasOfStudy1="Fringilla" areasOfStudy2="Justo" name="BTortor Sit Ridiculus" areasOfStudy="Pellentesque" areasCount="3" minor="true"  %}
+        {% include components/program-large-list.html areasOfStudy1="Ipsum" areasOfStudy2="Consectetur" name="CTortor Sit Ridiculus" areasOfStudy="Elit Quam" areasCount="1" major="true" minor="true" %}
+        {% include components/program-large-list.html areasOfStudy1="Tortor" areasOfStudy2="Sem" name="DTortor Sit Ridiculus" areasOfStudy="Pellentesque" areasCount="3" major="true"  %}
+        {% include components/program-large-list.html areasOfStudy1="Etiam" areasOfStudy2="Ridiculus" name="ETortor Sit Ridiculus" areasOfStudy="Pellentesque" areasCount="3" major="true"  %}
+        {% include components/program-large-list.html areasOfStudy1="Dapibus" areasOfStudy2="Porta" name="FTortor Sit Ridiculus" areasOfStudy="Commodo" areasCount="5" major="true" minor="true" %}
+        {% include components/program-large-list.html areasOfStudy1="Nibh" areasOfStudy2="Inceptos" name="GTortor Sit Ridiculus" areasOfStudy="Elit Quam" areasCount="1" major="true" minor="true" %}
+        {% include components/program-large-list.html areasOfStudy1="Mollis" areasOfStudy2="Ultricies" name="HTortor Sit Ridiculus" areasOfStudy="Pellentesque" areasCount="3" major="true"  %}
+        {% include components/program-large-list.html areasOfStudy1="Lorem" areasOfStudy2="Pharetra" name="ITortor Sit Ridiculus" areasOfStudy="Commodo" areasCount="5"  minor="true" %}
+        {% include components/program-large-list.html areasOfStudy1="Ipsum" areasOfStudy2="Sem" name="JTortor Sit Ridiculus" areasOfStudy="Pellentesque" areasCount="3" major="true"  %}
+        {% include components/program-large-list.html areasOfStudy1="Consectetur" areasOfStudy2="Vehicula" name="KTortor Sit Ridiculus" areasOfStudy="Pellentesque" areasCount="3" major="true"  %}
+        {% include components/program-large-list.html areasOfStudy1="Etiam" areasOfStudy2="Nibh" name="LTortor Sit Ridiculus" areasOfStudy="Pellentesque" areasCount="3" major="true"  %}
+        {% include components/program-large-list.html areasOfStudy1="Adipiscing" areasOfStudy2="Consectetur" name="MTortor Sit Ridiculus" areasOfStudy="Commodo" areasCount="5" major="true" minor="true" %}
+        {% include components/program-large-list.html areasOfStudy1="Malesuada" areasOfStudy2="Dapibus" name="NTortor Sit Ridiculus" areasOfStudy="Pellentesque" areasCount="3" major="true"  %}
+      </div>
+      <div class="no-results"><h2>No results found.</h2></div>
+    </div>
+  </article>
+</div>

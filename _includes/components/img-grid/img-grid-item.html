@@ -1,0 +1,75 @@
+{% if include.grid-item == "true" %}
+  <article class="img-grid-item">
+    {% if include.video_src %}
+      <a tabindex="-1" class="img-grid-item__toggle" data-fancybox href="https://www.youtube.com/watch?v=G67SZ0u-Lis">
+        <img src="{{include.src}}" width="{{include.width}}" height="{{include.height}}" alt="{{include.alt}}">
+        <?xml version="1.0" encoding="UTF-8"?>
+        <svg class="play-icon" width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+            <title>Icon/UI/play button</title>
+            <desc>Created with Sketch.</desc>
+            <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Component/Large/image-gallery" transform="translate(-21.000000, -439.000000)" fill="#20BABD" fill-rule="nonzero">
+                    <g id="image-gallery">
+                        <g id="Icon/UI/play-button" transform="translate(21.000000, 439.000000)">
+                            <path d="M41.1959797,26.9760381 L21.1284122,13.2933866 C20.8483784,13.1036539 20.4871622,13.0826738 20.187973,13.2404804 C19.8896959,13.398287 19.7027027,13.7084271 19.7027027,14.0468447 L19.7027027,41.4121476 C19.7027027,41.7505651 19.8896959,42.0607052 20.1888851,42.2185118 C20.3220608,42.2896616 20.4689189,42.3243243 20.6148649,42.3243243 C20.7945608,42.3243243 20.9742568,42.2705059 21.1284122,42.1656056 L41.1959797,28.4829541 C41.445,28.3132892 41.5945946,28.0314266 41.5945946,27.7294961 C41.5945946,27.4275656 41.445,27.145703 41.1959797,26.9760381 Z" id="Shape"></path>
+                            <path d="M27,0 C12.1122,0 0,12.1122 0,27 C0,41.8878 12.1122,54 27,54 C41.8878,54 54,41.8878 54,27 C54,12.1122 41.8878,0 27,0 Z M27,52.2 C13.1049,52.2 1.8,40.8951 1.8,27 C1.8,13.1049 13.1049,1.8 27,1.8 C40.8951,1.8 52.2,13.1049 52.2,27 C52.2,40.8951 40.8951,52.2 27,52.2 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </svg>
+        <div class="img-grid-item__toggle__overlay"></div>
+        <span class="img-grid-item__toggle__text">
+          <div class="img-grid-item__toggle__icon"><span class="fas fa-expand-arrows"></span></div>
+          <span>View Video {% if include.caption %}and Caption{% endif %}</span>
+        </span>
+      </a>
+    {% else %}
+      <a href tabindex="-1" class="img-grid-item__toggle">
+        <img src="{{include.src}}" width="{{include.width}}" height="{{include.height}}" alt="{{include.alt}}">
+        <div class="img-grid-item__toggle__overlay"></div>
+        <span class="img-grid-item__toggle__text">
+          <div class="img-grid-item__toggle__icon"><span class="fas fa-expand-arrows"></div></i>
+          <span>View Image {% if include.caption %}and Caption{% endif %}</span>
+        </span>
+      </a>
+    {% endif %}
+  </article>
+{% else %}  
+  <article class="img-grid-item--slide {% if !include.caption != "" %}img-grid-item--slide--no-caption{% endif %}">
+    {% if include.video_src %}
+      <a data-fancybox href="https://www.youtube.com/watch?v=G67SZ0u-Lis">
+        <figure>
+          <img src="{{include.src}}" width="{{include.width}}" height="{{include.height}}" alt="{{include.alt}}">
+          <?xml version="1.0" encoding="UTF-8"?>
+          <svg class="play-icon" width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+              <title>Icon/UI/play button</title>
+              <desc>Created with Sketch.</desc>
+              <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g id="Component/Large/image-gallery" transform="translate(-21.000000, -439.000000)" fill="#20BABD" fill-rule="nonzero">
+                      <g id="image-gallery">
+                          <g id="Icon/UI/play-button" transform="translate(21.000000, 439.000000)">
+                              <path d="M41.1959797,26.9760381 L21.1284122,13.2933866 C20.8483784,13.1036539 20.4871622,13.0826738 20.187973,13.2404804 C19.8896959,13.398287 19.7027027,13.7084271 19.7027027,14.0468447 L19.7027027,41.4121476 C19.7027027,41.7505651 19.8896959,42.0607052 20.1888851,42.2185118 C20.3220608,42.2896616 20.4689189,42.3243243 20.6148649,42.3243243 C20.7945608,42.3243243 20.9742568,42.2705059 21.1284122,42.1656056 L41.1959797,28.4829541 C41.445,28.3132892 41.5945946,28.0314266 41.5945946,27.7294961 C41.5945946,27.4275656 41.445,27.145703 41.1959797,26.9760381 Z" id="Shape"></path>
+                              <path d="M27,0 C12.1122,0 0,12.1122 0,27 C0,41.8878 12.1122,54 27,54 C41.8878,54 54,41.8878 54,27 C54,12.1122 41.8878,0 27,0 Z M27,52.2 C13.1049,52.2 1.8,40.8951 1.8,27 C1.8,13.1049 13.1049,1.8 27,1.8 C40.8951,1.8 52.2,13.1049 52.2,27 C52.2,40.8951 40.8951,52.2 27,52.2 Z" id="Shape"></path>
+                          </g>
+                      </g>
+                  </g>
+              </g>
+          </svg>
+          {% if include.caption %}
+            <figcaption>{{include.caption}}</figcaption>
+          {% endif %}  
+        </figure>
+      </a>
+    {% else %}
+      <figure>
+        <img src="{{include.src}}" width="{{include.width}}" height="{{include.height}}" alt="{{include.alt}}">
+        {% if include.caption %}
+          <figcaption>{{include.caption}}</figcaption>
+        {% endif %}  
+      </figure>
+    {% endif %}
+  </article>
+{% endif %}

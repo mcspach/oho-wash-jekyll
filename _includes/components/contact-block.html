@@ -1,0 +1,45 @@
+<article class="contact-block {% if include.src %}contact-block--has-img{% endif %}">
+  <div class="contact-block__inner">
+    <div class="contact-block__upper">
+      <div class="contact-block__img-title-container">
+        {% if include.src %}
+          <img src="http://placehold.it/80x80" alt="#" height="80" width="80">
+          <h2>Contact Us</h2>
+        {% else %}
+          <h2>Contact Information</h2>
+        {% endif %}
+      </div>
+      <h3 {% if include.hidden_name %}class="sr-only"{% endif %}><a href="#">{{include.name}}</a></h3>
+      {% if include.position %}
+        <span class="contact-block__position">{{include.position}}</span>
+      {% endif %}
+    </div>
+    <div class="contact-block__middle">
+      <ul class="contact-info-list">
+        <li><div class="fal fa-phone" aria-hidden="false"></div><span>555-555-5555</span></li>
+        <li><div class="fal fa-phone" aria-hidden="false"></div><span>555-555-5555</span></li>
+        <li><div class="fal fa-phone" aria-hidden="false"></div><span>555-555-5555</span></li>
+        <li><div class="fal fa-phone" aria-hidden="false"></div><span>555-555-5555</span></li>
+        <li><div class="fal fa-phone" aria-hidden="false"></div><span>555-555-5555</span></li>
+        <li><div class="fal fa-phone" aria-hidden="false"></div><span>555-555-5555</span></li>
+        <li><div class="fal fa-phone" aria-hidden="false"></div><span>555-555-5555</span></li>
+        <li><div class="fal fa-envelope" aria-hidden="false"></div><a href="#">decent.length.email@email.com</a></li>
+        <li><div class="fal fa-map-marker-alt" aria-hidden="false"></div><span>Dunning Decker N102</span></li>
+      </ul>
+    </div>
+    {% if include.officeHours %}
+      <div class="contact-block__middle">
+        <h4>Office Hours</h4>
+        <p>Monday 9AM - 11AM, also available by appointment</p>
+      </div>
+    {% endif %}
+    <div class="contact-block__bottom">
+      <ul class="social-media-list">
+        <li><a href="#" class="fab fa-youtube-square"><span class="show-for-sr">Youtube</span></a></li>
+        <li><a href="" class="fab fa-facebook-square"><span class="show-for-sr">Facebook</span></a></li>
+        <li><a href="" class="fab fa-twitter-square"><span class="show-for-sr">Twitter</span></a></li>
+        <li><a href="" class="fab fa-instagram-square"><span class="show-for-sr">Instagram</span></a></li>
+      </ul>
+    </div>
+  </div>
+</article>

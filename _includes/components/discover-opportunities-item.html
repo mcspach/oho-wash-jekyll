@@ -1,0 +1,33 @@
+<article data-discover-opportunities-panel-id="{{include.panel_id}}" class="discover-opportunities__modal">
+  <div class="row">
+    <div class="small-12 large-6  columns">
+      <div class="discover-opportunities__modal__media video-modal-container">
+        {% if include.video %}
+          <a data-fancybox href="https://www.youtube.com/watch?v=GF60Iuh643I">
+            <img src="//placehold.it/460x310" alt="dog" width="460" height="410">
+            <div aria-hidden="true"></div>
+          </a>
+        {% else %}
+          <img src="//placehold.it/460x310" alt="dog" width="460" height="410">
+        {% endif %}
+      </div>
+    </div>
+    <div class="small-12 large-6 columns">
+      <div class="discover-opportunities__modal__content">
+        <h4>{{include.title}}</h4>
+        {% if include.description %}
+          <p>{{include.description}}</p>
+          <p><strong>Additional Opportunities</strong></p>
+          <ul>
+            <li>Research with NASA</li>
+            <li>Research Intern at Acadia National Park</li>
+            <li>Research Fellow at MIT</li>
+          </ul>
+        {% endif %}
+        <a href="#" class="arrow-link"><span class="arrow-link__link">Learn more about student research</span><div class="arrow-link__icon" aria-hidden="true"></div></a>
+        {% if include.extraLink %}<a href="#" class="arrow-link"><span class="arrow-link__link">Optional second link</span><div class="arrow-link__icon" aria-hidden="true"></div></a>{% endif %}
+      </div>
+    </div>
+  </div>
+  <button class="discover-opportunities__modal__close"><span class="show-for-sr">Click to Close this panel</span></button>
+</article>

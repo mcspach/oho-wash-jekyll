@@ -1,0 +1,28 @@
+//
+// Encoding
+// --------------------------------------------------
+@charset "UTF-8";
+
+// Mixins & Other variables
+@import "helpers/mixins";
+@import "vendor/foundation_settings";
+@import "foundation";
+
+img {
+ max-width: 100%;
+}
+
+.obj-left,
+.align-left {
+  @include obj-left;
+}
+
+.obj-right,
+.align-right {
+  @include obj-right;
+}
+
+.obj-center,
+.align-center {
+  @include obj-center;
+}

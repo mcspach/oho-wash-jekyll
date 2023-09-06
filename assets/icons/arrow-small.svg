@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="11px" viewBox="0 0 18 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Icon/angle bracket Copy 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="8.32007829 -3.5 8.32007829 12.3729823 4.46140929 8.82608361 3.5 9.79863039 8.51929535 14.5 9.48070465 14.5 14.5 9.79863039 13.5385907 8.87156466 9.67992171 12.3729823 9.67992171 -3.5"></polygon>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Breadcrumbs/L2" transform="translate(-139.000000, -7.000000)">
+            <g id="Breadcrumbs" transform="translate(0.000000, 1.000000)">
+                <g id="Icon/UI/arrows_small" transform="translate(139.000000, 6.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Shape" fill="#EBAA00" fill-rule="evenodd" transform="translate(9.000000, 5.500000) rotate(-90.000000) translate(-9.000000, -5.500000) " xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

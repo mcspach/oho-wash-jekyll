@@ -1,0 +1,16 @@
+<article class="related-program">
+  <h3 class="h4"><a href="#">{{include.title}}</a></h3>
+  <div class="related-program__degrees">
+    <span>Major, Minor</span>
+  </div>
+  <p>{{include.description}}</p>
+  <div class="program-areas tags">
+    <ul>
+      <li class="area-of-study-item">Magna</li>
+      {% if include.multipleTags %}
+        <li class="area-of-study-item">Pellentesque Consectetur</li>
+        <li class="area-of-study-item">Condimentum</li>
+      {% endif %}
+    </ul>
+  </div>
+</article>

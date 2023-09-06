@@ -1,0 +1,356 @@
+//
+// Note: This stylesheet assumes default webform styles are disabled.
+// In theme_css_alter(): drupal_get_path('module', 'webform') . '/css/webform.css' => FALSE
+//
+// If the site requires the datepicker popup in forms, it would be good
+// to disable those styles as well:
+//   drupal_get_path('module', 'date_popup') . '/themes/datepicker.1.7.css' => FALSE,
+//   'misc/ui/jquery.ui.core.css' => FALSE,
+//   'misc/ui/jquery.ui.theme.css' => FALSE,
+//   'misc/ui/jquery.ui.button.css' => FALSE,
+//   'misc/ui/jquery.ui.resizable.css' => FALSE,
+//   'misc/ui/jquery.ui.dialog.css' => FALSE,
+//   'misc/ui/jquery.ui.datepicker.css' => FALSE
+//
+
+//
+// Forms Configuration
+//
+
+// Sizes & Spacing
+$form-element-width: 100% !default;
+$form-element-margin: rem-calc(20) !default;
+$form-element-min-height: rem-calc(50) !default; 
+$form-label-margin: rem-calc(10) !default;
+$form-description-margin: .333em !default;
+
+
+// Elements
+$form-border: none !default;
+$form-border-radius: rem-calc(0) !default;
+$form-padding: rem-calc(15 20 12) !default;
+
+
+// Text
+$form-text: rem-calc(15) $sans-serif !default;
+$form-text-case: none !default;
+$form-label-text: $benton-book rem-calc(20) $sans-serif !default;
+$form-description-text: italic rem-calc(14) $sans-serif !default;
+$form-placeholder-text: $benton-book rem-calc(15) $sans-serif !default;
+
+
+// Colors
+$form-background-color: #ffffff !default;
+$form-text-color: $accent-gray !default;
+$form-label-color: #000 !default;
+$form-description-color: #000 !default;
+$form-required-color: #d33c3c !default;
+$form-placeholder-color: $accent-gray !default;
+$form-error-color: #d33c3c !default;
+
+// Scope
+$form-scope: 'form, .header-search';
+$webform-scope: $form-scope;
+
+//
+// Reset
+//
+
+#{$form-scope} {
+  label {
+    display: block;
+  }
+}
+
+//
+// Base Styles
+//
+
+#{$form-scope} {
+  .form-item {
+    width: 100%;
+    max-width: $form-element-width;
+    margin-bottom: $form-element-margin;
+  }
+
+  input:not([type="checkbox"]):not([type="radio"]):not([type="image"]):not([type="submit"]):not([type="reset"]):not([name="jumpMonth"]),
+  textarea,
+  select {
+    width: 100%;
+    padding: $form-padding;
+    padding-bottom: 0;
+    padding-top: rem-calc(1);
+    background-color: $form-background-color;
+    border: $form-border;
+    border-radius: $form-border-radius;
+    color: $form-text-color;
+    font: $form-text;
+    text-transform: $form-text-case;
+    border: rem-calc(1) solid $light-teal;
+    font-weight: $benton-medium;
+    height: rem-calc(40);
+    @media #{$large-up} {
+      height: $form-element-min-height;
+      padding: $form-padding;
+    }
+  }
+
+  input {
+    @include placeholder {
+      color: $form-placeholder-color;
+      font: $form-placeholder-text;
+      font-weight: $benton-medium;
+    }
+  }
+}
+
+//
+// Address
+//
+
+#{$webform-scope} {
+  .addressfield-container-inline .form-item:last-child {
+    margin-bottom: 0;
+  }
+}
+
+//
+// Checkboxes & Radio Buttons
+//
+
+#{$webform-scope} {
+  .form-type-radio,
+  .form-type-checkbox {
+    margin-bottom: $form-padding / 3;
+  }
+
+  label + .form-checkboxes,
+  label + .form-radios {
+    margin-top: $form-padding;
+  }
+}
+
+#{$form-scope} {
+  [type="checkbox"],
+  [type="radio"] {
+    float: left;
+    margin: ($form-padding / 5) $form-padding 0 0;
+  }
+}
+.checkbox--single {
+  display: flex;
+  align-items: center;
+  label {
+    font-size: rem-calc(20);
+    font-weight: normal;
+    margin-left: rem-calc(20);
+    margin-bottom: 0;
+  }
+  [type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    display: block;
+    height: rem-calc(40);
+    width: rem-calc(40);
+    border: rem-calc(1) solid $light-teal;
+    background-color: #fff;
+    background-image: url("../icons/checkbox-checked.svg");
+    background-position: center center;
+    background-size: rem-calc(36);
+    background-repeat: no-repeat;
+    @media #{$medium-up} {
+      height: rem-calc(50);
+      width: rem-calc(50);      
+    }
+    &:checked {
+      background-color: $light-teal;
+    }
+  }    
+}
+input[type="submit"] {
+  -webkit-appearance: none;
+}
+//
+// Labels & Descriptions
+//
+
+#{$form-scope} {
+  label {
+    margin-bottom: $form-label-margin;
+    color: $form-label-color;
+    font: $form-label-text;
+    @media #{$small-only} {
+      font-size: rem-calc(16);
+    }
+  }
+}
+
+#{$webform-scope} {
+  label + .description {
+    margin-bottom: $form-label-margin;
+  }
+
+  .description {
+    margin-top: $form-label-margin;
+    color: $form-description-color;
+    font: $form-description-text;
+
+    + label {
+      margin-top: $form-label-margin;
+    }
+  }
+}
+
+//
+// Numbers
+//
+
+#{$webform-scope} {
+  .form-number,
+  .webform-component-number select {
+    width: auto !important;
+  }
+}
+
+//
+// Required & Validation
+//
+
+#{$webform-scope} {
+  .form-required {
+    color: $form-required-color;
+  }
+
+  .error {
+    border-color: $form-error-color !important;
+
+    @include placeholder {
+      color: $form-error-color !important;
+    }
+  }
+}
+
+//
+// Selects
+//
+
+#{$form-scope} {
+  select:not([name="jumpMonth"]) {
+    min-width: rem-calc(100);
+    appearance: none;
+    background-image: url("../icons/select.svg");
+    background-repeat: no-repeat;
+    background-position: right rem-calc(15) center;
+    padding-right: rem-calc(40);
+    option {
+      overflow: hidden; 
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+//
+// Upload
+//
+
+#{$webform-scope} {
+  .form-managed-file button {
+    display: block;
+    margin-top: $form-padding;
+    font-size: 75%;
+  }
+}
+
+//
+// Recaptcha
+//
+
+#{$webform-scope} {
+  .captcha {
+    margin: 0 0 1rem 0;
+    padding: 0;
+    transform: scale(.93, .93);
+    transform-origin: top left;
+
+    legend,
+    .fieldset-description {
+      display: none;
+    }
+  }
+}
+
+//
+// Dates
+//
+
+#{$webform-scope} {
+  .webform-datepicker {
+
+    .form-type-select {
+      float: left;
+      width: 30%;
+
+      + .form-type-select {
+        margin-left: 5%;
+      }
+    }
+  }
+}
+
+.ui-datepicker {
+  position: relative;
+  padding: $form-padding;
+  background: #ffffff;
+  border: $form-border;
+  border-radius: $form-border-radius;
+
+  table {
+    margin: 0;
+    font-size: 75%;
+  }
+
+  td,
+  th {
+    padding: $form-padding;
+    text-align: center;
+  }
+}
+
+.ui-datepicker-title {
+  margin-bottom: $form-label-margin * 2;
+  font: $form-label-text;
+  font-weight: 700;
+  text-align: center;
+}
+
+.ui-datepicker-prev,
+.ui-datepicker-next {
+  position: absolute;
+    top: $form-label-margin * 2.5;
+  font: $form-label-text;
+}
+
+.ui-datepicker-prev {
+  left: $form-label-margin * 2;
+
+  &:before {
+    content: $fa-var-angle-left;
+    display: inline-block;
+    @include fontAwesome;
+    margin-right: $form-label-margin;
+    text-decoration: none !important;
+  }
+}
+
+.ui-datepicker-next {
+  right: $form-label-margin * 2;
+
+  &:after {
+    content: $fa-var-angle-right;
+    display: inline-block;
+    @include fontAwesome;
+    margin-left: $form-label-margin;
+    text-decoration: none !important;
+  }
+}

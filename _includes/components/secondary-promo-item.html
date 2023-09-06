@@ -1,0 +1,20 @@
+<article class="secondary-promo-item sequence-anim-item fade-in-left">
+  {% if include.src %}
+    <div class="secondary-promo-item__media">
+      <img src="http://placehold.it/360x240" width="360" height="240" alt="#">
+    </div>
+  {% endif %}
+  <div class="secondary-promo-item__content">
+    <h3>{{include.title}}</h3>
+    <div aria-hidden="true" class="line-decoration"></div>
+    <p>{{include.description}}</p>
+    {% if include.arrowLink %}
+      <a href="#" class="arrow-link" ><span class="arrow-link__link">Ultricies Nibh</span><div class="arrow-link__icon" aria-hidden="true"></div></a>
+    {% endif %}
+    {% if include.arrowLinks %}
+      <a href="#" class="arrow-link" ><span class="arrow-link__link">Mollis Mattis Nibh</span><div class="arrow-link__icon" aria-hidden="true"></div></a>
+      <a href="#" class="arrow-link" ><span class="arrow-link__link">Ultricies Nibh</span><div class="arrow-link__icon" aria-hidden="true"></div></a>
+      <a href="#" class="arrow-link" ><span class="arrow-link__link">Ullamcorper</span><div class="arrow-link__icon" aria-hidden="true"></div></a>
+    {% endif %}
+  </div>
+</article>
